@@ -31,7 +31,7 @@ str(db[db$Class %in% "REPTILIA",]) #6278 obs
 
 db.rep <- db[db$Class %in% c("REPTILIA") & !is.na(db$male_svl_cm) & !is.na(db$female_svl_cm),]
 
-str(db.rep)#161 obs
+str(db.rep)#253 obs
 
 db.rep[1:5,"binomial"]
 db.rep[1:5,]
