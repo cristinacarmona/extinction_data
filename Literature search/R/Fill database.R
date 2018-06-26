@@ -8,7 +8,7 @@ setwd("C:/Users/cris.carmona/Documents/MEGAsync/Projects/Post-doc/Riesgo de exti
 xlsxfiles <- list.files(path = ".", pattern='*\\.xlsx$', all.files=TRUE)
 xlsxfiles
 
-library(openxlsx)
+library(openxlsx) #instalar primero
 import.list <- lapply(xlsxfiles, read.xlsx, sheet=1, colNames = TRUE, na.strings=c("NA","na","N","-","---"," ","",".","sin dato","SD","sd","Sin Dato", -999,"-999"))
 
 
@@ -34,12 +34,12 @@ db.rep <- db[db$Class %in% c("REPTILIA") & !is.na(db$male_svl_cm) & !is.na(db$fe
 str(db.rep)#253 obs
 
 db.rep[1:5,"binomial"]
-db.rep[1:5,]
-#[1] "Acanthodactylus erythrurus" 13-jun-2018  mating system and ASR
-#"Acanthophis laevis"   no data available (CCI 13/06/2018)
-#[3] "Acanthophis rugosus"        no data available (CCI 13/06/2018)
-#"Ameiva atrigularis"        no data available (CCI 13/06/2018)
-#[5] "Ameiva praesignis" no data available (CCI 13/06/2018)
+#db.rep[1:5,]
+# [1] "Acanthodactylus erythrurus" data recorded (CCI 26/jun/18)
+# [2] "Acanthophis laevis"        no data available (CCI 26/jun/28)
+# [3] "Acanthophis rugosus"       
+# [4] "Acrochordus arafurae"      
+# [5] "Acrochordus granulatus" 
 
 db.rep[6:10,"binomial"]
 #[1] "Anilios ammodytes" no data available (CCI 13/06/2018) 
