@@ -35,20 +35,27 @@ str(db.rep)#253 obs
 
 db.rep[1:5,"binomial"]
 #db.rep[1:5,]
-# [1] "Acanthodactylus erythrurus" data recorded (CCI 26/jun/18)
-# [2] "Acanthophis laevis"        no data available (CCI 26/jun/28)
-# [3] "Acanthophis rugosus"       
-# [4] "Acrochordus arafurae"      
-# [5] "Acrochordus granulatus" 
+# [1] "Acanthodactylus erythrurus" ASR and mating system (CCI 26/06/18)
+# [2] "Acanthophis laevis"        no data available (CCI 26/06/28)
+# [3] "Acanthophis rugosus"       no data available (CCI 13/06/2018)
+# [4] "Acrochordus arafurae"      scrambling mating system (CCI 27/06/2018)
+# [5] "Acrochordus granulatus"    no data available (CCI 27/06/2018)
 
 db.rep[6:10,"binomial"]
-#[1] "Anilios ammodytes" no data available (CCI 13/06/2018) 
-#"Anilios australis"     no data available (CCI 13/06/2018) 
-#[3] "Anilios bituberculatus"  no data available (CCI 13/06/2018) 
-#"Anilios diversus"      no data available (CCI 13/06/2018) 
-#[5] "Anilios endoterus"   no data available (CCI 13/06/2018) 
+# [1] "Agkistrodon contortrix"
+# [2] "Agkistrodon piscivorus"
+# [3] "Aipysurus laevis"      
+# [4] "Ameiva atrigularis"   no data available (CCI 13/06/2018) 
+# [5] "Ameiva praesignis"   no data available (CCI 13/06/2018)
+
 
 db.rep[11:15,"binomial"]
+# [1] "Anilios ammodytes" no data available (CCI 13/06/2018) 
+# [2]"Anilios australis"     no data available (CCI 13/06/2018) 
+# [3] "Anilios bituberculatus"  no data available (CCI 13/06/2018) 
+# [4]"Anilios diversus"      no data available (CCI 13/06/2018) 
+# [5] "Anilios endoterus"   no data available (CCI 13/06/2018) 
+
 #[1] "Anilios ligatus"     no data available (CCI 13/06/2018) 
 #"Anilios pinguis"    no data available (CCI 13/06/2018) 
 #[3] "Anolis carolinensis"  ASR and Mating system already known from adw
