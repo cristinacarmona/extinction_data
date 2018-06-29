@@ -42,11 +42,12 @@ db.rep[1:5,"binomial"]
 # [5] "Acrochordus granulatus"    no data available (CCI 27/06/2018)
 
 db.rep[6:10,"binomial"]
-# [1] "Agkistrodon contortrix"
-# [2] "Agkistrodon piscivorus"
-# [3] "Aipysurus laevis"      
+# [1] "Agkistrodon contortrix"  Added ASR (CCI 29 jun 2018)
+# [2] "Agkistrodon piscivorus"  data already known
+# [3] "Aipysurus laevis"       Added ASR and sex dimorphism (CCI 29 jun 2018)
 # [4] "Ameiva atrigularis"   no data available (CCI 13/06/2018) 
 # [5] "Ameiva praesignis"   no data available (CCI 13/06/2018)
+
 
 
 db.rep[11:15,"binomial"]
@@ -56,11 +57,17 @@ db.rep[11:15,"binomial"]
 # [4]"Anilios diversus"      no data available (CCI 13/06/2018) 
 # [5] "Anilios endoterus"   no data available (CCI 13/06/2018) 
 
+db.rep[16:20,"binomial"]
 #[1] "Anilios ligatus"     no data available (CCI 13/06/2018) 
 #"Anilios pinguis"    no data available (CCI 13/06/2018) 
 #[3] "Anolis carolinensis"  ASR and Mating system already known from adw
 #"Antaresia childreni"  no data available(CCI 13/06/2018)
 #[5] "Antaresia maculosa"  no data available (CCI 13/06/2018)
 
-
+db.rep[21:25,"binomial"]
+# [1] "Antaresia perthensis"    
+# [2] "Antaresia stimsoni"      
+# [3] "Archaeolacerta bedriagae"
+# [4] "Arizona elegans"         
+# [5] "Aspidites melanocephalus"
 
