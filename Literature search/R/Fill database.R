@@ -35,11 +35,19 @@ str(db.mam)#1174 obs
 
 db.mam[1:5,"binomial"]
 db.rep[1:5,]
-# [1] "Acomys cahirinus"  #no data  27 06 2018 PG
+# [1] "Acomys cahirinus"  #no data  27 06 2018 PG added a comment
 # [2] "Acomys russatus"     #no data
 # [3] "Acomys spinosissimus" #no data
 # [4] "Acomys subspinosus"  #no data
 # [5] "Acomys wilsoni"  #no data
+
+db.mam[6:10,"binomial"]
+db.mam[6:10,]
+# [1] "Aconaemys fuscus"    ASR ADD 28.06.2018  
+# [2]"Acrobates pygmaeus"    Di
+# [3]"Addax nasomaculatus"  30.06
+# [4] "Aepyceros melampus"    30.06
+# [5]"Aepyprymnus rufescens" 30.06 dimo/mating sy/
 
 db.rep[6:10,"binomial"]
 #[1] "Anilios ammodytes" no data available (CCI 13/06/2018) 
