@@ -49,7 +49,6 @@ db.rep[6:10,"binomial"]
 # [5] "Ameiva praesignis"   no data available (CCI 13/06/2018)
 
 
-
 db.rep[11:15,"binomial"]
 # [1] "Anilios ammodytes" no data available (CCI 13/06/2018) 
 # [2]"Anilios australis"     no data available (CCI 13/06/2018) 
@@ -65,9 +64,15 @@ db.rep[16:20,"binomial"]
 #[5] "Antaresia maculosa"  no data available (CCI 13/06/2018)
 
 db.rep[21:25,"binomial"]
-# [1] "Antaresia perthensis"    
-# [2] "Antaresia stimsoni"      
-# [3] "Archaeolacerta bedriagae"
-# [4] "Arizona elegans"         
-# [5] "Aspidites melanocephalus"
+# [1] "Antaresia perthensis"  no data available (CCI 03/07/2018)  
+# [2] "Antaresia stimsoni"    found derived ASR from pythons encountered on road and marked (CCI 03/07/2018)
+# [3] "Archaeolacerta bedriagae" no data available (CCI 03/07/2018)
+# [4] "Arizona elegans"         no data available for ASR (CCI 03/07/2018)
+# [5] "Aspidites melanocephalus" no data available for ASR (CCI 03/07/2018)
 
+db.rep[26:30, "binomial"]
+# [1] "Aspidites ramsayi"          
+# [2] "Aspidomorphus lineaticollis"
+# [3] "Aspidomorphus muelleri"     
+# [4] "Aspidomorphus schlegelii"   
+# [5] "Atractus major"
