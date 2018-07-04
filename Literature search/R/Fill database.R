@@ -71,8 +71,8 @@ db.rep[21:25,"binomial"]
 # [5] "Aspidites melanocephalus" no data available for ASR (CCI 03/07/2018)
 
 db.rep[26:30, "binomial"]
-# [1] "Aspidites ramsayi"          
-# [2] "Aspidomorphus lineaticollis"
-# [3] "Aspidomorphus muelleri"     
-# [4] "Aspidomorphus schlegelii"   
+# [1] "Aspidites ramsayi"        No data available for ASR (CCI 04/07/2018)
+# [2] "Aspidomorphus lineaticollis" found ASR (CCI 04/07/2018)
+# [3] "Aspidomorphus muelleri"     found ASR (CCI 04/07/2018)
+# [4] "Aspidomorphus schlegelii"   found ASR (CCI 04/07/2018)
 # [5] "Atractus major"
