@@ -75,4 +75,11 @@ db.rep[26:30, "binomial"]
 # [2] "Aspidomorphus lineaticollis" found ASR (CCI 04/07/2018)
 # [3] "Aspidomorphus muelleri"     found ASR (CCI 04/07/2018)
 # [4] "Aspidomorphus schlegelii"   found ASR (CCI 04/07/2018)
-# [5] "Atractus major"
+# [5] "Atractus major" No data available (CCI 05/07/2018)
+
+db.rep[31:35, "binomial"]
+# [1] "Atractus resplendens"  No data available (CCI 05/07/2018)   
+# [2] "Austrelaps labialis"    No data available (CCI 05/07/2018)  
+# [3] "Basiliscus vittatus"   No data available (CCI 05/07/2018)
+# [4] "Brachyurophis approximans" No data available (CCI 05/07/2018)
+# [5] "Brachyurophis australis"   No data available (CCI 05/07/2018)
