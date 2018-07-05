@@ -83,3 +83,10 @@ db.rep[31:35, "binomial"]
 # [3] "Basiliscus vittatus"   No data available (CCI 05/07/2018)
 # [4] "Brachyurophis approximans" No data available (CCI 05/07/2018)
 # [5] "Brachyurophis australis"   No data available (CCI 05/07/2018)
+
+db.rep[36:40, "binomial"]
+# [1] "Brachyurophis fasciolatus"  No data available (CCI 05/07/2018)
+# [2] "Brachyurophis incinctus"    No data available (CCI 05/07/2018)
+# [3] "Brachyurophis roperi"       No data available (CCI 05/07/2018)
+# [4] "Brachyurophis semifasciatus" No data available (CCI 05/07/2018)
+# [5] "Bradypodion caffer"  No data available (CCI 05/07/2018)
