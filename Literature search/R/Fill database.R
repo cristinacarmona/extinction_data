@@ -89,4 +89,30 @@ db.rep[36:40, "binomial"]
 # [2] "Brachyurophis incinctus"    No data available (CCI 05/07/2018)
 # [3] "Brachyurophis roperi"       No data available (CCI 05/07/2018)
 # [4] "Brachyurophis semifasciatus" No data available (CCI 05/07/2018)
-# [5] "Bradypodion caffer"  No data available (CCI 05/07/2018)
+# [5] "Bradypodion caffer"  Added data for sex.dim (CCI 06/07/2018) 
+
+db.rep[41:45, "binomial"]
+# [1] "Bradypodion damaranum"    Added data for sex.dim (CCI 06/07/2018) 
+# [2] "Bradypodion gutturale"    Added data for sex.dim (CCI 06/07/2018) 
+# [3] "Bradypodion occidentale"   Added data for sex.dim (CCI 06/07/2018)
+# [4] "Bradypodion pumilum"       Multiple patternity clutches so should be polygamous; ASR derived from study evaluating survival and immigrtaion, 37 fem and 60 males captured (CCI 06/07/2018)
+# [5] "Bradypodion taeniabronchum"Added data for sex.dim (CCI 06/07/2018)
+
+db.rep[46:50, "binomial"]
+# [1] "Bradypodion transvaalense" Added data for sex.dim (CCI 06/07/2018)
+# [2] "Bradypodion ventrale"     Added data for sex.dim (CCI 06/07/2018)
+# [3] "Brookesia confidens"      No data available (CCI 06/07/2018)
+# [4] "Brookesia desperata"      No data available (CCI 06/07/2018)
+# [5] "Brookesia micra"   No data available (CCI 06/07/2018)
+
+db.rep[51:60, "binomial"]
+# [1] "Brookesia tristis"     
+# [2] "Caiman crocodilus"     
+# [3] "Caiman yacare"         
+# [4] "Calamaria gervaisi"    
+# [5] "Calamaria lumbricoidea"
+# [6] "Calamaria virgulata"   
+# [7] "Carphophis amoenus"    
+# [8] "Carphophis vermis"     
+# [9] "Cerberus australis"    
+# [10] "Cerberus rynchops" 
