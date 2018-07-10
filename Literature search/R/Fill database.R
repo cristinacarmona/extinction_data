@@ -117,3 +117,14 @@ db.rep[51:60, "binomial"]
 # [9] "Cerberus australis"    No data available (CCI 09/07/2018)
 # [10] "Cerberus rynchops"  No data available (CCI 09/07/2018)
 
+db.rep[61:70, "binomial"]
+# [1] "Chalcides bedriagai" No accurate asr available (CCI 10/07/2018)
+# [2] "Chalcides striatus"  No data available (CCI 10/07/2018)    
+# [3] "Chamaeleo dilepis"       Added data for sex.dim (CCI 10/07/2018)
+# [4] "Chilomeniscus stramineus" No data available (CCI 10/07/2018)
+# [5] "Chlamydosaurus kingii"  Added mating system, asr and sex.dim (CCI 10/07/2018) 
+# [6] "Clonophis kirtlandii"    
+# [7] "Coluber constrictor"     
+# [8] "Coniophanes fissidens"   
+# [9] "Conopsis nasus"          
+# [10] "Coronella austriaca" 
