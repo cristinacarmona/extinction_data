@@ -123,8 +123,21 @@ db.rep[61:70, "binomial"]
 # [3] "Chamaeleo dilepis"       Added data for sex.dim (CCI 10/07/2018)
 # [4] "Chilomeniscus stramineus" No data available (CCI 10/07/2018)
 # [5] "Chlamydosaurus kingii"  Added mating system, asr and sex.dim (CCI 10/07/2018) 
-# [6] "Clonophis kirtlandii"    
-# [7] "Coluber constrictor"     
-# [8] "Coniophanes fissidens"   
-# [9] "Conopsis nasus"          
-# [10] "Coronella austriaca" 
+# [6] "Clonophis kirtlandii"    No data available (CCI 11/07/2018)
+# [7] "Coluber constrictor"     No data available (CCI 11/07/2018)
+# [8] "Coniophanes fissidens"   No data available (CCI 11/07/2018)
+# [9] "Conopsis nasus"          No data available (CCI 11/07/2018)
+[10] "Coronella austriaca"  Acceder desde la UNAM a: https://doi.org/10.1016/j.jcz.2017.09.007
+
+
+db.rep[71:80, "binomial"]
+# [1] "Crocodylus moreletii" Added ASR (CCI 11/07/2018)
+# [2] "Crotalus atrox"      
+# [3] "Crotalus cerastes"   
+# [4] "Crotalus durissus"   
+# [5] "Crotalus enyo"       
+# [6] "Crotalus horridus"   
+# [7] "Crotalus lepidus"    
+# [8] "Crotalus molossus"   
+# [9] "Crotalus pricei"     
+# [10] "Crotalus ruber"
