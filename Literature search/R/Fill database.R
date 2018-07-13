@@ -132,7 +132,7 @@ db.rep[61:70, "binomial"]
 
 db.rep[71:80, "binomial"]
 # [1] "Crocodylus moreletii" Added ASR (CCI 11/07/2018)
-# [2] "Crotalus atrox"      
+# [2] "Crotalus atrox"      Added mating system, sex.dim and ASR (CCI 11/07/2018)
 # [3] "Crotalus cerastes"   
 # [4] "Crotalus durissus"   
 # [5] "Crotalus enyo"       
