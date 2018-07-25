@@ -133,11 +133,11 @@ db.rep[61:70, "binomial"]
 db.rep[71:80, "binomial"]
 # [1] "Crocodylus moreletii" Added ASR (CCI 11/07/2018)
 # [2] "Crotalus atrox"      Added mating system, sex.dim and ASR (CCI 11/07/2018)
-# [3] "Crotalus cerastes"   
-# [4] "Crotalus durissus"   
-# [5] "Crotalus enyo"       
-# [6] "Crotalus horridus"   
-# [7] "Crotalus lepidus"    
-# [8] "Crotalus molossus"   
+# [3] "Crotalus cerastes"   No data available (CCI 24/07/2018) 
+# [4] "Crotalus durissus"  No data available (CCI 25/07/2018) 
+# [5] "Crotalus enyo"       No data available (CCI 25/07/2018)
+# [6] "Crotalus horridus"   Sex ratio dubious...unsure if I can use it: http://eherp.org/pdf/88639.pdf (CCI 25/07/2018)
+# [7] "Crotalus lepidus"    Found info for colour dimorphism (CCI 25/07/2018)
+# [8] "Crotalus molossus"   No data available (CCI 25/07/2018)
 # [9] "Crotalus pricei"     
 # [10] "Crotalus ruber"
