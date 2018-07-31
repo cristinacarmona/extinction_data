@@ -127,7 +127,7 @@ db.rep[61:70, "binomial"]
 # [7] "Coluber constrictor"     No data available (CCI 11/07/2018)
 # [8] "Coniophanes fissidens"   No data available (CCI 11/07/2018)
 # [9] "Conopsis nasus"          No data available (CCI 11/07/2018)
-[10] "Coronella austriaca"  Acceder desde la UNAM a: https://doi.org/10.1016/j.jcz.2017.09.007
+#[10] "Coronella austriaca"  ASR for 18 years of surveys 0.41 (89 males and 127 females) Average of 18 years of surveys marks and recaptures of adults (CCI 31/07/2018)
 
 
 db.rep[71:80, "binomial"]
@@ -139,5 +139,5 @@ db.rep[71:80, "binomial"]
 # [6] "Crotalus horridus"   Sex ratio dubious...unsure if I can use it: http://eherp.org/pdf/88639.pdf (CCI 25/07/2018)
 # [7] "Crotalus lepidus"    Found info for colour dimorphism (CCI 25/07/2018)
 # [8] "Crotalus molossus"   No data available (CCI 25/07/2018)
-# [9] "Crotalus pricei"     
-# [10] "Crotalus ruber"
+# [9] "Crotalus pricei"    Sex ratio available but it is unclear which are adults and which juveniles in: https://www.jstor.org/stable/pdf/23325733.pdf?casa_token=cxJdnwE8DuUAAAAA:89jou395feAO7TM4jMksYtIZ0bHwS1xr-NIGhogZhL2kuuaSNqMFW9z-9QZeyToCLXHYa7DibpsSpSlg7S8xgW7hmhAJUj7ZJhw44H6YoPN8ExpS-WcX0Q (CCI 27 jul 2018)
+# [10] "Crotalus ruber"   No data available (CCI 31/07/2018)
