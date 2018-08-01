@@ -6,10 +6,10 @@
 setwd("C:/Users/cris.carmona/Documents/MEGAsync/Projects/Post-doc/Riesgo de extinción y selección sexual/extinction_data/Literature search/input")
 
 xlsxfiles <- list.files(path = ".", pattern='*\\.xlsx$', all.files=TRUE)
-xlsxfiles
+xlsxfiles[2]
 
 library(openxlsx) #instalar primero
-import.list <- lapply(xlsxfiles, read.xlsx, sheet=1, colNames = TRUE, na.strings=c("NA","na","N","-","---"," ","",".","sin dato","SD","sd","Sin Dato", -999,"-999"))
+import.list <- lapply(xlsxfiles[2], read.xlsx, sheet=1, colNames = TRUE, na.strings=c("NA","na","N","-","---"," ","",".","sin dato","SD","sd","Sin Dato", -999,"-999"))
 
 
 #str(import.list)
@@ -141,3 +141,25 @@ db.rep[71:80, "binomial"]
 # [8] "Crotalus molossus"   No data available (CCI 25/07/2018)
 # [9] "Crotalus pricei"    Sex ratio available but it is unclear which are adults and which juveniles in: https://www.jstor.org/stable/pdf/23325733.pdf?casa_token=cxJdnwE8DuUAAAAA:89jou395feAO7TM4jMksYtIZ0bHwS1xr-NIGhogZhL2kuuaSNqMFW9z-9QZeyToCLXHYa7DibpsSpSlg7S8xgW7hmhAJUj7ZJhw44H6YoPN8ExpS-WcX0Q (CCI 27 jul 2018)
 # [10] "Crotalus ruber"   No data available (CCI 31/07/2018)
+
+db.rep[81:100, "binomial"]
+# [1] "Crotalus scutulatus"   No data available (CCI 31/07/2018)  
+# [2] "Crotalus tigris"         No data available (CCI 01/08/2018)
+# [3] "Crotalus triseriatus"    No data available (CCI 01/08/2018)
+# [4] "Crotalus viridis"        Adult male and female counts from a population of Crotalus viridis oreganus in Idaho, mark-recapture study: 195 adult males - 132 adult females (CCI 01/08/2018) 
+# [5] "Cryptophis pallidiceps"  No data available (CCI 01/08/2018)
+# [6] "Cyclocorus lineatus"     No data available (CCI 01/08/2018)
+# [7] "Demansia calodera"       No data available (CCI 01/08/2018)
+# [8] "Demansia olivacea"       No data available (CCI 01/08/2018)
+# [9] "Demansia papuensis"      No data available (CCI 01/08/2018)
+# [10] "Demansia psammophis"    No data available (CCI 01/08/2018) 
+# [11] "Demansia rufescens"     No data available (CCI 01/08/2018) 
+# [12] "Demansia torquata"       No data available (CCI 01/08/2018)
+# [13] "Dendrelaphis calligastra" No data available (CCI 01/08/2018)
+# [14] "Dendrelaphis punctulatus" No data available (CCI 01/08/2018)
+# [15] "Denisonia maculata"      No data available (CCI 01/08/2018)
+# [16] "Diadophis punctatus"     
+# [17] "Dipsas catesbyi"         
+# [18] "Drysdalia mastersii"     
+# [19] "Drysdalia rhodogaster"   
+# [20] "Echiopsis curta"   
