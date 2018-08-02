@@ -158,8 +158,30 @@ db.rep[81:100, "binomial"]
 # [13] "Dendrelaphis calligastra" No data available (CCI 01/08/2018)
 # [14] "Dendrelaphis punctulatus" No data available (CCI 01/08/2018)
 # [15] "Denisonia maculata"      No data available (CCI 01/08/2018)
-# [16] "Diadophis punctatus"     
-# [17] "Dipsas catesbyi"         
-# [18] "Drysdalia mastersii"     
-# [19] "Drysdalia rhodogaster"   
-# [20] "Echiopsis curta"   
+# [16] "Diadophis punctatus"     Found ASR but estimated it from figure: adult males 38, adult females 48 (Riedle 2014) (CCI 02/08/2018)
+# [17] "Dipsas catesbyi"         No data available (CCI 02/08/2018)
+# [18] "Drysdalia mastersii"     No data available (CCI 02/08/2018)
+# [19] "Drysdalia rhodogaster"   No data available (CCI 02/08/2018)
+# [20] "Echiopsis curta"          No data available (CCI 02/08/2018)
+
+db.rep[101:120, "binomial"]
+# [1] "Elaphe climacophora"      
+# [2] "Elapognathus minor"       
+# [3] "Enhydrina schistosa"      
+# [4] "Enhydris enhydris"        
+# [5] "Farancia erytrogramma"    
+# [6] "Fordonia leucobalia"      
+# [7] "Geophis brachycephalus"   
+# [8] "Geophis nasalis"          
+# [9] "Gonatodes albogularis"    
+# [10] "Gyalopion canum"          
+# [11] "Hemiaspis damelii"        
+# [12] "Hemidactylus turcicus"    
+# [13] "Heterodon nasicus"        
+# [14] "Homalopsis buccata"       
+# [15] "Hoplocephalus bungaroides"
+# [16] "Hoplocephalus stephensii" 
+# [17] "Hydrophis elegans"        
+# [18] "Hydrophis platurus"       
+# [19] "Iberolacerta aranica"     
+# [20] "Iberolacerta aurelioi"
