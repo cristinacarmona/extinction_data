@@ -164,19 +164,19 @@ db.rep[81:100, "binomial"]
 # [19] "Drysdalia rhodogaster"   No data available (CCI 02/08/2018)
 # [20] "Echiopsis curta"          No data available (CCI 02/08/2018)
 
-db.rep[101:120, "binomial"]
-# [1] "Elaphe climacophora"      
-# [2] "Elapognathus minor"       
-# [3] "Enhydrina schistosa"      
-# [4] "Enhydris enhydris"        
-# [5] "Farancia erytrogramma"    
-# [6] "Fordonia leucobalia"      
-# [7] "Geophis brachycephalus"   
-# [8] "Geophis nasalis"          
-# [9] "Gonatodes albogularis"    
-# [10] "Gyalopion canum"          
-# [11] "Hemiaspis damelii"        
-# [12] "Hemidactylus turcicus"    
+db.rep[101:253, "binomial"]
+# [1] "Elaphe climacophora"     No data available (CCI 06/08/2018) 
+# [2] "Elapognathus minor"       No data available (CCI 06/08/2018)
+# [3] "Enhydrina schistosa"      Collection data available from a population in Malaysia: ASR = 0.56, 80 males and 62 females labeled as ADULTS explicitly (CCI 06/08/2018)
+# [4] "Enhydris enhydris"        ASR based on collected individuals 351 males and 258 females (CCI 06/08/2018) 
+# [5] "Farancia erytrogramma"    No data available (CCI 06/08/2018)
+# [6] "Fordonia leucobalia"      ASR based on captured individuals 21 females and 14 males (CCI 06/08/2018)
+# [7] "Geophis brachycephalus"   No data available (CCI 07/08/2018)
+# [8] "Geophis nasalis"          No data available (CCI 07/08/2018)
+# [9] "Gonatodes albogularis"     ASR based on captured and preserved individuals: adult males (69), and adult females (57) (CCI 07/08/2018)
+# [10] "Gyalopion canum"          No data available (CCI 07/08/2018)
+# [11] "Hemiaspis damelii"        No data available (CCI 07/08/2018)
+# [12] "Hemidactylus turcicus"    ASR based on captured and preserved individuals: 75 adult males, 66 adult females (CCI 07/08/2018)
 # [13] "Heterodon nasicus"        
 # [14] "Homalopsis buccata"       
 # [15] "Hoplocephalus bungaroides"
