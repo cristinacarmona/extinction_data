@@ -177,11 +177,11 @@ db.rep[101:253, "binomial"]
 # [10] "Gyalopion canum"          No data available (CCI 07/08/2018)
 # [11] "Hemiaspis damelii"        No data available (CCI 07/08/2018)
 # [12] "Hemidactylus turcicus"    ASR based on captured and preserved individuals: 75 adult males, 66 adult females (CCI 07/08/2018)
-# [13] "Heterodon nasicus"        
-# [14] "Homalopsis buccata"       
-# [15] "Hoplocephalus bungaroides"
-# [16] "Hoplocephalus stephensii" 
-# [17] "Hydrophis elegans"        
-# [18] "Hydrophis platurus"       
-# [19] "Iberolacerta aranica"     
-# [20] "Iberolacerta aurelioi"
+# [13] "Heterodon nasicus"        No reliable data found, found one reference but it is not clear whether individuals were marked or not and how [The sex ratio of the 75 H. nasicus captured on TSP was slightly male-biased, with males representing 52% of captures. Young-of-year snakes comprised 19 (52.7%) of the 36 female and 29 (74.4%) of the 39 male snakes http://thekeep.eiu.edu/cgi/viewcontent.cgi?article=1046&context=theses]
+# [14] "Homalopsis buccata"       No data available (CCI 07/08/2018)
+# [15] "Hoplocephalus bungaroides" Sexual dimorphism data added (CCI 07/08/2018)
+# [16] "Hoplocephalus stephensii"  No data available (CCI 07/08/2018)
+# [17] "Hydrophis elegans"        No reliable data available (CCI 07/08/2018)
+# [18] "Hydrophis platurus"       No data available (CCI 07/08/2018)
+# [19] "Iberolacerta aranica"     No data available (CCI 07/08/2018)
+# [20] "Iberolacerta aurelioi"  No data available (CCI 07/08/2018)
