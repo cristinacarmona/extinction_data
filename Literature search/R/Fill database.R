@@ -164,7 +164,7 @@ db.rep[81:100, "binomial"]
 # [19] "Drysdalia rhodogaster"   No data available (CCI 02/08/2018)
 # [20] "Echiopsis curta"          No data available (CCI 02/08/2018)
 
-db.rep[101:253, "binomial"]
+db.rep[101:120, "binomial"]
 # [1] "Elaphe climacophora"     No data available (CCI 06/08/2018) 
 # [2] "Elapognathus minor"       No data available (CCI 06/08/2018)
 # [3] "Enhydrina schistosa"      Collection data available from a population in Malaysia: ASR = 0.56, 80 males and 62 females labeled as ADULTS explicitly (CCI 06/08/2018)
@@ -184,4 +184,37 @@ db.rep[101:253, "binomial"]
 # [17] "Hydrophis elegans"        No reliable data available (CCI 07/08/2018)
 # [18] "Hydrophis platurus"       No data available (CCI 07/08/2018)
 # [19] "Iberolacerta aranica"     No data available (CCI 07/08/2018)
-# [20] "Iberolacerta aurelioi"  No data available (CCI 07/08/2018)
+# [20] "Iberolacerta aurelioi"  Color dimorphism (CCI 07/08/2018)
+
+db.rep[121:140, "binomial"]
+# [1] "Iberolacerta bonnali"  No data available (CCI 08/08/2018)    
+# [2] "Iberolacerta cyreni"   Mating system, all adult lizards seen were captured (43 males and 34 females in 2002 and 33 males and 30 females in 2003) (CCI 08/08/2018)
+# [3] "Iberolacerta galani"      Color dimorphism (CCI 08/08/2018) 
+# [4] "Iberolacerta horvathi"     No data available (CCI 08/08/2018)
+# [5] "Iberolacerta martinezricai" Unreliable ASR as it is not clear whether individuals captured were marked or collected (http://www.podarcis.eu/AS/Bibliografie/BIB_7370.pdf) (CCI 08/08/2018)
+# [6] "Iberolacerta monticola"    Color dimorphism (CCI 08/08/2018)
+# [7] "Lacerta agilis"           Found mating system and sex.dim (CCI 08/08/2018) 
+# [8] "Lacerta bilineata"         
+# [9] "Lacerta schreiberi"        
+# [10] "Lampropeltis calligaster"  
+# [11] "Lampropeltis getula"       
+# [12] "Lampropeltis zonata"       
+# [13] "Leptodeira frenata"        
+# [14] "Leptodeira maculata"       
+# [15] "Leptodeira nigrofasciata"  
+# [16] "Leptodeira septentrionalis"
+# [17] "Liasis fuscus"             
+# [18] "Liasis olivaceus"          
+# [19] "Masticophis flagellum"     
+# [20] "Masticophis lateralis"
+
+db.rep[141:160, "binomial"]
+
+db.rep[161:180, "binomial"]
+
+db.rep[181:110, "binomial"]
+
+db.rep[111:130, "binomial"]
+
+db.rep[131:153, "binomial"]
+
