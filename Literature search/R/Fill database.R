@@ -71,9 +71,9 @@ db.mam <- db[db$Class %in% c("MAMMALIA") & !is.na(db$male_body_mass_g) & !is.na(
 str(db.mam)
 
 db.mam [11:16, "binomial"]
-#[1] "Aethomys chrysophilus" #no mating sy (06/08/2018) PG no ASR ni marcaje
-#[2] "Ailurus fulgens"      pendiente asr
-#[3] "Akodon boliviensis"   Mating st no data asr pendiente ###
+#[1] "Aethomys chrysophilus" #no mating sy (06/08/2018) PG no ASR ni marcaje sex di found
+#[2] "Ailurus fulgens"      
+#[3] "Akodon boliviensis"   Mating st no data NO asr### No data available
 #[4] "Akodon cursor"        
 #[5] "Alcelaphus buselaphus"
 #[6] "Alces alces" 
