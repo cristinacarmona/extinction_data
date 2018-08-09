@@ -194,8 +194,8 @@ db.rep[121:140, "binomial"]
 # [5] "Iberolacerta martinezricai" Unreliable ASR as it is not clear whether individuals captured were marked or collected (http://www.podarcis.eu/AS/Bibliografie/BIB_7370.pdf) (CCI 08/08/2018)
 # [6] "Iberolacerta monticola"    Color dimorphism (CCI 08/08/2018)
 # [7] "Lacerta agilis"           Found mating system and sex.dim (CCI 08/08/2018) 
-# [8] "Lacerta bilineata"         
-# [9] "Lacerta schreiberi"        
+# [8] "Lacerta bilineata"         Sexes shaped differently (CCI 09/08/2018)
+# [9] "Lacerta schreiberi"        Found mating system and sex.dim, but sex ratio was not given in desired format plus no info from how data was collected was given (CCI 09/08/2018)
 # [10] "Lampropeltis calligaster"  
 # [11] "Lampropeltis getula"       
 # [12] "Lampropeltis zonata"       
