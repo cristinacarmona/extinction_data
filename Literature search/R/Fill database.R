@@ -75,10 +75,19 @@ db.mam [11:16, "binomial"]
 #[2] "Ailurus fulgens"      no ASR
 #[3] "Akodon boliviensis"   Mating st no data NO asr### No data available
 #[4] "Akodon cursor"     no mating sy ASR = 43M:30F, .589
-#[5] "Alcelaphus buselaphus" no asr msy pendiente
-#[6] "Alces alces" 
-
-
+#[5] "Alcelaphus buselaphus" asr and mating system no available  sex dim know from adw (PG 11/08/2019)
+#[6] "Alces alces" sex dim and mating sys know from adw ASR from (Roönnega??rd et al., 2008)ASR's data from 1984 sex ratio in percentage in the article (PG 11/08/2018)
+db .mam [17:22, "binomial"]
+str(db.mam)
+db.mam [17:24, "binomial"]
+#[1] "Allactaga elater"           
+#[2] "Allenopithecus nigroviridis"
+#[3] "Alouatta belzebul"          
+#[4] "Alouatta caraya"            
+#[5] "Alouatta palliata"          
+#[6] "Amblysomus hottentotus"     
+#[7] "Ametrida centurio"          
+#[8] "Ammodorcas clarkei"   
 
 
 
