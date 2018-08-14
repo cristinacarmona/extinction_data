@@ -196,19 +196,39 @@ db.rep[121:140, "binomial"]
 # [7] "Lacerta agilis"           Found mating system and sex.dim (CCI 08/08/2018) 
 # [8] "Lacerta bilineata"         Sexes shaped differently (CCI 09/08/2018)
 # [9] "Lacerta schreiberi"        Found mating system and sex.dim, but sex ratio was not given in desired format plus no info from how data was collected was given (CCI 09/08/2018)
-# [10] "Lampropeltis calligaster"  
-# [11] "Lampropeltis getula"       
-# [12] "Lampropeltis zonata"       
-# [13] "Leptodeira frenata"        
-# [14] "Leptodeira maculata"       
-# [15] "Leptodeira nigrofasciata"  
-# [16] "Leptodeira septentrionalis"
-# [17] "Liasis fuscus"             
-# [18] "Liasis olivaceus"          
-# [19] "Masticophis flagellum"     
-# [20] "Masticophis lateralis"
+# [10] "Lampropeltis calligaster"  No data available (CCI 09/08/2018)
+# [11] "Lampropeltis getula"       No data available (CCI 09/08/2018)
+# [12] "Lampropeltis zonata"       No data available (CCI 13/08/2018)
+# [13] "Leptodeira frenata"        No data available (CCI 13/08/2018)
+# [14] "Leptodeira maculata"       No data available (CCI 13/08/2018)
+# [15] "Leptodeira nigrofasciata"  No data available (CCI 13/08/2018)
+# [16] "Leptodeira septentrionalis" No data available (CCI 13/08/2018)
+# [17] "Liasis fuscus"             Added mating system (CCI 13(08/2018))
+# [18] "Liasis olivaceus"          No data available(CCI 13/08/2018)
+# [19] "Masticophis flagellum"     No data available (CCI 13/08/2018)
+# [20] "Masticophis lateralis"  No data available (CCI 13/08/2018)
 
 db.rep[141:160, "binomial"]
+# [1] "Micrurus fulvius"      No data available (CCI 13/08/2018) 
+# [2] "Morelia amethistina"    ASR=0.77 derived from captures: 80 males and 24 females (CCI 13/08/2018)
+# [3] "Morelia bredli"         No data available (CCI 13/08/2018)
+# [4] "Morelia spilota"        Polygyny
+# [5] "Morelia viridis"        
+# [6] "Myron richardsonii"     
+# [7] "Natrix natrix"          
+# [8] "Neelaps bimaculatus"    
+# [9] "Nerodia erythrogaster"  
+# [10] "Nerodia fasciata"       
+# [11] "Nerodia sipedon"        
+# [12] "Nerodia taxispilota"    
+# [13] "Notechis scutatus"      
+# [14] "Opheodrys aestivus"     
+# [15] "Oxyrhopus melanogenys"  
+# [16] "Paleosuchus palpebrosus"
+# [17] "Paleosuchus trigonatus" 
+# [18] "Parasuta flagellum"     
+# [19] "Parasuta gouldii"       
+# [20] "Parasuta monachus" 
 
 db.rep[161:180, "binomial"]
 
