@@ -81,7 +81,7 @@ db .mam [17:22, "binomial"]
 str(db.mam)
 db.mam [17:24, "binomial"]
 #[1] "Allactaga elater"      no data available (PG 11/08/2018)     
-#[2] "Allenopithecus nigroviridis"
+#[2] "Allenopithecus nigroviridis" Mating sysstem (Fuentes, 1998) dim sex weight (no registrado en excel)(nowark, 1999) ASR available (13/08/2018)
 #[3] "Alouatta belzebul"          
 #[4] "Alouatta caraya"            
 #[5] "Alouatta palliata"          
