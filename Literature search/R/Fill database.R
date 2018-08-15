@@ -222,15 +222,35 @@ db.rep[141:160, "binomial"]
 # [11] "Nerodia sipedon"        Data already complete
 # [12] "Nerodia taxispilota"    No reliable data available (CCI 14/08/2018)
 # [13] "Notechis scutatus"      No data available (CCI 14/08/2018)
-# [14] "Opheodrys aestivus"     
-# [15] "Oxyrhopus melanogenys"  
-# [16] "Paleosuchus palpebrosus"
-# [17] "Paleosuchus trigonatus" 
-# [18] "Parasuta flagellum"     
-# [19] "Parasuta gouldii"       
-# [20] "Parasuta monachus" 
+# [14] "Opheodrys aestivus"     Data already complete
+# [15] "Oxyrhopus melanogenys"  No data available (CCI 15/08/2018)
+# [16] "Paleosuchus palpebrosus" No data available (CCI 15/08/2018)
+# [17] "Paleosuchus trigonatus" No data available (CCI 15/08/2018) 
+# [18] "Parasuta flagellum"     No data availalbe (CCI 15/08/2018)
+# [19] "Parasuta gouldii"       No data available (CCI 15/08/2018)
+# [20] "Parasuta monachus"  No data available (CCI 15/08/2018)
 
 db.rep[161:180, "binomial"]
+# [1] "Parasuta nigriceps"       No data available (CCI 15/08/2018)
+# [2] "Parasuta spectabilis"     No data available (CCI 15/08/2018)
+# [3] "Phrynosoma douglasii"     No data available (CCI 15/08/2018)
+# [4] "Phrynosoma hernandesi"    No data available (CCI 15/08/2018)
+# [5] "Phyllorhynchus browni"    No data available (CCI 15/08/2018)
+# [6] "Phyllorhynchus decurtatus" No data available (CCI 15/08/2018)
+# [7] "Pituophis melanoleucus"   ASR estimated with 92 males and 45 females (CCI 15/08/2018)
+# [8] "Podarcis bocagei"         sex.dim data added (CCI 15/08/2018)
+# [9] "Podarcis carbonelli"      No data available (CCI 15/08/2018)
+# [10] "Podarcis gaigeae"         
+# [11] "Podarcis hispanicus"      
+# [12] "Podarcis lilfordi"        
+# [13] "Podarcis muralis"         
+# [14] "Podarcis pityusensis"     
+# [15] "Podarcis siculus"         
+# [16] "Podarcis tiliguerta"      
+# [17] "Podarcis vaucheri"        
+# [18] "Psammodromus algirus"     
+# [19] "Psammodromus hispanicus"  
+# [20] "Pseudechis australis"
 
 db.rep[181:110, "binomial"]
 
