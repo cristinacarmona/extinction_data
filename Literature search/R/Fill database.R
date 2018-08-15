@@ -212,16 +212,16 @@ db.rep[141:160, "binomial"]
 # [1] "Micrurus fulvius"      No data available (CCI 13/08/2018) 
 # [2] "Morelia amethistina"    ASR=0.77 derived from captures: 80 males and 24 females (CCI 13/08/2018)
 # [3] "Morelia bredli"         No data available (CCI 13/08/2018)
-# [4] "Morelia spilota"        Polygyny
-# [5] "Morelia viridis"        
-# [6] "Myron richardsonii"     
-# [7] "Natrix natrix"          
-# [8] "Neelaps bimaculatus"    
-# [9] "Nerodia erythrogaster"  
-# [10] "Nerodia fasciata"       
-# [11] "Nerodia sipedon"        
-# [12] "Nerodia taxispilota"    
-# [13] "Notechis scutatus"      
+# [4] "Morelia spilota"        Polygyny, data for morelia spilota spilota, 6 females 9 males (Slip & Shine 1988), (CCI 14/08/2018)  
+# [5] "Morelia viridis"        captured adults: 56 males and 41 females (CCI 14/08/2018)
+# [6] "Myron richardsonii"     No data available (CCI 14/08/2018)
+# [7] "Natrix natrix"          Polygamous (multiple paternity in 27-91% of clutches), ASR based on captures of 58 females and 63 males
+# [8] "Neelaps bimaculatus"    No data available (CCI 14/08/2018)
+# [9] "Nerodia erythrogaster"  No data available (CCI 14/08/2018)
+# [10] "Nerodia fasciata"       No reliable data available (CCI 14/08/2018)
+# [11] "Nerodia sipedon"        Data already complete
+# [12] "Nerodia taxispilota"    No reliable data available (CCI 14/08/2018)
+# [13] "Notechis scutatus"      No data available (CCI 14/08/2018)
 # [14] "Opheodrys aestivus"     
 # [15] "Oxyrhopus melanogenys"  
 # [16] "Paleosuchus palpebrosus"
