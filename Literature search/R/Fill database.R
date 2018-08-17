@@ -221,7 +221,7 @@ db.rep[141:160, "binomial"]
 # [10] "Nerodia fasciata"       No reliable data available (CCI 14/08/2018)
 # [11] "Nerodia sipedon"        Data already complete
 # [12] "Nerodia taxispilota"    No reliable data available (CCI 14/08/2018)
-# [13] "Notechis scutatus"      No data available (CCI 14/08/2018)
+# [13] "Notechis scutatus"      ASR derived from male and female adult captures: 214 males and 78 females, already in Pipoly
 # [14] "Opheodrys aestivus"     Data already complete
 # [15] "Oxyrhopus melanogenys"  No data available (CCI 15/08/2018)
 # [16] "Paleosuchus palpebrosus" No data available (CCI 15/08/2018)
@@ -240,10 +240,10 @@ db.rep[161:180, "binomial"]
 # [7] "Pituophis melanoleucus"   ASR estimated with 92 males and 45 females (CCI 15/08/2018)
 # [8] "Podarcis bocagei"         sex.dim data added (CCI 15/08/2018)
 # [9] "Podarcis carbonelli"      No data available (CCI 15/08/2018)
-# [10] "Podarcis gaigeae"         
-# [11] "Podarcis hispanicus"      
-# [12] "Podarcis lilfordi"        
-# [13] "Podarcis muralis"         
+# [10] "Podarcis gaigeae"         No data available (CCI 16/08/2018)
+# [11] "Podarcis hispanicus"      Added sex.dim (CCI 16/08/2018)
+# [12] "Podarcis lilfordi"        ASR computed from captures of 113 males and 147 females (CCI 16/08/2018)
+# [13] "Podarcis muralis"         Multiple paternity in at least 87% of clutches. This is a sexually dimorphic lizard, with adult males having, in the study population, orange throat and ventral coloration, which is usually whitish in juveniles and females. 
 # [14] "Podarcis pityusensis"     
 # [15] "Podarcis siculus"         
 # [16] "Podarcis tiliguerta"      
