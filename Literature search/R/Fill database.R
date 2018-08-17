@@ -243,18 +243,40 @@ db.rep[161:180, "binomial"]
 # [10] "Podarcis gaigeae"         No data available (CCI 16/08/2018)
 # [11] "Podarcis hispanicus"      Added sex.dim (CCI 16/08/2018)
 # [12] "Podarcis lilfordi"        ASR computed from captures of 113 males and 147 females (CCI 16/08/2018)
-# [13] "Podarcis muralis"         Multiple paternity in at least 87% of clutches. This is a sexually dimorphic lizard, with adult males having, in the study population, orange throat and ventral coloration, which is usually whitish in juveniles and females. 
-# [14] "Podarcis pityusensis"     
-# [15] "Podarcis siculus"         
-# [16] "Podarcis tiliguerta"      
-# [17] "Podarcis vaucheri"        
-# [18] "Psammodromus algirus"     
-# [19] "Psammodromus hispanicus"  
-# [20] "Pseudechis australis"
+# [13] "Podarcis muralis"         Multiple paternity in at least 87% of clutches. This is a sexually dimorphic lizard, with adult males having, in the study population, orange throat and ventral coloration, which is usually whitish in juveniles and females. (CCI 16/08/2018) 
+# [14] "Podarcis pityusensis"     Added sex.dim (CCI 17/08/2018)
+# [15] "Podarcis siculus"         No data available (CCI 17/08/2018)
+# [16] "Podarcis tiliguerta"      No data available (CCI 17/08/2018)
+# [17] "Podarcis vaucheri"        No data available (CCI 17/08/2018)
+# [18] "Psammodromus algirus"     Mating system and sex.dim added (CCI 17/08/2018)
+# [19] "Psammodromus hispanicus"  Added sex.dim (CCI 17/08/2018)
+# [20] "Pseudechis australis"     No data available (CCI 17/08/2018)
 
-db.rep[181:110, "binomial"]
+db.rep[181:200, "binomial"]
+# [1] "Pseudechis butleri"      
+# [2] "Pseudechis papuanus"     
+# [3] "Pseudoferania polylepis" 
+# [4] "Pseudoficimia frontalis" 
+# [5] "Pseudonaja affinis"      
+# [6] "Pseudonaja modesta"      
+# [7] "Rankinia diemensis"      
+# [8] "Regina septemvittata"    
+# [9] "Rhadinaea flavilata"     
+# [10] "Rhinocheilus lecontei"   
+# [11] "Rhinoplocephalus bicolor"
+# [12] "Salvadora grahamiae"     
+# [13] "Salvadora lemniscata"    
+# [14] "Salvadora mexicana"      
+# [15] "Sauromalus hispidus"     
+# [16] "Simoselaps anomalus"     
+# [17] "Simoselaps bertholdi"    
+# [18] "Simoselaps littoralis"   
+# [19] "Sistrurus catenatus"     
+# [20] "Sonora semiannulata"
 
-db.rep[111:130, "binomial"]
+db.rep[201:220, "binomial"]
 
-db.rep[131:153, "binomial"]
+db.rep[221:240, "binomial"]
+
+db.rep[241:253, "binomial"]
 
