@@ -83,9 +83,9 @@ db.mam [17:24, "binomial"]
 #[1] "Allactaga elater"      no data available (PG 11/08/2018)     
 #[2] "Allenopithecus nigroviridis" Mating sysstem (Fuentes, 1998) dim sex weight (no registrado en excel)(nowark, 1999) ASR available (13/08/2018)
 #[3] "Alouatta belzebul"    mating sy and sex di know from adw asr no available (PG 14/08/2018)      
-#[4] "Alouatta caraya"            
-#[5] "Alouatta palliata"          
-#[6] "Amblysomus hottentotus"     
+#[4] "Alouatta caraya"      mating sy and sex di know from adw ASR know from pipoly (PG 16/08/2018)      
+#[5] "Alouatta palliata"       mating sy and sex di know from adw ASR know from pipoly (PG 16/08/2018)    
+#[6] "Amblysomus hottentotus"      sex di know from adw mating sy and ASR no available (PG 16/08/2018)
 #[7] "Ametrida centurio"          
 #[8] "Ammodorcas clarkei"   
 
