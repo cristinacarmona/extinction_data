@@ -264,9 +264,9 @@ db.rep[181:200, "binomial"]
 # [9] "Rhadinaea flavilata"     No data available (CCI 20/08/2018)
 # [10] "Rhinocheilus lecontei"   No data available (CCI 20/08/2018)
 # [11] "Rhinoplocephalus bicolor" No data available (CCI 20/08/2018)
-# [12] "Salvadora grahamiae"     
-# [13] "Salvadora lemniscata"    
-# [14] "Salvadora mexicana"      
+# [12] "Salvadora grahamiae"     No data available (CCI 20/08/2018)
+# [13] "Salvadora lemniscata"    No data available (CCI 20/08/2018)
+# [14] "Salvadora mexicana"      No data available (CCI 20/08/2018)
 # [15] "Sauromalus hispidus"     
 # [16] "Simoselaps anomalus"     
 # [17] "Simoselaps bertholdi"    
