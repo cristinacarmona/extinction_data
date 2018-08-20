@@ -86,10 +86,16 @@ db.mam [17:24, "binomial"]
 #[4] "Alouatta caraya"      mating sy and sex di know from adw ASR know from pipoly (PG 16/08/2018)      
 #[5] "Alouatta palliata"       mating sy and sex di know from adw ASR know from pipoly (PG 16/08/2018)    
 #[6] "Amblysomus hottentotus"      sex di know from adw mating sy and ASR no available (PG 16/08/2018)
-#[7] "Ametrida centurio"          
-#[8] "Ammodorcas clarkei"   
+#[7] "Ametrida centurio"          sex di "exhibits the greatest female-biased sexual size dimorphism" no added to data in excel,  mating sy no available, no ASR (19/08/2018)
+#[8] "Ammodorcas clarkei"   sex di added ASR nad mating sis no available (PG 19/08/2018)
 
-
-
+db.mam [25:31, "binomial"]
+#[1] "Ammotragus lervia"    mating and sex dim know feom adw ASR Added (PG 19/08/2018)
+#[2] "Anisomys imitator" no data available (19/08/2018)   
+#[3] "Anoura cultrata"      
+#[4] "Anoura geoffroyi"     
+#[5] "Anoura latidens"      
+#[6] "Anourosorex squamipes"
+#[7] "Antechinomys laniger"
 
 
