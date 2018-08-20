@@ -253,17 +253,17 @@ db.rep[161:180, "binomial"]
 # [20] "Pseudechis australis"     No data available (CCI 17/08/2018)
 
 db.rep[181:200, "binomial"]
-# [1] "Pseudechis butleri"      
-# [2] "Pseudechis papuanus"     
-# [3] "Pseudoferania polylepis" 
-# [4] "Pseudoficimia frontalis" 
-# [5] "Pseudonaja affinis"      
-# [6] "Pseudonaja modesta"      
-# [7] "Rankinia diemensis"      
-# [8] "Regina septemvittata"    
-# [9] "Rhadinaea flavilata"     
-# [10] "Rhinocheilus lecontei"   
-# [11] "Rhinoplocephalus bicolor"
+# [1] "Pseudechis butleri"      No data available (CCI 20/08/2018)
+# [2] "Pseudechis papuanus"     No data available (CCI 20/08/2018)
+# [3] "Pseudoferania polylepis" No data available (CCI 20/08/2018)
+# [4] "Pseudoficimia frontalis" No data available (CCI 20/08/2018)
+# [5] "Pseudonaja affinis"      No data available (CCI 20/08/2018)
+# [6] "Pseudonaja modesta"      No data available (CCI 20/08/2018)
+# [7] "Rankinia diemensis"      ASR 193 females and 123 males;based on average for: captures of 58 adults (20 females, 38 males) (Stuart-Smith et al. 2007) and N = 69 females, 22 males; N = 61 females, 58 males; N = 43 females, 5 males (Stuart-Smith et al., 2008)  (CCI 20/08/2018)
+# [8] "Regina septemvittata"    ASR based on captures of 47 males and 17 females adults (CCI 20/08/2018)
+# [9] "Rhadinaea flavilata"     No data available (CCI 20/08/2018)
+# [10] "Rhinocheilus lecontei"   No data available (CCI 20/08/2018)
+# [11] "Rhinoplocephalus bicolor" No data available (CCI 20/08/2018)
 # [12] "Salvadora grahamiae"     
 # [13] "Salvadora lemniscata"    
 # [14] "Salvadora mexicana"      
