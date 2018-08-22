@@ -91,7 +91,7 @@ db.mam [17:24, "binomial"]
 
 db.mam [25:31, "binomial"]
 #[1] "Ammotragus lervia"    mating and sex dim know feom adw ASR Added (PG 19/08/2018)
-#[2] "Anisomys imitator" no data available (19/08/2018)   
+#[2] "Anisomys imitator"    no data available (19/08/2018)   
 #[3] "Anoura cultrata"      
 #[4] "Anoura geoffroyi"     
 #[5] "Anoura latidens"      
