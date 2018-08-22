@@ -267,7 +267,7 @@ db.rep[181:200, "binomial"]
 # [12] "Salvadora grahamiae"     No data available (CCI 20/08/2018)
 # [13] "Salvadora lemniscata"    No data available (CCI 20/08/2018)
 # [14] "Salvadora mexicana"      No data available (CCI 20/08/2018)
-# [15] "Sauromalus hispidus"     
+# [15] "Sauromalus hispidus"     Added mating system (CCI 21/08/2018)
 # [16] "Simoselaps anomalus"     
 # [17] "Simoselaps bertholdi"    
 # [18] "Simoselaps littoralis"   
