@@ -2,4 +2,5 @@
 
 *.doc
 *.exe
+*.Rhistory
 temp/
