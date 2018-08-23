@@ -6,7 +6,7 @@
 setwd("C:/Users/cris.carmona/Documents/MEGAsync/Projects/Post-doc/Riesgo de extinción y selección sexual/extinction_data/Literature search/input")
 
 xlsxfiles <- list.files(path = ".", pattern='*\\.xlsx$', all.files=TRUE)
-xlsxfiles[2]
+
 
 library(openxlsx) #instalar primero
 import.list <- lapply(xlsxfiles[2], read.xlsx, sheet=1, colNames = TRUE, na.strings=c("NA","na","N","-","---"," ","",".","sin dato","SD","sd","Sin Dato", -999,"-999"))
@@ -28,13 +28,24 @@ names(db)
 table(db$Class)
 
 str(db[db$Class %in% "REPTILIA",]) #6278 obs
-
 db.rep <- db[db$Class %in% c("REPTILIA") & !is.na(db$male_svl_cm) & !is.na(db$female_svl_cm),]
+str(db.rep)#253 obs -> CCI
 
-str(db.rep)#253 obs
+db.mam <- db[db$Class %in% c("MAMMALIA") & !is.na(db$male_body_mass_g) & !is.na(db$female_body_mass_g),]
+str(db.mam)#1174 obs -> DIANA
+
+db.amph <- db[db$Class %in% c("AMPHIBIA") & !is.na(db$male_svl_cm) & !is.na(db$female_svl_cm),]
+str(db.amph)#661 obs -> MARIA PAULA
+head(db.amph)
+
+db.fish <- db[db$Class %in% c("ACTINOPTERYGII","CEPHALASPIDOMORPHI"," MYXINI", "CHONDRICHTHYES","SARCOPTERYGII") & !is.na(db$male_svl_cm) & !is.na(db$female_svl_cm),]
+str(db.fish)#96 obs -> OSCAR
+
+db.birds <- db[db$Class %in% c("AVES") & !is.na(db$male_body_mass_g) & !is.na(db$female_body_mass_g),]
+str(db.birds)#4544 obs -> Base de datos ALEX?
+
 
 db.rep[1:5,"binomial"]
-#db.rep[1:5,]
 # [1] "Acanthodactylus erythrurus" ASR and mating system (CCI 26/06/18)
 # [2] "Acanthophis laevis"        no data available (CCI 26/06/28)
 # [3] "Acanthophis rugosus"       no data available (CCI 13/06/2018)
@@ -268,13 +279,34 @@ db.rep[181:200, "binomial"]
 # [13] "Salvadora lemniscata"    No data available (CCI 20/08/2018)
 # [14] "Salvadora mexicana"      No data available (CCI 20/08/2018)
 # [15] "Sauromalus hispidus"     Added mating system (CCI 21/08/2018)
-# [16] "Simoselaps anomalus"     
-# [17] "Simoselaps bertholdi"    
-# [18] "Simoselaps littoralis"   
-# [19] "Sistrurus catenatus"     
-# [20] "Sonora semiannulata"
+# [16] "Simoselaps anomalus"     No data available (CCI 21/08/2018)
+# [17] "Simoselaps bertholdi"    No reliable data available, How & Shine (1999) do not say whether individuals captured were marked. (CCI 22/08/2018) 
+# [18] "Simoselaps littoralis"   No data available (CCI 22/08/2018) 
+# [19] "Sistrurus catenatus"     Added mating system and ASR based on captures of 19 females, 20 males in one locality and 18 females and 20 males from a second locality (CCI 22/08/2018)
+# [20] "Sonora semiannulata"      No data available (CCI 22/08/2018)
 
 db.rep[201:220, "binomial"]
+# [1] "Sphaerodactylus ariasae"     No data available (CCI 22/08/2018)
+# [2] "Sphaerodactylus parthenopion"  No data available (CCI 22/08/2018)
+# "Sphaerodactylus vincenti" Found svl and ASR for this spp. ASR based on captures of 48 males and 79 females (CCI 22/08/2018)
+# [3] "Stellagama stellio"    No data available (CCI 22/08/2018)      
+# [4] "Storeria dekayi"             ASR based on captures of adults 135 males and 138 females (CCI 23/08/2018)
+# [5] "Storeria occipitomaculata"   
+# [6] "Suta fasciata"               
+# [7] "Suta punctata"               
+# [8] "Suta suta"                   
+# [9] "Tantilla coronata"           
+# [10] "Tantilla gracilis"           
+# [11] "Tantilla hobartsmithi"       
+# [12] "Tantilla planiceps"          
+# [13] "Tarentola mauritanica"       
+# [14] "Teira dugesii"               
+# [15] "Thamnophis butleri"          
+# [16] "Thamnophis elegans"          
+# [17] "Thamnophis hammondii"        
+# [18] "Thamnophis ordinoides"       
+# [19] "Thamnophis proximus"         
+# [20] "Thamnophis sauritus"
 
 db.rep[221:240, "binomial"]
 
