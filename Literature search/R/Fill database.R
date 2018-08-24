@@ -2,7 +2,7 @@
 #Fill in data into database
 #########################################################
 #Load datasets
-
+ASR 
 setwd("C:/Users/cris.carmona/Documents/MEGAsync/Projects/Post-doc/Riesgo de extinción y selección sexual/extinction_data/Literature search/input")
 
 xlsxfiles <- list.files(path = ".", pattern='*\\.xlsx$', all.files=TRUE)
@@ -291,14 +291,19 @@ db.rep[201:220, "binomial"]
 # "Sphaerodactylus vincenti" Found svl and ASR for this spp. ASR based on captures of 48 males and 79 females (CCI 22/08/2018)
 # [3] "Stellagama stellio"    No data available (CCI 22/08/2018)      
 # [4] "Storeria dekayi"             ASR based on captures of adults 135 males and 138 females (CCI 23/08/2018)
-# [5] "Storeria occipitomaculata"   
-# [6] "Suta fasciata"               
-# [7] "Suta punctata"               
-# [8] "Suta suta"                   
-# [9] "Tantilla coronata"           
-# [10] "Tantilla gracilis"           
-# [11] "Tantilla hobartsmithi"       
-# [12] "Tantilla planiceps"          
+# [5] "Storeria occipitomaculata"   ASR based on data from collected adults 14 males and 27 females (Cahoe et al. 2004) and 39 males and 71 females collected (Blanchard 1937). (CCI 24/08/2018)
+# [6] "Suta fasciata"               No data available (CCI 24/08/2018)
+# [7] "Suta punctata"               No data available (CCI 24/08/2018)
+# [8] "Suta suta"                   No data availalbe (CCI 24/08/2018)
+# [9] "Tantilla coronata"           ASR found but sampling bias is argued: significantly male-biased captures we
+#                                   observed in those months on the SRS, which was similarly
+#                                  identified in an earlier study (Semlitsch et al., 1981). Greater
+#                                 movements by males have been associated with matesearching
+#                                 behavior in numerous snake species (Gibbons and Semlitsch, 1987; Gregory et al., 1987) and likely
+#                                 contribute to the pattern we observed. (Todd et al. 2008) (CCI 24/08/2018)
+# [10] "Tantilla gracilis"        No data available (CCI 24/08/2018)   
+# [11] "Tantilla hobartsmithi"    No data available (CCI 24/08/2018)   
+# [12] "Tantilla planiceps"       No data available (CCI 24/08/2018)   
 # [13] "Tarentola mauritanica"       
 # [14] "Teira dugesii"               
 # [15] "Thamnophis butleri"          
