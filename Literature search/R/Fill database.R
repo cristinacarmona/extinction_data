@@ -304,10 +304,10 @@ db.rep[201:220, "binomial"]
 # [10] "Tantilla gracilis"        No data available (CCI 24/08/2018)   
 # [11] "Tantilla hobartsmithi"    No data available (CCI 24/08/2018)   
 # [12] "Tantilla planiceps"       No data available (CCI 24/08/2018)   
-# [13] "Tarentola mauritanica"       
-# [14] "Teira dugesii"               
-# [15] "Thamnophis butleri"          
-# [16] "Thamnophis elegans"          
+# [13] "Tarentola mauritanica"    Sex.dim and ASR based on: captures of 76 males, 35 females (CCI 27/08/2018)
+# [14] "Teira dugesii"            ASR based on captures of 67 females and 54 males (CCI 27/08/2018)  
+# [15] "Thamnophis butleri"       No data available (CCI 27/08/2018)
+# [16] "Thamnophis elegans"        ASR based on captures of 104 females and 77 males (I excluded 6 females and 5 males smaller than 300 mm based on fig 1 as they could be neonates and one-year olds, CCI 27/08/2018)  
 # [17] "Thamnophis hammondii"        
 # [18] "Thamnophis ordinoides"       
 # [19] "Thamnophis proximus"         
