@@ -93,9 +93,20 @@ db.mam [25:31, "binomial"]
 #[1] "Ammotragus lervia"    mating and sex dim know feom adw ASR Added (PG 19/08/2018)
 #[2] "Anisomys imitator"    no data available (19/08/2018)   
 #[3] "Anoura cultrata"      dimo sex found (PG 21/08/2018)
-#[4] "Anoura geoffroyi"     sex di know from adw no mating dy ASR added (23/08/2018)
-#[5] "Anoura latidens"      
-#[6] "Anourosorex squamipes"
-#[7] "Antechinomys laniger"
+#[4] "Anoura geoffroyi"     sex di know from adw no mating dy ASR added (PG 23/08/2018)
+#[5] "Anoura latidens"      no data available (PG 26/08/2018)
+#[6] "Anourosorex squamipes" no data availabe (PG 26/08/2018)
+#[7] "Antechinomys laniger" no data available (PG 26/08/2018)
+db.mam [32:40, "binomial"]
+#1] "Antechinus adustus"   
+#[2] "Antechinus agilis"    
+#[3] "Antechinus bellus"    
+#[4] "Antechinus flavipes"  
+#[5] "Antechinus godmani"   
+#[6] "Antechinus leo"       
+#[7] "Antechinus minimus"   
+#[8] "Antechinus stuartii"  
+#[9] "Antechinus swainsonii"
+
 
 
