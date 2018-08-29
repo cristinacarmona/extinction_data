@@ -307,13 +307,46 @@ db.rep[201:220, "binomial"]
 # [13] "Tarentola mauritanica"    Sex.dim and ASR based on: captures of 76 males, 35 females (CCI 27/08/2018)
 # [14] "Teira dugesii"            ASR based on captures of 67 females and 54 males (CCI 27/08/2018)  
 # [15] "Thamnophis butleri"       No data available (CCI 27/08/2018)
-# [16] "Thamnophis elegans"        ASR based on captures of 104 females and 77 males (I excluded 6 females and 5 males smaller than 300 mm based on fig 1 as they could be neonates and one-year olds, CCI 27/08/2018)  
-# [17] "Thamnophis hammondii"        
-# [18] "Thamnophis ordinoides"       
-# [19] "Thamnophis proximus"         
-# [20] "Thamnophis sauritus"
+# [16] "Thamnophis elegans"       ASR based on captures of 104 females and 77 males (I excluded 6 females and 5 males smaller than 300 mm based on fig 1 as they could be neonates and one-year olds, CCI 27/08/2018)  
+# [17] "Thamnophis hammondii"     No data available (CCI 28/08/2018)   
+# [18] "Thamnophis ordinoides"    No data available (CCI 28/08/2018)   
+# [19] "Thamnophis proximus"      ASR based on captures of 80 males and 25 females (CCI 28/08/2018)  
+# [20] "Thamnophis sauritus"      ASR based on captures of 58 males and 51 females (CCI 28/08/2018)
 
 db.rep[221:240, "binomial"]
+# [1] "Thamnophis sauritus"  [20] del anterior    
+# [2] "Thamnophis sirtalis"      Data already known (CCI 28/08/2018)
+# [3] "Timon lepidus"            No data available (CCI 28/08/2018)
+# [4] "Tretanorhinus nigroluteus" No data available (CCI 28/08/2018)
+# [5] "Tropidoclonion lineatum"   No data available (CCI 28/08/2018)
+# [6] "Tropidonophis mairii"     
+# [7] "Varanus beccarii"         
+# [8] "Varanus bengalensis"      
+# [9] "Varanus boehmei"          
+# [10] "Varanus bogerti"          
+# [11] "Varanus cumingi"          
+# [12] "Varanus doreanus"         
+# [13] "Varanus exanthematicus"   
+# [14] "Varanus finschi"          
+# [15] "Varanus flavescens"       
+# [16] "Varanus glauerti"         
+# [17] "Varanus indicus"          
+# [18] "Varanus jobiensis"        
+# [19] "Varanus komodoensis"      
+# [20] "Varanus kordensis"
 
-db.rep[241:253, "binomial"]
-
+db.rep[241:254, "binomial"]
+# [1] "Varanus macraei"   
+# [2] "Varanus marmoratus"
+# [3] "Varanus nuchalis"  
+# [4] "Varanus olivaceus" 
+# [5] "Varanus prasinus"  
+# [6] "Varanus primordius"
+# [7] "Varanus rosenbergi"
+# [8] "Varanus salvadorii"
+# [9] "Varanus salvator"  
+# [10] "Varanus scalaris"  
+# [11] "Varanus spinulosus"
+# [12] "Varanus yemenensis"
+# [13] "Virginia valeriae" 
+# [14] "Zootoca vivipara" 
