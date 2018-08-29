@@ -319,21 +319,21 @@ db.rep[221:240, "binomial"]
 # [3] "Timon lepidus"            No data available (CCI 28/08/2018)
 # [4] "Tretanorhinus nigroluteus" No data available (CCI 28/08/2018)
 # [5] "Tropidoclonion lineatum"   No data available (CCI 28/08/2018)
-# [6] "Tropidonophis mairii"     
-# [7] "Varanus beccarii"         
-# [8] "Varanus bengalensis"      
-# [9] "Varanus boehmei"          
-# [10] "Varanus bogerti"          
-# [11] "Varanus cumingi"          
-# [12] "Varanus doreanus"         
-# [13] "Varanus exanthematicus"   
-# [14] "Varanus finschi"          
-# [15] "Varanus flavescens"       
-# [16] "Varanus glauerti"         
-# [17] "Varanus indicus"          
-# [18] "Varanus jobiensis"        
-# [19] "Varanus komodoensis"      
-# [20] "Varanus kordensis"
+# [6] "Tropidonophis mairii"     ASR based on captures of wet and dry seasons: 248 males and 543 females (CCI 29/08/2018)
+# [7] "Varanus beccarii"         No data available (CCI 29/08/2018)
+# [8] "Varanus bengalensis"      Data already known (CCI 29/08/2018)
+# [9] "Varanus boehmei"          No data available (CCI 29/08/2018)
+# [10] "Varanus bogerti"          No data available (CCI 29/08/2018)
+# [11] "Varanus cumingi"          No data available (CCI 29/08/2018)
+# [12] "Varanus doreanus"         No data available (CCI 29/08/2018)
+# [13] "Varanus exanthematicus"   No data available (CCI 29/08/2018)
+# [14] "Varanus finschi"          No data available (CCI 29/08/2018)
+# [15] "Varanus flavescens"       No data availabble (CCI 29/08/2018)
+# [16] "Varanus glauerti"         Added sex.dim (CCI 29/08/2018)
+# [17] "Varanus indicus"          ASR based on animals collected 48 males and 34 females (considering only those sexually mature) (CCI 29/08/2018)
+# [18] "Varanus jobiensis"        No data available (CCI 29/08/2018)
+# [19] "Varanus komodoensis"      No data available (CCI 29/08/2018)
+# [20] "Varanus kordensis"        No data available (CCI 29/08/2018)
 
 db.rep[241:254, "binomial"]
 # [1] "Varanus macraei"   
