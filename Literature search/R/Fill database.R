@@ -336,17 +336,17 @@ db.rep[221:240, "binomial"]
 # [20] "Varanus kordensis"        No data available (CCI 29/08/2018)
 
 db.rep[241:254, "binomial"]
-# [1] "Varanus macraei"   
-# [2] "Varanus marmoratus"
-# [3] "Varanus nuchalis"  
-# [4] "Varanus olivaceus" 
-# [5] "Varanus prasinus"  
-# [6] "Varanus primordius"
-# [7] "Varanus rosenbergi"
-# [8] "Varanus salvadorii"
-# [9] "Varanus salvator"  
-# [10] "Varanus scalaris"  
-# [11] "Varanus spinulosus"
-# [12] "Varanus yemenensis"
-# [13] "Virginia valeriae" 
-# [14] "Zootoca vivipara" 
+# [1] "Varanus macraei"           Size dimorphism, sexes alike (CCI 30/08/2018)
+# [2] "Varanus marmoratus"        No data available (CCI 30/08/2018)
+# [3] "Varanus nuchalis"          No data available (CCI 30/08/2018)
+# [4] "Varanus olivaceus"         ASR based on 8 individuals (6 males and 2 females)...not considered reliable (CCI 30/08/2018)
+# [5] "Varanus prasinus"          No data available (CCI 30/08/2018)
+# [6] "Varanus primordius"        No data available (CCI 30/08/2018)
+# [7] "Varanus rosenbergi"        ASR based on captures of 71 males and 77 females, monogamous pairs in 40%-80% of pairs throughout a breeding period (CCI 30/08/2018).
+# [8] "Varanus salvadorii"        No data available (CCI 30/08/2018)
+# [9] "Varanus salvator"          ASR based on captures of 33 individuals: 17 females and 16 males (CCI 30/08/2018)
+# [10] "Varanus scalaris"         No data available (CCI 30/08/2018)
+# [11] "Varanus spinulosus"       No data available (CCI 30/08/2018)
+# [12] "Varanus yemenensis"       No data available (CCI 30/08/2018)
+# [13] "Virginia valeriae"        *****ASR based on one thesis on Virginia valeriae pulchra: 36 mature males and 30 mature females (Ware 2008) (CCI 30/08/2018)
+# [14] "Zootoca vivipara"         ASR based on captures of 146 adults: 88 males and 58 females (CCI 30/08/2018)
