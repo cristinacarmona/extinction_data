@@ -98,8 +98,8 @@ db.mam [25:31, "binomial"]
 #[6] "Anourosorex squamipes" no data availabe (PG 26/08/2018)
 #[7] "Antechinomys laniger" no data available (PG 26/08/2018)
 db.mam [32:40, "binomial"]
-#1] "Antechinus adustus"   
-#[2] "Antechinus agilis"    
+#1] "Antechinus adustus"   Mating sy added sex dim no available ASR no available (PG 28/08/2018)
+#[2] "Antechinus agilis"    Mating sy added (PG 28/08/2018)
 #[3] "Antechinus bellus"    
 #[4] "Antechinus flavipes"  
 #[5] "Antechinus godmani"   
