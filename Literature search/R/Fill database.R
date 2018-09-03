@@ -100,9 +100,9 @@ db.mam [25:31, "binomial"]
 db.mam [32:40, "binomial"]
 #1] "Antechinus adustus"   Mating sy added sex dim no available ASR no available (PG 28/08/2018)
 #[2] "Antechinus agilis"    Mating sy added (PG 28/08/2018)
-#[3] "Antechinus bellus"    
-#[4] "Antechinus flavipes"  
-#[5] "Antechinus godmani"   
+#[3] "Antechinus bellus"    Sex dim added , added and coment AST mait no available (PG 01/09/2018)
+#[4] "Antechinus flavipes"  mating sy and asr no available sex di added (PG 01/09/2018)
+#[5] "Antechinus godmani"   No data available (PG 01/09/2018)
 #[6] "Antechinus leo"       
 #[7] "Antechinus minimus"   
 #[8] "Antechinus stuartii"  
