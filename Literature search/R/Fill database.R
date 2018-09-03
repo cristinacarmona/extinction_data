@@ -4,6 +4,9 @@
 #Load datasets
 setwd("C:/Users/peepi_000/Documents/extinction_data/Literature search/input")
 
+#setwd("C:/Users/cris.carmona/Documents/MEGAsync/Projects/Post-doc/Riesgo de extinción y selección sexual/extinction_data/Literature search/input")
+
+
 xlsxfiles <- list.files(path = ".", pattern='*\\.xlsx$', all.files=TRUE)
 xlsxfiles
 
@@ -23,7 +26,7 @@ attach(working.list)
 
 names(db)
 
-#Example with reptiles--------------
+#Example with mammals--------------
 #Choose Class to work with
 table(db$Class)
 
@@ -33,8 +36,8 @@ db.mam <- db[db$Class %in% c("MAMMALIA") & !is.na(db$male_body_mass_g) & !is.na(
 
 str(db.mam)#1174 obs
 
+#------------------------Trabajo PG:
 db.mam[1:5,"binomial"]
-db.rep[1:5,]
 # [1] "Acomys cahirinus"  #no data  27 06 2018 PG added a comment
 # [2] "Acomys russatus"     #no data
 # [3] "Acomys spinosissimus" #no data
@@ -42,44 +45,22 @@ db.rep[1:5,]
 # [5] "Acomys wilsoni"  #no data
 
 db.mam[6:10,"binomial"]
-db.mam[6:10,]
 # [1] "Aconaemys fuscus"    ASR ADD 28.06.2018  
 # [2]"Acrobates pygmaeus"    Di
 # [3]"Addax nasomaculatus"  30.06
 # [4] "Aepyceros melampus"    30.06
 # [5]"Aepyprymnus rufescens" 30.06 dimo/mating sy/
 
-db.rep[6:10,"binomial"]
-#[1] "Anilios ammodytes" no data available (CCI 13/06/2018) 
-#"Anilios australis"     no data available (CCI 13/06/2018) 
-#[3] "Anilios bituberculatus"  no data available (CCI 13/06/2018) 
-#"Anilios diversus"      no data available (CCI 13/06/2018) 
-#[5] "Anilios endoterus"   no data available (CCI 13/06/2018) 
-
-db.rep[11:15,"binomial"]
-#[1] "Anilios ligatus"     no data available (CCI 13/06/2018) 
-#"Anilios pinguis"    no data available (CCI 13/06/2018) 
-#[3] "Anolis carolinensis"  ASR and Mating system already known from adw
-#"Antaresia childreni"  no data available(CCI 13/06/2018)
-#[5] "Antaresia maculosa"  no data available (CCI 13/06/2018)
-
-str(db[db$Class %in% "MAMMALIA",])
-#5674 obs
-
-db.mam <- db[db$Class %in% c("MAMMALIA") & !is.na(db$male_body_mass_g) & !is.na(db$female_body_mass_g),]
-
-str(db.mam)
-
-db.mam [11:16, "binomial"]
+db.mam[11:16, "binomial"]
 #[1] "Aethomys chrysophilus" No ASR and mark dimo diferencia de peso, mating no encontredo ecepto un articulo que trabaja con sperma y suguiere un tipo de mating pero no lo menciona como tal
 #[2] "Ailurus fulgens"      no ASR
 #[3] "Akodon boliviensis"   Mating st no data NO asr### No data available
 #[4] "Akodon cursor"     no mating sy ASR = 43M:30F, .589
 #[5] "Alcelaphus buselaphus" asr and mating system no available  sex dim know from adw (PG 11/08/2019)
 #[6] "Alces alces" sex dim and mating sys know from adw ASR from (Roönnega??rd et al., 2008)ASR's data from 1984 sex ratio in percentage in the article (PG 11/08/2018)
-db .mam [17:22, "binomial"]
+
 str(db.mam)
-db.mam [17:24, "binomial"]
+db.mam[17:24, "binomial"]
 #[1] "Allactaga elater"      no data available (PG 11/08/2018)     
 #[2] "Allenopithecus nigroviridis" Mating sysstem (Fuentes, 1998) dim sex weight (no registrado en excel)(nowark, 1999) ASR available (13/08/2018)
 #[3] "Alouatta belzebul"    mating sy and sex di know from adw asr no available (PG 14/08/2018)      
@@ -89,7 +70,7 @@ db.mam [17:24, "binomial"]
 #[7] "Ametrida centurio"          sex di "exhibits the greatest female-biased sexual size dimorphism" no added to data in excel,  mating sy no available, no ASR (19/08/2018)
 #[8] "Ammodorcas clarkei"   sex di added ASR nad mating sis no available (PG 19/08/2018)
 
-db.mam [25:31, "binomial"]
+db.mam[25:31, "binomial"]
 #[1] "Ammotragus lervia"    mating and sex dim know feom adw ASR Added (PG 19/08/2018)
 #[2] "Anisomys imitator"    no data available (19/08/2018)   
 #[3] "Anoura cultrata"      dimo sex found (PG 21/08/2018)
@@ -97,7 +78,8 @@ db.mam [25:31, "binomial"]
 #[5] "Anoura latidens"      no data available (PG 26/08/2018)
 #[6] "Anourosorex squamipes" no data availabe (PG 26/08/2018)
 #[7] "Antechinomys laniger" no data available (PG 26/08/2018)
-db.mam [32:40, "binomial"]
+
+db.mam[32:40, "binomial"]
 #1] "Antechinus adustus"   Mating sy added sex dim no available ASR no available (PG 28/08/2018)
 #[2] "Antechinus agilis"    Mating sy added (PG 28/08/2018)
 #[3] "Antechinus bellus"    Sex dim added , added and coment AST mait no available (PG 01/09/2018)
@@ -110,3 +92,17 @@ db.mam [32:40, "binomial"]
 
 
 
+
+
+#--------------------Trabajo CCI:
+db.mam[1165:1174, "binomial"]
+# [1] "Zaglossus bruijnii"       This suggestion also fits with the observation that there is no obvious sexual dimorphism between male and female echidnas (Griffiths 1978) (CCI 03/09/2018)
+# [2] "Zalophus californianus"
+# [3] "Zalophus japonicus"    
+# [4] "Zalophus wollebaeki"   
+# [5] "Zapus hudsonius"       
+# [6] "Zapus princeps"        
+# [7] "Zelotomys woosnami"    
+# [8] "Ziphius cavirostris"   
+# [9] "Zyzomys argurus"       
+# [10] "Zyzomys woodwardi
