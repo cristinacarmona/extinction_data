@@ -104,9 +104,9 @@ db.mam [32:40, "binomial"]
 #[4] "Antechinus flavipes"  mating sy and asr no available sex di added (PG 01/09/2018)
 #[5] "Antechinus godmani"   No data available (PG 01/09/2018)
 #[6] "Antechinus leo"       no data available (PG 02/09/2018)
-#[7] "Antechinus minimus"   
-#[8] "Antechinus stuartii"  
-#[9] "Antechinus swainsonii"
+#[7] "Antechinus minimus"   mating sy aded ASR and sex di no available (PG 03 09 2018)
+#[8] "Antechinus stuartii"  matinh, ASR, sex d added (PG  03 09 2018)
+#[9] "Antechinus swainsonii" no data available (PG 03 09 2018)
 
 
 
