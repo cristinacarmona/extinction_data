@@ -11,7 +11,7 @@ xlsxfiles <- list.files(path = ".", pattern='*\\.xlsx$', all.files=TRUE)
 xlsxfiles
 
 library(openxlsx) #CERRAR ARCHIVO "merged_iucn" en excel antes de correr codigo
-import.list <- lapply(xlsxfiles, read.xlsx, sheet=1, colNames = TRUE, na.strings=c("NA","na","N","-","---"," ","",".","sin dato","SD","sd","Sin Dato", -999,"-999"))
+import.list <- lapply(xlsxfiles, read.xlsx, sheet=1, colNames = TRUE, na.strings=c("NA", "NA ","na","N","-","---"," ","",".","sin dato","SD","sd","Sin Dato", -999,"-999"))
 #import.list <- read.xlsx("merged_iucn_and_db_v4.xlsx", sheet=1, colNames=TRUE, na.strings=c("NA","na","N","-","---"," ","",".","sin dato","SD","sd","Sin Dato", -999,"-999"))
 
 
@@ -95,6 +95,8 @@ db.mam[32:40, "binomial"]
 
 
 #--------------------Trabajo CCI:
+str(db.mam[!is.na(db.mam$ASR),"binomial"]) #44
+
 db.mam[1165:1174, "binomial"]
 # [1] "Zaglossus bruijnii"       This suggestion also fits with the observation that there is no obvious sexual dimorphism between male and female echidnas (Griffiths 1978) (CCI 03/09/2018)
 # [2] "Zalophus californianus"
@@ -106,3 +108,5 @@ db.mam[1165:1174, "binomial"]
 # [8] "Ziphius cavirostris"   
 # [9] "Zyzomys argurus"       
 # [10] "Zyzomys woodwardi
+
+db.mam[1155:1164, "binomial"]
