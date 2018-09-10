@@ -97,6 +97,94 @@ db.mam[32:40, "binomial"]
 #--------------------Trabajo CCI:
 str(db.mam[!is.na(db.mam$ASR),"binomial"]) #44
 
+#----------merge Lindenfors 2002 database for pinnipeds mating systems
+setwd("C:/Users/cris.carmona/Documents/MEGAsync/Projects/Post-doc/Riesgo de extinción y selección sexual/Analysis/Merge databases/input")
+
+csvfiles <- list.files(path = ".", pattern='*\\.csv$', all.files=TRUE)
+csvfiles
+
+import.list <- lapply(csvfiles[11], read.csv, header = TRUE, as.is=TRUE, na.strings=c("NA","na","N","-","---"," ","",".","sin dato","SD","sd","Sin Dato", -999,"-999"))
+
+
+#str(import.list)
+ls()
+
+working.list <- import.list
+names(working.list) <- c("Lindenfors")
+
+attach(working.list)
+#----------------------------------
+names(Lindenfors)
+str(Lindenfors)
+# Data on average male harem sizes were
+#collected with species classified as monogamous or serially
+#monogamous denoted as having a harem size of one
+
+for (i in 1:length(Lindenfors$Species)){
+  if(Lindenfors$Harem.size[i] != 1){
+    Lindenfors$Mating_system[i] <- "Polygamous" 
+    } else {
+      Lindenfors$Mating_system[i] <-"Monogamous"
+    }
+  }
+#ADD NA to spp with no harem size: Arctocephalus philippii
+Lindenfors$Mating_system[29] <- NA
+Lindenfors[29,]  
+
+#Check spp names
+Lindenfors[!Lindenfors$Species %in% db.mam$binomial,"Species"]
+db.mam[db.mam$binomial %in% "Ommatophoca",]
+
+Lindenfors$Species[5]<-"Leptonychotes weddellii"
+Lindenfors$Species[6]<-"Ommatophoca rossii"
+Lindenfors[6,] #Male and female body weight in grams
+
+#Merge Lindenfors to general db manually
+Lindenfors[,c("Species", "Mating_system", "Female.weight", "Male.weight")]
+
+#                              Species      Mating_system Female.weight(kg) Male.weight (kg)
+# 1                Monachus schauinslandi    Monogamous        265.00      173.00 ,/
+# 2                     Monachus monachus    Monogamous        301.00      260.00 ,/
+# 3               Mirounga angustirostris    Polygamous        513.00     2275.00 ,/
+# 4                      Mirounga leonina    Polygamous        503.00     3510.00 ,/
+# 5               Leptonychotes weddellii    Polygamous        376.00      360.00 ,/
+# 6                    Ommatophoca rossii    Monogamous        185.00      173.80 ,/
+# 7                 Lobodon carcinophagus    Monogamous        224.00      220.50 ,/
+# 8                     Hydrurga leptonyx    Monogamous        367.00      324.00 ,/
+# 9                   Cystophora cristata    Monogamous        222.50      343.18 ,/
+# 10                  Erignathus barbatus    Monogamous        276.36      265.00 ,/
+# 11                   Halichoerus grypus    Polygamous        155.00      233.00 ,/
+# 12                   Phoca groenlandica    Monogamous        129.50      135.00 ,/
+# 13                       Phoca fasciata    Monogamous         80.36       94.80 ,/
+# 14                         Phoca largha    Monogamous         86.00       97.00 ,/
+# 15                        Phoca caspica    Monogamous         55.00       70.50 ,/
+# 16                       Phoca sibirica    Monogamous         89.50       89.50 ,/
+# 17                        Phoca hispida    Monogamous         66.50       71.67 ,/
+# 18              Phoca vitulina vitulina    Monogamous         66.00       80.00 ,/
+# 19             Phoca vitulina richardsi    Monogamous         64.80       87.60  x
+# 20            Phoca vitulina stejnegeri    Monogamous        101.00      128.50  x
+# 21 Zalophus californianus californianus    Polygamous         86.00      289.00 ,/
+# 22    Zalophus californianus wollebaeki    Polygamous         78.00      200.00 ,/
+# 23                   Eumetopias jubatus    Polygamous        287.55     1000.00 ,/
+# 24            Otaria byronia/flavescens    Polygamous        144.00      300.00 ,/
+# 25                     Neophoca cinerea    Polygamous         78.55      300.00 ,/
+# 26                    Phocartos hookeri    Polygamous        183.00      364.00 ,/
+# 27                  Callorhinus ursinus    Polygamous         44.75      227.00 ,/
+# 28              Arctocephalus townsendi    Polygamous         49.55      145.00 ,/
+# 29              Arctocephalus philippii          <NA>         50.00      140.00 ,/
+# 30          Arctocephalus galapagoensis    Monogamous         27.40       64.50 ,/
+# 31              Arctocephalus australis    Monogamous         48.50      159.00 ,/
+# 32               Arctocephalus forsteri    Monogamous         55.00      164.38 ,/
+# 33                Arctocephalus gazella    Monogamous         38.20      155.00 ,/
+# 34             Arctocephalus tropicalis    Monogamous         50.00      152.50 ,/
+# 35      Arctocephalus pusillus pusillus    Monogamous         71.00      278.00 ,/
+# 36     Arctocephalus pusillus doriferus    Monogamous         84.00      307.00 x
+# 37           Odobenus rosmarus rosmarus    Monogamous        655.00     1050.00 ,/
+# 38          Odobenus rosmarus divergens    Monogamous        738.00     1353.00 x
+# 
+
+
+#------------------------------------
 db.mam[1165:1174, "binomial"]
 # [1] "Zaglossus bruijnii"       This suggestion also fits with the observation that there is no obvious sexual dimorphism between male and female echidnas (Griffiths 1978) (CCI 03/09/2018)
 # [2] "Zalophus californianus"
