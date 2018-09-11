@@ -33,7 +33,12 @@ str(db2[db2$Class %in% "REPTILIA",]) #6278 obs
 
 db.amp <- db2[db2$Class %in% c("AMPHIBIA") & !is.na(db2$male_svl_cm) & !is.na(db2$female_svl_cm),]
 
-str(db.amp)#161 obs
+str(db.amp)#661 obs
+
+db.amp[!is.na(db.amp$ASR), "binomial"] #8
+db.amp[!is.na(db.amp$mating_system), "binomial"] #51
+
+
 head(db.amp)
 db.amp[1:3,"binomial"]
 # [1] "Acris crepitans"
