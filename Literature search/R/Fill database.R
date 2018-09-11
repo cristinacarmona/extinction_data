@@ -2,7 +2,7 @@
 #Fill in data into database
 #########################################################
 #Load datasets
-ASR 
+
 setwd("C:/Users/cris.carmona/Documents/MEGAsync/Projects/Post-doc/Riesgo de extinción y selección sexual/extinction_data/Literature search/input")
 
 xlsxfiles <- list.files(path = ".", pattern='*\\.xlsx$', all.files=TRUE)
@@ -56,7 +56,7 @@ db.fish[!is.na(db.fish$mating_system), "binomial"] #9
 str(db[db$Class %in% "AVES",])#11122
 db.birds <- db[db$Class %in% c("AVES") & !is.na(db$male_body_mass_g) & !is.na(db$female_body_mass_g),]
 str(db.birds)#4544 obs -> Base de datos ALEX?
-db.birds[!is.na(db.birds$ASR), "binomial"]#16
+db.birds[!is.na(db.birds$ASR), "binomial"]#16 #Pipoly's data was not added...
 db.birds[!is.na(db.birds$ASR) & !db.birds$ref.asr %in% "pipoly", "binomial"]#44
 db.birds[!is.na(db.birds$mating_system), "binomial"] #430
 
