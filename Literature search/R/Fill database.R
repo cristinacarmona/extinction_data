@@ -31,18 +31,35 @@ str(db[db$Class %in% "REPTILIA",]) #6278 obs
 db.rep <- db[db$Class %in% c("REPTILIA") & !is.na(db$male_svl_cm) & !is.na(db$female_svl_cm),]
 str(db.rep)#253 obs -> CCI
 
+db.rep[!is.na(db.rep$ASR), "binomial"]#59
+db.rep[!is.na(db.rep$ASR) & !db.rep$ref.asr %in% "pipoly", "binomial"]#44
+db.rep[!is.na(db.rep$mating_system), "binomial"] #49
+
+
+str(db[db$Class %in% "MAMMALIA",])
 db.mam <- db[db$Class %in% c("MAMMALIA") & !is.na(db$male_body_mass_g) & !is.na(db$female_body_mass_g),]
 str(db.mam)#1174 obs -> DIANA
+db.mam[!is.na(db.mam$ASR), "binomial"]#38
+db.mam[!is.na(db.mam$mating_system), "binomial"] #377
+
 
 db.amph <- db[db$Class %in% c("AMPHIBIA") & !is.na(db$male_svl_cm) & !is.na(db$female_svl_cm),]
 str(db.amph)#661 obs -> MARIA PAULA
 head(db.amph)
 
+str(db[db$Class %in% c("ACTINOPTERYGII","CEPHALASPIDOMORPHI"," MYXINI", "CHONDRICHTHYES","SARCOPTERYGII"),])
 db.fish <- db[db$Class %in% c("ACTINOPTERYGII","CEPHALASPIDOMORPHI"," MYXINI", "CHONDRICHTHYES","SARCOPTERYGII") & !is.na(db$male_svl_cm) & !is.na(db$female_svl_cm),]
 str(db.fish)#96 obs -> OSCAR
+db.fish[!is.na(db.fish$ASR), "binomial"]#0
+db.fish[!is.na(db.fish$mating_system), "binomial"] #9
 
+str(db[db$Class %in% "AVES",])#11122
 db.birds <- db[db$Class %in% c("AVES") & !is.na(db$male_body_mass_g) & !is.na(db$female_body_mass_g),]
 str(db.birds)#4544 obs -> Base de datos ALEX?
+db.birds[!is.na(db.birds$ASR), "binomial"]#16
+db.birds[!is.na(db.birds$ASR) & !db.birds$ref.asr %in% "pipoly", "binomial"]#44
+db.birds[!is.na(db.birds$mating_system), "binomial"] #430
+
 
 
 db.rep[1:5,"binomial"]
