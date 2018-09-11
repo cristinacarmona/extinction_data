@@ -29,7 +29,7 @@ db2 <- db
 #Choose Class to work with
 table(db2$Class)
 
-str(db2[db2$Class %in% "REPTILIA",]) #6278 obs
+str(db2[db2$Class %in% "AMPHIBIA",]) #6609 obs
 
 db.amp <- db2[db2$Class %in% c("AMPHIBIA") & !is.na(db2$male_svl_cm) & !is.na(db2$female_svl_cm),]
 
