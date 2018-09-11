@@ -11,7 +11,7 @@ xlsxfiles <- list.files(path = ".", pattern='*\\.xlsx$', all.files=TRUE)
 xlsxfiles
 
 library(openxlsx) #CERRAR ARCHIVO "merged_iucn" en excel antes de correr codigo
-import.list <- lapply(xlsxfiles, read.xlsx, sheet=1, colNames = TRUE, na.strings=c("NA", "NA ","na","N","-","---"," ","",".","sin dato","SD","sd","Sin Dato", -999,"-999"))
+import.list <- lapply(xlsxfiles[2], read.xlsx, sheet=1, colNames = TRUE, na.strings=c("NA", "NA ","na","N","-","---"," ","",".","sin dato","SD","sd","Sin Dato", -999,"-999"))
 #import.list <- read.xlsx("merged_iucn_and_db_v4.xlsx", sheet=1, colNames=TRUE, na.strings=c("NA","na","N","-","---"," ","",".","sin dato","SD","sd","Sin Dato", -999,"-999"))
 
 
@@ -98,49 +98,49 @@ db.mam[32:40, "binomial"]
 str(db.mam[!is.na(db.mam$ASR),"binomial"]) #44
 
 #----------merge Lindenfors 2002 database for pinnipeds mating systems
-setwd("C:/Users/cris.carmona/Documents/MEGAsync/Projects/Post-doc/Riesgo de extinción y selección sexual/Analysis/Merge databases/input")
-
-csvfiles <- list.files(path = ".", pattern='*\\.csv$', all.files=TRUE)
-csvfiles
-
-import.list <- lapply(csvfiles[11], read.csv, header = TRUE, as.is=TRUE, na.strings=c("NA","na","N","-","---"," ","",".","sin dato","SD","sd","Sin Dato", -999,"-999"))
-
-
-#str(import.list)
-ls()
-
-working.list <- import.list
-names(working.list) <- c("Lindenfors")
-
-attach(working.list)
-#----------------------------------
-names(Lindenfors)
-str(Lindenfors)
-# Data on average male harem sizes were
-#collected with species classified as monogamous or serially
-#monogamous denoted as having a harem size of one
-
-for (i in 1:length(Lindenfors$Species)){
-  if(Lindenfors$Harem.size[i] != 1){
-    Lindenfors$Mating_system[i] <- "Polygamous" 
-    } else {
-      Lindenfors$Mating_system[i] <-"Monogamous"
-    }
-  }
-#ADD NA to spp with no harem size: Arctocephalus philippii
-Lindenfors$Mating_system[29] <- NA
-Lindenfors[29,]  
-
-#Check spp names
-Lindenfors[!Lindenfors$Species %in% db.mam$binomial,"Species"]
-db.mam[db.mam$binomial %in% "Ommatophoca",]
-
-Lindenfors$Species[5]<-"Leptonychotes weddellii"
-Lindenfors$Species[6]<-"Ommatophoca rossii"
-Lindenfors[6,] #Male and female body weight in grams
-
-#Merge Lindenfors to general db manually
-Lindenfors[,c("Species", "Mating_system", "Female.weight", "Male.weight")]
+# setwd("C:/Users/cris.carmona/Documents/MEGAsync/Projects/Post-doc/Riesgo de extinción y selección sexual/Analysis/Merge databases/input")
+# 
+# csvfiles <- list.files(path = ".", pattern='*\\.csv$', all.files=TRUE)
+# csvfiles
+# 
+# import.list <- lapply(csvfiles[11], read.csv, header = TRUE, as.is=TRUE, na.strings=c("NA","na","N","-","---"," ","",".","sin dato","SD","sd","Sin Dato", -999,"-999"))
+# 
+# 
+# #str(import.list)
+# ls()
+# 
+# working.list <- import.list
+# names(working.list) <- c("Lindenfors")
+# 
+# attach(working.list)
+# #----------------------------------
+# names(Lindenfors)
+# str(Lindenfors)
+# # Data on average male harem sizes were
+# #collected with species classified as monogamous or serially
+# #monogamous denoted as having a harem size of one
+# 
+# for (i in 1:length(Lindenfors$Species)){
+#   if(Lindenfors$Harem.size[i] != 1){
+#     Lindenfors$Mating_system[i] <- "Polygamous" 
+#     } else {
+#       Lindenfors$Mating_system[i] <-"Monogamous"
+#     }
+#   }
+# #ADD NA to spp with no harem size: Arctocephalus philippii
+# Lindenfors$Mating_system[29] <- NA
+# Lindenfors[29,]  
+# 
+# #Check spp names
+# Lindenfors[!Lindenfors$Species %in% db.mam$binomial,"Species"]
+# db.mam[db.mam$binomial %in% "Ommatophoca",]
+# 
+# Lindenfors$Species[5]<-"Leptonychotes weddellii"
+# Lindenfors$Species[6]<-"Ommatophoca rossii"
+# Lindenfors[6,] #Male and female body weight in grams
+# 
+# #Merge Lindenfors to general db manually
+# Lindenfors[,c("Species", "Mating_system", "Female.weight", "Male.weight")]
 
 #                              Species      Mating_system Female.weight(kg) Male.weight (kg)
 # 1                Monachus schauinslandi    Monogamous        265.00      173.00 ,/
@@ -183,11 +183,16 @@ Lindenfors[,c("Species", "Mating_system", "Female.weight", "Male.weight")]
 # 38          Odobenus rosmarus divergens    Monogamous        738.00     1353.00 x
 # 
 
+#Mammals stats
+db.mam[!is.na(db.mam$ASR), c("binomial","mating_system")] #44
+db.mam[!is.na(db.mam$ASR) & is.na(db.mam$mating_system), c("binomial","mating_system")] #10
+db.mam[is.na(db.mam$ASR) & !is.na(db.mam$mating_system), c("binomial")] #360
+
 
 #------------------------------------
 db.mam[1165:1174, "binomial"]
 # [1] "Zaglossus bruijnii"       This suggestion also fits with the observation that there is no obvious sexual dimorphism between male and female echidnas (Griffiths 1978) (CCI 03/09/2018)
-# [2] "Zalophus californianus"
+# [2] "Zalophus californianus"    No ASR, added mating system
 # [3] "Zalophus japonicus"    
 # [4] "Zalophus wollebaeki"   
 # [5] "Zapus hudsonius"       
