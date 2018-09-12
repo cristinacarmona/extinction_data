@@ -45,11 +45,11 @@ db.mam[1:5,"binomial"]
 # [5] "Acomys wilsoni"  #no data
 
 db.mam[6:10,"binomial"]
-# [1] "Aconaemys fuscus"    ASR ADD 28.06.2018  
+# [1] "Aconaemys fuscus"    ASR ADD 28.06.2018  M3:F4
 # [2]"Acrobates pygmaeus"    Di
 # [3]"Addax nasomaculatus"  30.06
 # [4] "Aepyceros melampus"    30.06
-# [5]"Aepyprymnus rufescens" 30.06 dimo/mating sy/
+# [5]"Aepyprymnus rufescens" 30.06 dimo/mating sy/ M42:F31
 
 db.mam[11:16, "binomial"]
 #[1] "Aethomys chrysophilus" No ASR and mark dimo diferencia de peso, mating no encontredo ecepto un articulo que trabaja con sperma y suguiere un tipo de mating pero no lo menciona como tal
@@ -57,7 +57,7 @@ db.mam[11:16, "binomial"]
 #[3] "Akodon boliviensis"   Mating st no data NO asr### No data available
 #[4] "Akodon cursor"     no mating sy ASR = 43M:30F, .589
 #[5] "Alcelaphus buselaphus" asr and mating system no available  sex dim know from adw (PG 11/08/2019)
-#[6] "Alces alces" sex dim and mating sys know from adw ASR from (Roönnega??rd et al., 2008)ASR's data from 1984 sex ratio in percentage in the article (PG 11/08/2018)
+#[6] "Alces alces" sex dim and mating sys know from adw ASR  males "62" and females "65" from (Roönnega??rd et al., 2008)ASR's data from 1984 sex ratio in percentage in the article (PG 11/08/2018)
 
 str(db.mam)
 db.mam[17:24, "binomial"]
@@ -70,11 +70,12 @@ db.mam[17:24, "binomial"]
 #[7] "Ametrida centurio"          sex di "exhibits the greatest female-biased sexual size dimorphism" no added to data in excel,  mating sy no available, no ASR (19/08/2018)
 #[8] "Ammodorcas clarkei"   sex di added ASR nad mating sis no available (PG 19/08/2018)
 
-db.mam[25:31, "binomial"]
-#[1] "Ammotragus lervia"    mating and sex dim know feom adw ASR Added (PG 19/08/2018)
+
+db.mam [25:31, "binomial"]
+#[1] "Ammotragus lervia"    mating and sex dim know feom adw ASR Males "42" and females "51" Added (PG 19/08/2018)
 #[2] "Anisomys imitator"    no data available (19/08/2018)   
 #[3] "Anoura cultrata"      dimo sex found (PG 21/08/2018)
-#[4] "Anoura geoffroyi"     sex di know from adw no mating dy ASR added (PG 23/08/2018)
+#[4] "Anoura geoffroyi"     sex di know from adw no mating dy ASR M106:F169 added (PG 23/08/2018)
 #[5] "Anoura latidens"      no data available (PG 26/08/2018)
 #[6] "Anourosorex squamipes" no data availabe (PG 26/08/2018)
 #[7] "Antechinomys laniger" no data available (PG 26/08/2018)
@@ -85,11 +86,10 @@ db.mam[32:40, "binomial"]
 #[3] "Antechinus bellus"    Sex dim added , added and coment AST mait no available (PG 01/09/2018)
 #[4] "Antechinus flavipes"  mating sy and asr no available sex di added (PG 01/09/2018)
 #[5] "Antechinus godmani"   No data available (PG 01/09/2018)
-#[6] "Antechinus leo"       
-#[7] "Antechinus minimus"   
-#[8] "Antechinus stuartii"  
-#[9] "Antechinus swainsonii"
-
+#[6] "Antechinus leo"       no data available (PG 02/09/2018)
+#[7] "Antechinus minimus"   mating sy aded ASR and sex di no available (PG 03 09 2018)
+#[8] "Antechinus stuartii"  matinh, ASR males "115" and famales "38", sex d added (PG  03 09 2018)
+#[9] "Antechinus swainsonii" no data available (PG 03 09 2018)
 
 
 
