@@ -192,7 +192,7 @@ db.mam[is.na(db.mam$ASR) & !is.na(db.mam$mating_system), c("binomial")] #360
 #------------------------------------
 db.mam[1165:1174, "binomial"]
 # [1] "Zaglossus bruijnii"       This suggestion also fits with the observation that there is no obvious sexual dimorphism between male and female echidnas (Griffiths 1978) (CCI 03/09/2018)
-# [2] "Zalophus californianus"    No ASR, added mating system
+# [2] "Zalophus californianus"    No ASR, added mating system (06/08/2018)
 # [3] "Zalophus japonicus"    
 # [4] "Zalophus wollebaeki"   
 # [5] "Zapus hudsonius"       
