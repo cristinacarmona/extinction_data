@@ -11,7 +11,7 @@ xlsxfiles <- list.files(path = ".", pattern='*\\.xlsx$', all.files=TRUE)
 xlsxfiles
 
 library(openxlsx) #CERRAR ARCHIVO "merged_iucn" en excel antes de correr codigo
-import.list <- lapply(xlsxfiles[2], read.xlsx, sheet=1, colNames = TRUE, na.strings=c("NA", "NA ","na","N","-","---"," ","",".","sin dato","SD","sd","Sin Dato", -999,"-999"))
+import.list <- lapply(xlsxfiles, read.xlsx, sheet=1, colNames = TRUE, na.strings=c("NA", "NA ","na","N","-","---"," ","",".","sin dato","SD","sd","Sin Dato", -999,"-999"))
 #import.list <- read.xlsx("merged_iucn_and_db_v4.xlsx", sheet=1, colNames=TRUE, na.strings=c("NA","na","N","-","---"," ","",".","sin dato","SD","sd","Sin Dato", -999,"-999"))
 
 
@@ -87,14 +87,52 @@ db.mam[32:40, "binomial"]
 #[4] "Antechinus flavipes"  mating sy and asr no available sex di added (PG 01/09/2018)
 #[5] "Antechinus godmani"   No data available (PG 01/09/2018)
 #[6] "Antechinus leo"       no data available (PG 02/09/2018)
-#[7] "Antechinus minimus"   mating sy aded ASR and sex di no available (PG 03 09 2018)
-#[8] "Antechinus stuartii"  matinh, ASR males "115" and famales "38", sex d added (PG  03 09 2018)
-#[9] "Antechinus swainsonii" no data available (PG 03 09 2018)
+#[7] "Antechinus minimus"   mating sy aded ASR and sex di no available (PG 03/09/2018)
+#[8] "Antechinus stuartii"  matinh, ASR males "115" and famales "38", sex d added (PG  03/09/2018)
+#[9] "Antechinus swainsonii" no data available (PG 03/09/2018)
+
+sp.worked.pg <- db.mam[1:40, "binomial"]
+
+#-----------Continúa trabajo PG con la nueva selección de especies (13/sept/2018):
+
+sp.worked.pg <- db.mam[1:40, "binomial"] #Especies que PG trabajó previo al 12/sept/2018
+db.mam2 <- db.mam[!is.na(db.mam$mating_system) & !db.mam$binomial %in% sp.worked.pg,]
+str(db.mam2) #372 spp
+
+db.mam2[1:10, "binomial"]
+# [1] "Antilocapra americana"      
+# [2] "Antrozous pallidus"         
+# [3] "Aotus lemurinus"            
+# [4] "Aotus trivirgatus"          
+# [5] "Arctocebus calabarensis"    
+# [6] "Arctocephalus australis"    
+# [7] "Arctocephalus galapagoensis"
+# [8] "Arctocephalus gazella"      
+# [9] "Arctocephalus pusillus"     
+# [10] "Arctocephalus townsendi"
+
+db.mam2[11:20, "binomial"]
+# [1] "Arctocephalus tropicalis"
+# [2] "Artibeus jamaicensis"    
+# [3] "Atelerix frontalis"      
+# [4] "Ateles paniscus"         
+# [5] "Avahi laniger"           
+# [6] "Axis porcinus"           
+# [7] "Bassaricyon gabbii"      
+# [8] "Bison bison"             
+# [9] "Bradypus torquatus"      
+# [10] "Bradypus variegatus" 
 
 
 
 
-#--------------------Trabajo CCI:
+
+
+
+
+###########################################################
+#-----------------------------------------------
+#--------------------Trabajo CCI (10/sept/2018)
 str(db.mam[!is.na(db.mam$ASR),"binomial"]) #44
 
 #----------merge Lindenfors 2002 database for pinnipeds mating systems
