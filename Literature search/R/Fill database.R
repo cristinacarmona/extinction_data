@@ -209,7 +209,11 @@ sra[sra$binomial %in% "Himantopus himantopus",]
 
 #------------------------------------
 
-#---------------------------18/sept/2018
+#---------------------------18/sept/2018 write db-----------------
 setwd("C:/Users/cris.carmona/Documents/MEGAsync/Projects/Post-doc/Riesgo de extinción y selección sexual/extinction_data/Literature search/input")
 write.csv(db.merge, "merged_iucn_and_db_v4_aves.csv")
 
+
+#---------------------check numbers-----
+str(db.merge[!is.na(db.merge$ASR) & db.merge$Class %in% "AVES","ASR"]) #187
+str(db.merge[db.merge$Class %in% "AVES" & (!is.na(db.merge$mating_system) | !is.na(db.merge$mating_system.SR)),])#1428
