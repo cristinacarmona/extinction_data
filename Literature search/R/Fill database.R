@@ -105,38 +105,111 @@ bin.syn <- db$binomial[db$Synonyms %in% c]#1517 includes b (intersect between sp
 
 d<-match.arg(db$Synonyms[db$Class %in% "AVES"], sra$species,several.ok=T)#1286
 
-i=6404
+#i=1948
 options(warn=-1) 
+sra$binomial <- NA
+
 for(i in 1:length(sra$species)){
-  sra$binomial[i] <- db$binomial[pmatch(sra$species[i], db$Synonyms, nomatch= "NA")]
-}
+  #sra$binomial[i] <- db$binomial[pmatch(sra$species[i], db$Synonyms, nomatch= "NA")]
+  if(any(grepl(sra$species[i], db$Synonyms, fixed=T))){
+    sra$binomial[i] <- db$binomial[which(grepl(sra$species[i], db$Synonyms, fixed=T))]
+  }
+  if(!any(grepl(sra$species[i], db$Synonyms, fixed=T))){
+    sra$binomial[i] <- sra$species[i]  
+  }
+  }
 
-sra$binomial <- ifelse(is.na(sra$binomial), sra$species, sra$binomial)
+#sra$binomial <- ifelse(is.na(sra$binomial), sra$species, sra$binomial)
 
+
+#-----debug-------
 no.na<-sra[!is.na(sra$binomial), c("binomial","species")]
 no.na[1:30,]
 head(sra)
 tail(sra)
 
+
+which(db.merge$binomial %in% "Falco peregrinus")
+which(sra$binomial %in% "Falco peregrinus")
+sra[3621:3622,] #ommit case with no ASR
+sra <- sra[-3621,]
+str(sra)
+
+which(sra$binomial %in% "Chen caerulescens")
+sra[1948,]
+
+which(sra$species %in% "Myrmeciza berlepschi")
+sra[5985,]
+i=1948
+pmatch(sra$species[i], c("Anser caerulescens caerulescens| Chen caerulescens Anser caerulescens caerulescens|Anser caerulescens caerulescens|"), duplicates.ok=TRUE)
+grepl(sra$species[i], c("Anser caerulescens caerulescens| Chen caerulescens Anser caerulescens caerulescens|Anser caerulescens caerulescens|"), fixed=TRUE)
+          
+
+
 #-----------------------------------------------------
 #Merge relevant data from sra to dba-------------
 names(sra) #asr, dev.mod, fpg, fpg.scr, f.mass, m.mass, m_displ, mating.system, mortality, mpg, mpg.scr, pl.total, unsexed.mass, unsexed.tarsus, unsexed.wing
 
-sra.merge <- sra[,c("binomial", "asr","dev.mod", "f.mass","fpg","fpg.scr","m.mass", "m_displ", "mating.system","mortality","mpg","mpg.scr","pl.total", "unsexed.mass","unsexed.tarsus","unsexed.wing")]
+sra.merge <- sra[,c("binomial", "asr","dev.mod", "f.mass","fpg","fpg.scr","m.mass", "m_displ", "mating.system","mortality","mpg","mpg.scr","pl.total", "unsexed.mass","unsexed.tarsus","unsexed.wing","pl.mean")]
 names(sra.merge)
 db.merge <- db
 
 #Merge data which is already a variable in db:-----------
-
+#i<-16008
 for(i in 1:length(db.merge$binomial)){
   if(db.merge$Class[i] %in% "AVES"){
     sp<-sra.merge[match(db.merge$binomial[i], sra.merge$binomial),]
+    
+      db.merge$mating_system.SR[i] <- sp$mating.system
+      db.merge$mortality.SR[i] <- sp$mortality
+      db.merge$fem_poly.SR[i] <- sp$fpg
+      db.merge$fem_polyscore.SR[i] <- sp$fpg.scr
+      db.merge$develop_mode.SR[i] <- sp$dev.mod
+      db.merge$m_display.SR[i] <- sp$m_displ
+      db.merge$male_poly.SR[i] <- sp$mpg
+      db.merge$male_polyscore.SR[i] <- sp$mpg.scr
+      db.merge$plumagetotal.SR[i] <- sp$pl.total
+      db.merge$plumagemean.SR[i] <- sp$pl.mean
+      db.merge$unsexed_tarsus.SR[i] <- sp$unsexed.tarsus
+      db.merge$unsexed_wing.SR[i] <- sp$unsexed.wing
     
     if(is.na(db.merge$ASR[i]) & !is.na(sp$asr)){
       db.merge$ASR[i] <- sp$asr
       db.merge$ref.asr[i] <- "TS_sexroles"
     }
+      if(is.na(db.merge$female_body_mass_g[i]) & !is.na(sp$f.mass)){
+        db.merge$female_body_mass_g[i] <- sp$f.mass
+        db.merge$ref.body_mass.female[i] <- "TS_sexroles"
+      }
+      if(is.na(db.merge$male_body_mass_g[i]) & !is.na(sp$m.mass)){
+        db.merge$male_body_mass_g[i] <- sp$m.mass
+        db.merge$ref.body_mass.male[i] <- "TS_sexroles"
+      }
+      if(is.na(db.merge$body_mass_adult[i]) & !is.na(sp$unsexed.mass)){
+        db.merge$body_mass_adult[i] <- sp$unsexed.mass
+        db.merge$ref_body_mass[i] <- "TS_sexroles"
+      }
   }
-  }
+}
 
+#----------debug----------
+db.merge[!is.na(db.merge$ASR),]
+db.aves.with.asr<-db.merge[!is.na(db.merge$ASR) & db.merge$Class %in% "AVES",]
+
+setdiff(sra.merge$binomial[!is.na(sra.merge$asr)], db.aves.with.asr$binomial)
+#Himantopus himantopus
+
+#Assign ASR to himantopus himantopus mannualy
+db.merge$ASR[db.merge$binomial %in% "Himantopus himantopus"] <- 0.554
+sra$asr[sra$binomial %in% "Himantopus himantopus"]
+
+db.merge[db.merge$binomial %in% "Himantopus himantopus",]
+sra[sra$binomial %in% "Himantopus himantopus",]
+
+
+#------------------------------------
+
+#---------------------------18/sept/2018
+setwd("C:/Users/cris.carmona/Documents/MEGAsync/Projects/Post-doc/Riesgo de extinción y selección sexual/extinction_data/Literature search/input")
+write.csv(db.merge, "merged_iucn_and_db_v4_aves.csv")
 
