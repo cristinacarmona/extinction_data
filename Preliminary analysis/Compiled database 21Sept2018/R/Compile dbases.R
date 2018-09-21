@@ -4,19 +4,39 @@
 ###########################
 #Load datasets
 
-setwd("C:/Users/cris.carmona/Documents/MEGAsync/Projects/Post-doc/Riesgo de extinción y selección sexual/extinction_data/Literature search/input")
+setwd("C:/Users/cris.carmona/Documents/MEGAsync/Projects/Post-doc/Riesgo de extinción y selección sexual/extinction_data/Preliminary analysis/Compiled database 21Sept2018/input")
 
-csvfiles <- list.files(path = ".", pattern='*\\.csv$', all.files=TRUE)
-csvfiles
+xlsxfiles <- list.files(path = ".", pattern='*\\.xlsx$', all.files=TRUE)
+xlsxfiles
 
-import.list <- lapply(csvfiles, read.csv, header = TRUE, as.is=TRUE, na.strings=c("NA","na","N","-","---"," ","",".","sin dato","SD","sd","Sin Dato", -999,"-999"))
+library(openxlsx)
+import.list <- lapply(xlsxfiles, read.xlsx, sheet=1, colNames = TRUE, na.strings=c("NA", "NA ","na","N","-","---"," ","",".","sin dato","SD","sd","Sin Dato", -999,"-999"))
 
 
 #str(import.list)
 ls()
 
-working.list <- import.list[2]
-names(working.list) <- c("db2")
+working.list <- import.list
+names(working.list) <- c("mam", "av","fi", "rep")
 
 attach(working.list)
 ###########################################################
+table(fi$Class)
+
+mam <- mam[mam$Class %in% "MAMMALIA",]
+av <- av[av$Class %in% "AVES",]
+rep <- rep[rep$Class %in% c("REPTILIA", "AMPHIBIA"),]
+fi <- fi[fi$Class %in% c("ACTINOPTERYGII","CEPHALASPIDOMORPHI","MYXINI",
+                         "CHONDRICHTHYES","SARCOPTERYGII"),]
+
+#Merge db 
+
+db.mam.av <- merge(mam, av, all=T)
+str(db.mam.av) #16796
+db.mam.av.rep <- merge(db.mam.av, rep, all=T)
+str(db.mam.av.rep) #29683
+db.mam.av.rep.fi <- merge(db.mam.av.rep, fi, all=T)
+str(db.mam.av.rep.fi) #46092
+
+setwd("C:/Users/cris.carmona/Documents/MEGAsync/Projects/Post-doc/Riesgo de extinción y selección sexual/extinction_data/Preliminary analysis/Compiled database 21Sept2018/output")
+write.csv(db.mam.av.rep.fi, "merged_iucn_pre-analysis.csv")
