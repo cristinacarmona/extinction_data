@@ -25,7 +25,7 @@ attach(working.list)
 db2 <- db
 names(db2)
 
-#Example with reptiles--------------
+#Work with fish--------------
 #Choose Class to work with
 table(db2$Class)
 
@@ -63,7 +63,7 @@ db.fish[1:20,"binomial"]
 # [6] "Achoerodus gouldii"       
 # [7] "Acipenser oxyrinchus"     
 # [8] "Acipenser stellatus"      
-# [9] "Agosia chrysogaster"      
+# [9] "Agosia chrysogaster"  Faltan comentarios y sex.dim y ASR(OGM 22/08/2018)       
 # [10] "Albula vulpes"            
 # [11] "Alburnoides eichwaldii"   
 # [12] "Alburnus alburnus"        
