@@ -1,5 +1,9 @@
 #############################
 #Preliminary analysis 21/Sept/2018
+
+#Gave ordinal number to IUCN status 21/sept/2018
+#Corrected mating.system categories 21/sept/2018
+
 #############################
 ###########################
 #Load datasets
@@ -59,8 +63,138 @@ db$rl.status.ordinal[db$Red.List.status %in% c("EW")] <- 6
 db$rl.status.ordinal[db$Red.List.status %in% c("EX")] <- 6
 
 table(db$rl.status.ordinal)
+# 1     2     3     4     5     6 
+# 27917  2720  3698  2966  1710   380 
 
 
+#------Check mating.system-------------
+db2<-db
+table(db2$mating_system, useNA = "always")#<NA>  43752
+
+unique(db2$mating_system)
+
+db2$mating_system[db2$mating_system %in% "Unknown, NA"] <- NA
+db2$mating_system.corrected[db2$mating_system %in% c("Polygyny", "polygyny",
+                                                     "Polygynous, promiscuity",
+                                                     "Polygynous, Cooperative breeder ",
+                                                     "Polygynous, Cooperative breeder",
+                                                     "Polygynous, Cooperative breeder, non-monogamy",
+                                                     "Polygynous, Cooperative breeder, non-monogamy ",
+                                                     "Polygynous, Polygynandrous (promiscuous), non-monogamy", 
+                                                     "Polygynous, Polygynandrous (promiscuous), non-monogamy ", 
+                                                     "Polygynous, Polygynandrous (promiscuous)", 
+                                                     "Polygynous, polyandry", 
+                                                     "Polygynous, non-monogamy",
+                                                     "Polygynous, non-monogamy ",
+                                                     "Polygynous, polygyny",
+                                                     "Polygynous, NA", 
+                                                     "promiscuity",
+                                                     "polygynous",
+                                                     "Polygynous",
+                                                     "scramble",
+                                                     "Polygynandrous (promiscuous), promiscuity",
+                                                     "Polygynandrous (promiscuous), polygyny",
+                                                     "Polygynandrous (promiscuous), polyandry",
+                                                     "Polygynandrous (promiscuous), non-monogamy",
+                                                     "Polygynandrous (promiscuous), non-monogamy ",
+                                                     "Polygynandrous (promiscuous), NA",
+                                                     "Polygynandrous (promiscuous), Cooperative breeder",
+                                                     "Polygynandrous (promiscuous)",
+                                                     "Polygynandrous",
+                                                     "Polygamous, polyandry",
+                                                     "Polygamous, NA",
+                                                     "Polygamous*",
+                                                     "Polygamous",
+                                                     "Polygamy",
+                                                     "polyandry",
+                                                     "Polyandrous, polygyny",
+                                                     "Polyandrous, Polygynous, Polygynandrous (promiscuous), Cooperative breeder",
+                                                     "Polyandrous, Polygynous, Polygynandrous (promiscuous)",
+                                                     "Polyandrous, Polygynous, NA",
+                                                     "Polyandrous, Polygynous",
+                                                     "Polyandrous, Polygynandrous (promiscuous)",
+                                                     "Polygynous, Polygynandrous (promiscuous), Cooperative breeder",
+                                                     "Polyandrous, NA",
+                                                     "Polyandrous, Eusocial",
+                                                     "Polyandrous, Cooperative breeder",
+                                                     "Polyandrous",
+                                                     "polyandous",
+                                                     "non-monogamy",
+                                                     "non-monogamy ",
+                                                     "Sequential polyandry",
+                                                     "Simultaneous polyandry"
+                                                     )] <- "Polygamous"
+
+db2$mating_system.corrected[db2$mating_system %in% c("Monoandry",
+                                                     "Monogamous, Cooperative breeder",
+                                                     "Monogamous, Cooperative breeder, monogamy",
+                                                     "Monogamous, Cooperative breeder, monogamy ",
+                                                     "Monogamous, Monogamous, monogamy",
+                                                     "Monogamous, monogamy",
+                                                     "Monogamous, monogamy ",
+                                                     "Monogamous, NA",
+                                                     "Monogamous, Unknown, NA",
+                                                     "monogamy",
+                                                     "monogamy ",
+                                                     "monogamy, monogamy",
+                                                     "Monogamous"
+                                                     )] <- "Monogamous"
+
+db2$mating_system.corrected[db2$mating_system %in% c("Polygynous, monogamy",
+                                                     "Polygynandrous (promiscuous), monogamy",
+                                                     "Polygynandrous (promiscuous), Monoandry",
+                                                     "Monogamous, Polygynous, Polygynandrous (promiscuous)",
+                                                     "Monogamous, Polygynous, non-monogamy",
+                                                     "Monogamous, Polygynous, non-monogamy ",
+                                                     "Monogamous, Polygynous, monogamy",
+                                                     "Monogamous, Polygynous, monogamy ",
+                                                     "Monogamous, Polygynous, Cooperative breeder",
+                                                     "Monogamous, Polygynous",
+                                                     "Monogamous, Polygynandrous (promiscuous), NA",
+                                                     "Monogamous, Polygynandrous (promiscuous), monogamy",
+                                                     "Monogamous, Polygynandrous (promiscuous), monogamy ",
+                                                     "Monogamous, Polygynandrous (promiscuous), Cooperative breeder, monogamy",
+                                                     "Monogamous, Polygynandrous (promiscuous), Cooperative breeder, monogamy ",
+                                                     "Monogamous, Polygynandrous (promiscuous), Cooperative breeder",
+                                                     "Monogamous, Polygynandrous (promiscuous)",
+                                                     "Monogamous, Polyandrous, Polygynous, Polygynandrous (promiscuous), Cooperative breeder",
+                                                     "Monogamous, Polyandrous, Polygynous, Polygynandrous (promiscuous)",
+                                                     "Monogamous, Polyandrous, Polygynous, NA",
+                                                     "Monogamous, Polyandrous, Polygynous, monogamy",
+                                                     "Monogamous, Polyandrous, Polygynous, monogamy ",
+                                                     "Monogamous, Polyandrous, Polygynous",
+                                                     "Monogamous, Polyandrous, monogamy",
+                                                     "Monogamous, Polyandrous, monogamy ",
+                                                     "Monogamous, Polyandrous, Cooperative breeder, NA",
+                                                     "Monogamous, Polyandrous, Cooperative breeder",
+                                                     "Monogamous, Polyandrous",
+                                                     "Monogamous, Cooperative breeder, non-monogamy ",
+                                                     "Monogamous, Cooperative breeder, non-monogamy")] <- "Monogamous or Polygamous"
+  
+  
+table(db2$mating_system.corrected, useNA = "always") #NA 43755
+# Monogamous           Monogamous or Polygamous 
+# 1307                      102 
+# Polygamous          <NA> 
+# 928                    43755 
+
+unique(db2[is.na(db2$mating_system.corrected) & !is.na(db2$mating_system),"mating_system"])
+
+#------------------------
+#Check sizes and estimate sexual size dimorphism
+head(db2) #fish: male_size_cm.fishbase, female_size_cm.fishbase;
+                #male_TLinfinity.fishbase, female_TLinfinity.fishbase
+                #male_svl_cm, female_svl_cm
+          #Mammals: male_body_mass_g, female_body_mass_g
+          #Reptiles: male_svl_cm, female_svl_cm
+          #Aves: male_body_mass_g, female_body_mass_g
+          #Amphibia: male_svl_cm, female_svl_cm
+
+names(db2)
+table(db2$ref.sex.size.dim)
 
 
-
+#----------------------
+#Check sex.dim
+head(db2)
+table(db2$sex_dim, useNA="always") #161 categories
