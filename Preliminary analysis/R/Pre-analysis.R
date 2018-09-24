@@ -66,6 +66,7 @@ table(db$rl.status.ordinal)
 # 1     2     3     4     5     6 
 # 27917  2720  3698  2966  1710   380 
 
+hist(db$rl.status.ordinal)
 
 #------Check mating.system-------------
 db2<-db
@@ -180,6 +181,7 @@ table(db2$mating_system.corrected, useNA = "always") #NA 43755
 
 unique(db2[is.na(db2$mating_system.corrected) & !is.na(db2$mating_system),"mating_system"])
 
+
 #------------------------
 #Check sizes and estimate sexual size dimorphism
 head(db2) #fish: male_size_cm.fishbase, female_size_cm.fishbase;
@@ -192,9 +194,58 @@ head(db2) #fish: male_size_cm.fishbase, female_size_cm.fishbase;
 
 names(db2)
 table(db2$ref.sex.size.dim)
+hist(db2$sex.size.dim)
 
 
+db2$sex.size.dim.2 <- NA
+db2$sex.size.dim.2[db2$Class %in% "MAMMALIA"] <- log(db2$male_body_mass_g[db2$Class %in% "MAMMALIA"]/db2$female_body_mass_g[db2$Class %in% "MAMMALIA"])
+db2$sex.size.dim.2[db2$Class %in% c("REPTILIA", "AMPHIBIA")] <- log(db2$male_svl_cm[db2$Class %in% c("REPTILIA", "AMPHIBIA")]/db2$female_svl_cm[db2$Class %in% c("REPTILIA", "AMPHIBIA")])
+db2$sex.size.dim.2[db2$Class %in% "AVES"] <- log(db2$male_body_mass_g[db2$Class %in% "AVES"]/db2$female_body_mass_g[db2$Class %in% "AVES"])
+
+db2$sex.size.dim.2[db2$Class %in% c("ACTINOPTERYGII","CEPHALASPIDOMORPHI"," MYXINI",
+                                    "CHONDRICHTHYES","SARCOPTERYGII")] <- 
+  ifelse(!is.na(db2$male_svl_cm[db2$Class %in% c("ACTINOPTERYGII","CEPHALASPIDOMORPHI"," MYXINI",
+                                    "CHONDRICHTHYES","SARCOPTERYGII")]) &
+           !is.na(db2$female_svl_cm[db2$Class %in% c("ACTINOPTERYGII","CEPHALASPIDOMORPHI"," MYXINI",
+                                      "CHONDRICHTHYES","SARCOPTERYGII")]),
+    log(db2$male_svl_cm[db2$Class %in% c("ACTINOPTERYGII","CEPHALASPIDOMORPHI"," MYXINI", "CHONDRICHTHYES","SARCOPTERYGII")]
+        /db2$female_svl_cm[db2$Class %in% c("ACTINOPTERYGII","CEPHALASPIDOMORPHI"," MYXINI", "CHONDRICHTHYES","SARCOPTERYGII")]),
+    ifelse(!is.na(db2$male_size_cm.fishbase[db2$Class %in% c("ACTINOPTERYGII","CEPHALASPIDOMORPHI"," MYXINI",
+                                                             "CHONDRICHTHYES","SARCOPTERYGII")]) 
+           & !is.na(db2$female_size_cm.fishbase[db2$Class %in% c("ACTINOPTERYGII","CEPHALASPIDOMORPHI"," MYXINI", 
+                                                                 "CHONDRICHTHYES","SARCOPTERYGII")]),
+          log(db2$male_size_cm.fishbase[db2$Class %in% c("ACTINOPTERYGII","CEPHALASPIDOMORPHI"," MYXINI",
+                                                         "CHONDRICHTHYES","SARCOPTERYGII")]/
+                db2$female_size_cm.fishbase[db2$Class %in% c("ACTINOPTERYGII","CEPHALASPIDOMORPHI"," MYXINI",
+                                                             "CHONDRICHTHYES","SARCOPTERYGII")]), 
+          ifelse(!is.na(db2$male_TLinfinity.fishbase) & !is.na(db2$female_TLinfinity.fishbase),
+                 log(db2$male_TLinfinity.fishbase/db2$female_TLinfinity.fishbase), NA)))
+
+
+#--------debug------------
+hist(db2$sex.size.dim.2)
+ind<-which(db2$sex.size.dim.2 < -1)
+db2[ind,] 
+
+#Podarcis siculus female_svl_cm is 1664.03....should be: 6.206
+db2$female_svl_cm[db2$binomial %in% "Podarcis siculus"] <- 6.206
+ 
 #----------------------
 #Check sex.dim
 head(db2)
-table(db2$sex_dim, useNA="always") #161 categories
+length(db2$binomial)
+categories<-as.data.frame(table(db2$sex_dim, useNA="always")) #161 categories
+
+db2$sex_dim[db2$sex_dim %in% "Male larger than female"] <- "Male larger"
+db2$sex_dim[db2$sex_dim %in% "Sesex alike"] <- "Sexes alike"
+db2$sex_dim[db2$sex_dim %in% "Sexes alike, male larger"] <- "Sexes alike, Male larger"
+db2$sex_dim[db2$sex_dim %in% "other, Morph-NA, Color-NA"] <- NA
+db2$sex_dim[db2$sex_dim %in% "Males more colorful"] <- "Male more colorful"
+
+cat_sex_dim<-unique(categories$Var1) #155 categories
+
+ind<-grep("-males ", cat_sex_dim, perl=T)
+ind2<-grep("(?!fe)male", cat_sex_dim, perl=T)
+ind<-grep("alike", cat_sex_dim, perl=T)
+ind<-grep("Males larger", cat_sex_dim, perl=T)
+cat_sex_dim[ind]
