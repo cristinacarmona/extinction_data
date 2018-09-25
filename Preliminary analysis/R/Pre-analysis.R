@@ -332,8 +332,21 @@ db2$sex_dim_simplified[db2$sex_dim_simplified %in% "Male more colorful, Color-al
 categories<-as.data.frame(table(db2$sex_dim_simplified, useNA="always")) #161 categories
 cat_sex_dim<-unique(categories$Var1) #66 categories
 
+categories[order(categories$Freq),]
 
+#Convert Morph-always different morphology between mature adults, to
+#Sexes shaped differently
+db2$sex_dim_simplified[db2$sex_dim_simplified %in% "Morph-always different morphology between mature adults, "] <- "Sexes shaped differently"
+db2$sex_dim_simplified[db2$sex_dim_simplified %in% "Color-always different colors between mature adults"] <- "Sexes colored or patterned differently"
+db2$sex_dim_simplified[db2$sex_dim_simplified %in% "Color-different colors in mature adults only"] <- "Sexes colored or patterned differently"
+db2$sex_dim_simplified[db2$sex_dim_simplified %in% "Sexes alike, Sexes colored or patterned differently, Male more colorful, Sexes alike, Color-males alike females"] <- "Male more colorful"
+db2$sex_dim_simplified[db2$sex_dim_simplified %in% "Sexes colored or patterned differently, Female more colorful"] <- "Female more colorful"
 
+categories<-as.data.frame(table(db2$sex_dim_simplified, useNA="always")) #161 categories
+cat_sex_dim<-unique(categories$Var1) #62 categories
 
+#check color categories
+ind<-grep("color", cat_sex_dim, perl=T)
+cat_sex_dim[ind]
 
 
