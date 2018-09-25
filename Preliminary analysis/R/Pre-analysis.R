@@ -245,7 +245,95 @@ db2$sex_dim[db2$sex_dim %in% "Males more colorful"] <- "Male more colorful"
 cat_sex_dim<-unique(categories$Var1) #155 categories
 
 ind<-grep("-males ", cat_sex_dim, perl=T)
-ind2<-grep("(?!fe)male", cat_sex_dim, perl=T)
+ind2<-grep("(?<!fe)male", cat_sex_dim, perl=T)
 ind<-grep("alike", cat_sex_dim, perl=T)
-ind<-grep("Males larger", cat_sex_dim, perl=T)
+ind<-grep("Male larger", cat_sex_dim, perl=T)
 cat_sex_dim[ind]
+
+#Get rid of categories about size Male larger and female larger
+db2$sex_dim_simplified <- db2$sex_dim
+db2$sex_dim_simplified <- gsub("Male larger, ", "", db2$sex_dim_simplified)
+db2$sex_dim_simplified <- gsub(", Male larger", "", db2$sex_dim_simplified)
+db2$sex_dim_simplified <- gsub("Male larger", NA, db2$sex_dim_simplified)
+categories<-as.data.frame(table(db2$sex_dim_simplified, useNA="always")) #161 categories
+cat_sex_dim<-unique(categories$Var1) #133 categories
+
+
+ind<-grep("Female", cat_sex_dim, perl=T)
+ind2<-grep("(?<!fe)male", cat_sex_dim, perl=T)
+ind<-grep("alike", cat_sex_dim, perl=T)
+ind<-grep("Male larger", cat_sex_dim, perl=T)
+cat_sex_dim[ind]
+
+db2$sex_dim_simplified <- gsub("Female larger, ", "", db2$sex_dim_simplified)
+db2$sex_dim_simplified <- gsub("Female larger", NA, db2$sex_dim_simplified)
+categories<-as.data.frame(table(db2$sex_dim_simplified, useNA="always")) #161 categories
+cat_sex_dim<-unique(categories$Var1) #109 categories
+
+#Get rid of NA in categories
+db2$sex_dim_simplified <- gsub("^NA, ", "", db2$sex_dim_simplified)
+db2$sex_dim_simplified <- gsub("Color-NA", "", db2$sex_dim_simplified)
+db2$sex_dim_simplified <- gsub("Morph-NA, ", "", db2$sex_dim_simplified)
+db2$sex_dim_simplified <- gsub("NA, ", "", db2$sex_dim_simplified)
+categories<-as.data.frame(table(db2$sex_dim_simplified, useNA="always")) #161 categories
+cat_sex_dim<-unique(categories$Var1) #108 categories
+
+#Get rid of Morph-males alike females turn it into Sexes alike and
+#Sexes alike, Color-males alike females
+db2$sex_dim_simplified <- gsub("Morph-males alike females, ", "Sexes alike, ", db2$sex_dim_simplified)
+categories<-as.data.frame(table(db2$sex_dim_simplified, useNA="always")) #161 categories
+cat_sex_dim<-unique(categories$Var1) #109 categories
+
+db2$sex_dim_simplified[db2$sex_dim_simplified %in% "Sexes alike, Color-males alike females"] <- "Sexes alike"
+
+db2$sex_dim_simplified[db2$sex_dim_simplified %in% "Color-males alike females"] <- "Sexes alike"
+
+db2$sex_dim_simplified[db2$sex_dim_simplified %in% "Sexes alike, "] <- "Sexes alike"
+
+db2$sex_dim_simplified[db2$sex_dim_simplified %in% "Sexes alike, Sexes alike, "] <- "Sexes alike"
+
+db2$sex_dim_simplified[db2$sex_dim_simplified %in% "Sexes alike, Sexes alike, Color-males alike females"] <- "Sexes alike"
+
+
+#Get rid of Color-different colors in juveniles and adults and
+# Morph-different morphology in juveniles and adults
+db2$sex_dim_simplified <- gsub(", Color-different colors in juveniles and adults", "", db2$sex_dim_simplified)
+db2$sex_dim_simplified <- gsub("Morph-different morphology in juveniles and adults, ", "", db2$sex_dim_simplified)
+
+db2$sex_dim_simplified[db2$sex_dim_simplified %in% "Color-different colors in juveniles and adults"] <- NA
+db2$sex_dim_simplified[db2$sex_dim_simplified %in% "Morph-different morphology in juveniles and adults"] <- NA
+categories<-as.data.frame(table(db2$sex_dim_simplified, useNA="always")) #161 categories
+cat_sex_dim<-unique(categories$Var1) #108 categories
+
+#Get rid of other
+ind<-grep("other", cat_sex_dim, perl=T)
+cat_sex_dim[ind]
+db2$sex_dim_simplified <- gsub("other, ", "", db2$sex_dim_simplified)
+categories<-as.data.frame(table(db2$sex_dim_simplified, useNA="always")) #161 categories
+cat_sex_dim<-unique(categories$Var1) #93 categories
+
+#Turn Morph-always different morphology between mature adults to Sexes shaped differently
+db2$sex_dim_simplified[db2$sex_dim_simplified %in% "Sexes shaped differently, Morph-always different morphology between mature adults, "] <- "Sexes shaped differently"
+categories<-as.data.frame(table(db2$sex_dim_simplified, useNA="always")) #161 categories
+cat_sex_dim<-unique(categories$Var1) #92 categories
+
+#Get rid of no special organs
+ind<-grep("no special organs", cat_sex_dim, perl=T)
+cat_sex_dim[ind]
+db2$sex_dim_simplified <- gsub("no special organs, ", "", db2$sex_dim_simplified)
+db2$sex_dim_simplified[db2$sex_dim_simplified %in% "no special organs"] <- NA
+categories<-as.data.frame(table(db2$sex_dim_simplified, useNA="always")) #161 categories
+cat_sex_dim<-unique(categories$Var1) #70 categories
+
+#Get rid of Male more colorful, Color-always different colors between mature adults
+db2$sex_dim_simplified[db2$sex_dim_simplified %in% ""] <- NA
+
+db2$sex_dim_simplified[db2$sex_dim_simplified %in% "Male more colorful, Color-always different colors between mature adults"] <- "Male more colorful"
+categories<-as.data.frame(table(db2$sex_dim_simplified, useNA="always")) #161 categories
+cat_sex_dim<-unique(categories$Var1) #66 categories
+
+
+
+
+
+
