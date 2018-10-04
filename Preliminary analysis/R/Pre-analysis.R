@@ -558,10 +558,69 @@ str(which(!is.na(db4$sex_dim_simplified[db4$Class %in% c("ACTINOPTERYGII","CEPHA
                                                          "CHONDRICHTHYES","SARCOPTERYGII")])))
 
 #-----------------------------------------
-#
+#Descriptives
+hist(db4$ASR)
 hist(db4$colordimscr)
 hist(db4$orndimscr)
 hist(db4$rl.status.ordinal)
+hist(db4$sex.size.dim.2)
+
+require(foreign)
+require(ggplot2)
+require(MASS)
+require(Hmisc)
+require(reshape2)
 
 
-load("~/MEGAsync/Projects/Post-doc/Riesgo de extinción y selección sexual/extinction_data/Preliminary analysis/input/.RData")
+db.nona<-db4[!is.na(db4$ASR)& !is.na(db4$colordimscr) & !is.na(db4$mating_system.corrected),]
+str(db.nona) #51 obs
+
+lapply(db4[, c("colordimscr","orndimscr", "rl.status.ordinal", "mating_system.corrected")], table)
+
+ftable(xtabs(~ db.nona$rl.status.ordinal + db.nona$mating_system.corrected + db.nona$colordimscr, addNA=T, data = db.nona))
+
+summary(db4$ASR)
+
+ggplot(db.nona, aes(x = rl.status.ordinal, y = sex.size.dim.2)) +
+  geom_boxplot(size = .75) +
+  geom_jitter(alpha = .5) +
+  facet_grid(db.nona$mating_system.corrected ~ db.nona$colordimscr, margins = TRUE) +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1, vjust = 1))
+
+boxplot(sex.size.dim.2~rl.status.ordinal, data=db4)
+
+ggplot(db4, aes(x = rl.status.ordinal, y = sex.size.dim.2)) +
+  geom_boxplot(size = .75) +
+  geom_jitter(alpha = .5) +
+  facet_grid(db4$mating_system.corrected ~ db4$colordimscr, margins = TRUE) +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1, vjust = 1))
+
+
+
+## fit ordered logit model
+str(db4$rl.status.ordinal)
+db4$rl.status.ordinal <- as.factor(db4$rl.status.ordinal)
+
+m <- polr(rl.status.ordinal ~ sex.size.dim.2 + mating_system.corrected, data = db4, Hess=TRUE)
+
+## view a summary of the model
+summary(m)
+(ci <- confint(m))
+confint.default(m)
+## odds ratios
+exp(coef(m))
+## OR and CI
+exp(cbind(OR = coef(m), ci))
+
+
+#Test assumptions for logit model, ranges must be similar
+sf <- function(y) {
+  c('Y>=1' = qlogis(mean(y >= 1)),
+    'Y>=2' = qlogis(mean(y >= 2)),
+    'Y>=3' = qlogis(mean(y >= 3)),
+    'Y>=4' = qlogis(mean(y >= 4)),
+    'Y>=5' = qlogis(mean(y >= 5)))
+}
+
+s <- with(db4, summary(as.numeric(rl.status.ordinal) ~ sex.size.dim.2, fun=sf))
+plot(s, which=1:3, pch=1:3, xlab='logit', main=' ', xlim=range(s[,3:4]))
