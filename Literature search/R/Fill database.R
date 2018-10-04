@@ -40,38 +40,41 @@ str(db2[db2$Class %in% c("ACTINOPTERYGII","CEPHALASPIDOMORPHI"," MYXINI",
           ((!is.na(db2$male_svl_cm) & !is.na(db2$female_svl_cm)) | 
              (!is.na(db2$male_size_cm.fishbase) & !is.na(db2$female_size_cm.fishbase))),]) #594 sp with known size for male and female
 
-str(db2[db2$Class %in% c("ACTINOPTERYGII","CEPHALASPIDOMORPHI"," MYXINI",
+db.fish1<-db2[db2$Class %in% c("ACTINOPTERYGII","CEPHALASPIDOMORPHI"," MYXINI",
                          "CHONDRICHTHYES","SARCOPTERYGII") & 
           ((!is.na(db2$male_svl_cm) & !is.na(db2$female_svl_cm)) | 
              (!is.na(db2$male_size_cm.fishbase) & !is.na(db2$female_size_cm.fishbase)) &
-             !is.na(db2$mating_system)),]) #164 species with known male and female size and Mating_system
+             !is.na(db2$mating_system)),] #164 species with known male and female size and Mating_system
 
-db.fish <- db2[db2$Class %in% c("ACTINOPTERYGII","CEPHALASPIDOMORPHI"," MYXINI",
+db.fish2 <- db2[db2$Class %in% c("ACTINOPTERYGII","CEPHALASPIDOMORPHI"," MYXINI",
                                 "CHONDRICHTHYES","SARCOPTERYGII") & 
                  ((!is.na(db2$male_svl_cm) & !is.na(db2$female_svl_cm)) | 
                     (!is.na(db2$male_size_cm.fishbase) & !is.na(db2$female_size_cm.fishbase))),] #updated CCI 21/Sept/2018
 
-str(db.fish)#594 obs
+str(db.fish2)#594 obs
+str(db.fish1)#164
 head(db.fish)
 
-db.fish[1:20,"binomial"] 
-# [1] "Abramis brama"            
-# [2] "Acanthobrama marmid"      
-# [3] "Acanthopagrus bifasciatus"
-# [4] "Acanthopagrus butcheri"   
-# [5] "Acanthopagrus schlegelii" 
-# [6] "Achoerodus gouldii"       
-# [7] "Acipenser oxyrinchus"     
-# [8] "Acipenser stellatus"      
-# [9] "Agosia chrysogaster"  Faltan comentarios y sex.dim y ASR(OGM 22/08/2018)       
-# [10] "Albula vulpes"            
-# [11] "Alburnoides eichwaldii"   
-# [12] "Alburnus alburnus"        
-# [13] "Alburnus belvica"         
-# [14] "Alburnus chalcoides"      
-# [15] "Alepocephalus rostratus"  
-# [16] "Alestes baremoze"         
-# [17] "Alestes dentex"           
-# [18] "Alopias pelagicus"        
-# [19] "Alopias superciliosus"    
-# [20] "Alopias vulpinus"
+
+#Start with 164 fish species with known size and mating system
+db.fish1[1:20,"binomial"] 
+# [1] "Agosia chrysogaster"     
+# [2] "Albula vulpes"           
+# [3] "Alopias vulpinus"        
+# [4] "Alosa pseudoharengus"    
+# [5] "Alosa sapidissima"       
+# [6] "Amia calva"              
+# [7] "Anguilla anguilla"       
+# [8] "Campostoma anomalum"     
+# [9] "Campostoma oligolepis"   
+# [10] "Campostoma ornatum"      
+# [11] "Carcharhinus falciformis"
+# [12] "Carcharhinus plumbeus"   
+# [13] "Carcharias taurus"       
+# [14] "Clarias gariepinus"      
+# [15] "Clinostomus funduloides" 
+# [16] "Cobitis taenia"          
+# [17] "Couesius plumbeus"       
+# [18] "Cyprinella camura"       
+# [19] "Cyprinella galactura"    
+# [20] "Cyprinella lutrensis" 
