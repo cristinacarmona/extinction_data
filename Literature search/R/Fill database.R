@@ -2,7 +2,7 @@
 #Fill in data into database
 #########################################################
 #Load datasets
-setwd("C:/Users/peepi_000/Documents/extinction_data/Literature search/input")
+setwd("C:/Users/peepi_000/Documents/extinction_data_backup/extinction_data/Literature search/input")
 
 #setwd("C:/Users/cris.carmona/Documents/MEGAsync/Projects/Post-doc/Riesgo de extinción y selección sexual/extinction_data/Literature search/input")
 
@@ -56,7 +56,7 @@ db.mam[11:16, "binomial"]
 #[2] "Ailurus fulgens"      no ASR
 #[3] "Akodon boliviensis"   Mating st no data NO asr### No data available
 #[4] "Akodon cursor"     no mating sy ASR = 43M:30F, .589
-#[5] "Alcelaphus buselaphus" asr and mating system no available  sex dim know from adw (PG 11/08/2019)
+#[5] "Alcelaphus buselaphus" asr and mating system no available  sex dim know from adw (PG 11/08/2018)
 #[6] "Alces alces" sex dim and mating sys know from adw ASR  males "62" and females "65" from (Roönnega??rd et al., 2008)ASR's data from 1984 sex ratio in percentage in the article (PG 11/08/2018)
 
 str(db.mam)
@@ -240,4 +240,78 @@ db.mam[1165:1174, "binomial"]
 # [9] "Zyzomys argurus"       
 # [10] "Zyzomys woodwardi
 
-db.mam[1155:1164, "binomial"]
+db.mam[1:114, "binomial"]
+     
+#[42] "Antilocapra americana"   ASR based on captures from 41 males and 61 females (PG 08/10/2018) 
+#[43] "Antilope cervicapra"     ASR based on captures from 653 males and 988 females (PG 08/10/2018)  
+#[44] "Antrozous pallidus"         
+#[45] "Aonyx capensis"             
+#[46] "Aotus lemurinus"            
+#[47] "Aotus trivirgatus"          
+#[48] "Aplodontia rufa"            
+#[49] "Apodemus agrarius"          
+#[50] "Apodemus draco"             
+#[51] "Apodemus flavicollis"       
+#[52] "Apodemus sylvaticus"        
+#[53] "Arctocebus calabarensis"    
+#[54] "Arctocephalus australis"    
+#[55] "Arctocephalus galapagoensis"
+#[56] "Arctocephalus gazella"      
+#[57] "Arctocephalus pusillus"     
+#[58] "Arctocephalus townsendi"    
+#[59] "Arctocephalus tropicalis"   
+#[60] "Ardops nichollsi"           
+#[61] "Ariteus flavescens"         
+#[62] "Artibeus concolor"          
+#[63] "Artibeus hirsutus"          
+#[64] "Artibeus jamaicensis"       
+#[65] "Artibeus lituratus"         
+#[66] "Artibeus obscurus"          
+#[67] "Arvicanthis niloticus"      
+#[68] "Asellia tridens"            
+#[69] "Atelerix frontalis"         
+#[70] "Ateles geoffroyi"           
+#[71] "Ateles paniscus"            
+#[72] "Atherurus africanus"        
+#[73] "Atilax paludinosus"         
+#[74] "Auliscomys pictus"          
+#[75] "Avahi laniger"              
+#[76] "Axis axis"                  
+#[77] "Axis porcinus"              
+#[78] "Balaenoptera acutorostrata" 
+#[79] "Balantiopteryx io"          
+#[80] "Bandicota bengalensis"      
+#[81] "Bandicota indica"           
+#[82] "Barbastella barbastellus"   
+#[83] "Bassaricyon alleni"         
+#[84] "Bassaricyon gabbii"         
+#[85] "Bassariscus astutus"        
+#[86] "Bathyergus janetta"         
+#[87] "Bathyergus suillus"         
+#[88] "Beamys hindei"              
+#[89] "Berylmys bowersi"           
+#[90] "Bison bison"                
+#[91] "Blarina carolinensis"       
+#[92] "Bos gaurus"                 
+#[93] "Bos primigenius"            
+#[94] "Boselaphus tragocamelus"    
+#[95] "Bradypus torquatus"         
+#[96] "Bradypus tridactylus"       
+#[97] "Bradypus variegatus"        
+#[98] "Burramys parvus"            
+#[99] "Calcochloris obtusirostris" 
+#[100] "Callicebus brunneus"        
+#[101] "Callicebus cupreus"         
+#[102] "Callicebus moloch"          
+#[103] "Callicebus personatus"      
+#[104] "Callicebus torquatus"       
+#[105] "Callithrix geoffroyi"       
+#[106] "Callithrix jacchus"         
+#[107] "Callithrix penicillata"     
+#[108] "Callorhinus ursinus"        
+#[109] "Callosciurus erythraeus"    
+#[110] "Callosciurus notatus"       
+#[111] "Calomys callosus"           
+#[112] "Calomys musculinus"         
+#[113] "Calomys sorellus"           
+#[114] "Caloprymnus campestris" 
