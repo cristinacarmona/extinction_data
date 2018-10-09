@@ -58,12 +58,12 @@ head(db.fish)
 
 #Start with 164 fish species with known size and mating system
 db.fish1[1:20,"binomial"] 
-# [1] "Agosia chrysogaster"     
-# [2] "Albula vulpes"           
-# [3] "Alopias vulpinus"        
-# [4] "Alosa pseudoharengus"    
-# [5] "Alosa sapidissima"       
-# [6] "Amia calva"              
+# [1] "Agosia chrysogaster"  Mating system added (OGM 22/Ago/2018), no ASR found (CCI 08/10/2018)
+# [2] "Albula vulpes"       ASR based on captures of 274 females and 192 males, no data for sex_dim (CCI 08/10/2018)    
+# [3] "Alopias vulpinus"    No data (CCI 08/10/2018)    
+# [4] "Alosa pseudoharengus"    No data available (CCI 09/10/2018)
+# [5] "Alosa sapidissima"   ASR based on three studies from fisheries captures or baited hooks captures: males 1084, females 1248 (Celia, 2007); males 146, females 29 (Layzer, 1979); males 317, females 368 (Craigie, 1926). (CCI 09/10/2018)
+# [6] "Amia calva"         ASR based on collected fish: 51 males, 24 females (considering only aged fish and fish > 0 years) (CCI 09/10/2018)     
 # [7] "Anguilla anguilla"       
 # [8] "Campostoma anomalum"     
 # [9] "Campostoma oligolepis"   
