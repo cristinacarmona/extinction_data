@@ -100,8 +100,9 @@ db.mam2 <- db.mam[!is.na(db.mam$mating_system) & !db.mam$binomial %in% sp.worked
 str(db.mam2) #372 spp
 
 db.mam2[1:10, "binomial"]
-# [1] "Antilocapra americana"      
-# [2] "Antrozous pallidus"         
+# [1] "Antilocapra americana" ASR based on captures from 41 males and 61 females (PG 08/10/2018) 
+# [1']"Antilope cervicapra"   ASR based on captures from 42 males and 13 females (PG 08/10/2018)
+# [2] "Antrozous pallidus"   ASR based on captures from 653 males and 988 females (PG 08/10/2018)       
 # [3] "Aotus lemurinus"            
 # [4] "Aotus trivirgatus"          
 # [5] "Arctocebus calabarensis"    
@@ -243,7 +244,7 @@ db.mam[1165:1174, "binomial"]
 db.mam[1:114, "binomial"]
      
 #[42] "Antilocapra americana"   ASR based on captures from 41 males and 61 females (PG 08/10/2018) 
-#[43] "Antilope cervicapra"     ASR based on captures from 653 males and 988 females (PG 08/10/2018)  
+#[43] "Antilope cervicapra"      
 #[44] "Antrozous pallidus"         
 #[45] "Aonyx capensis"             
 #[46] "Aotus lemurinus"            
