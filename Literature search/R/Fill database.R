@@ -64,8 +64,8 @@ db.fish1[1:20,"binomial"]
 # [4] "Alosa pseudoharengus"    No data available (CCI 09/10/2018)
 # [5] "Alosa sapidissima"   ASR based on three studies from fisheries captures or baited hooks captures: males 1084, females 1248 (Celia, 2007); males 146, females 29 (Layzer, 1979); males 317, females 368 (Craigie, 1926). (CCI 09/10/2018)
 # [6] "Amia calva"         ASR based on collected fish: 51 males, 24 females (considering only aged fish and fish > 0 years) (CCI 09/10/2018)     
-# [7] "Anguilla anguilla"       
-# [8] "Campostoma anomalum"     
+# [7] "Anguilla anguilla"     Did not consider counts of males and females based on captures during downstream river migration: males 73, females 1145 (Vollestad & Jonsson, 1986), prefered data from captures in lagoons or basins and not during migration: males 737, females 1049 (CCI 10/10/2018)
+# [8] "Campostoma anomalum"     No data (CCI 10/10/2018)
 # [9] "Campostoma oligolepis"   
 # [10] "Campostoma ornatum"      
 # [11] "Carcharhinus falciformis"
