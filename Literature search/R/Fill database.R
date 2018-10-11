@@ -103,7 +103,7 @@ db.mam2[1:10, "binomial"]
 # [1] "Antilocapra americana" ASR based on captures from 41 males and 61 females (PG 08/10/2018) 
 # [1']"Antilope cervicapra"   ASR based on captures from 42 males and 13 females (PG 08/10/2018)
 # [2] "Antrozous pallidus"   ASR based on captures from 653 males and 988 females (PG 08/10/2018)       
-# [3] "Aotus lemurinus"            
+# [3] "Aotus lemurinus"       no data available (PG 10/10/2018)     
 # [4] "Aotus trivirgatus"          
 # [5] "Arctocebus calabarensis"    
 # [6] "Arctocephalus australis"    
