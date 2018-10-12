@@ -42,8 +42,8 @@ str(db2[db2$Class %in% c("ACTINOPTERYGII","CEPHALASPIDOMORPHI"," MYXINI",
 
 db.fish1<-db2[db2$Class %in% c("ACTINOPTERYGII","CEPHALASPIDOMORPHI"," MYXINI",
                          "CHONDRICHTHYES","SARCOPTERYGII") & 
-          ((!is.na(db2$male_svl_cm) & !is.na(db2$female_svl_cm)) | 
-             (!is.na(db2$male_size_cm.fishbase) & !is.na(db2$female_size_cm.fishbase)) &
+          (((!is.na(db2$male_svl_cm) & !is.na(db2$female_svl_cm)) | 
+             (!is.na(db2$male_size_cm.fishbase) & !is.na(db2$female_size_cm.fishbase))) &
              !is.na(db2$mating_system)),] #164 species with known male and female size and Mating_system
 
 db.fish2 <- db2[db2$Class %in% c("ACTINOPTERYGII","CEPHALASPIDOMORPHI"," MYXINI",
@@ -52,7 +52,7 @@ db.fish2 <- db2[db2$Class %in% c("ACTINOPTERYGII","CEPHALASPIDOMORPHI"," MYXINI"
                     (!is.na(db2$male_size_cm.fishbase) & !is.na(db2$female_size_cm.fishbase))),] #updated CCI 21/Sept/2018
 
 str(db.fish2)#594 obs
-str(db.fish1)#164
+str(db.fish1)#79
 head(db.fish)
 
 
@@ -66,15 +66,15 @@ db.fish1[1:20,"binomial"]
 # [6] "Amia calva"         ASR based on collected fish: 51 males, 24 females (considering only aged fish and fish > 0 years) (CCI 09/10/2018)     
 # [7] "Anguilla anguilla"     Did not consider counts of males and females based on captures during downstream river migration: males 73, females 1145 (Vollestad & Jonsson, 1986), prefered data from captures in lagoons or basins and not during migration: males 737, females 1049 (CCI 10/10/2018)
 # [8] "Campostoma anomalum"     No data (CCI 10/10/2018)
-# [9] "Campostoma oligolepis"   
-# [10] "Campostoma ornatum"      
-# [11] "Carcharhinus falciformis"
-# [12] "Carcharhinus plumbeus"   
-# [13] "Carcharias taurus"       
-# [14] "Clarias gariepinus"      
-# [15] "Clinostomus funduloides" 
-# [16] "Cobitis taenia"          
-# [17] "Couesius plumbeus"       
-# [18] "Cyprinella camura"       
-# [19] "Cyprinella galactura"    
-# [20] "Cyprinella lutrensis" 
+# [9] "Carcharhinus falciformis" ASR based on bycatch captures of 103 males and 149 females (CCI 11/10/2018)
+# [10] "Carcharhinus plumbeus"    
+# [11] "Carcharias taurus"       
+# [12] "Clarias gariepinus"      
+# [13] "Cobitis taenia"          
+# [14] "Couesius plumbeus"       
+# [15] "Cyprinus carpio"         
+# [16] "Dasyatis pastinaca"      
+# [17] "Engraulis mordax"        
+# [18] "Esox lucius"             
+# [19] "Etheostoma juliae"       
+# [20] "Gadus morhua" 
