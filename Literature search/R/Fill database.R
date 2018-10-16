@@ -65,19 +65,19 @@ db.fish1[1:20,"binomial"]
 # [5] "Alosa sapidissima"   ASR based on three studies from fisheries captures or baited hooks captures: males 1084, females 1248 (Celia, 2007); males 146, females 29 (Layzer, 1979); males 317, females 368 (Craigie, 1926). (CCI 09/10/2018)
 # [6] "Amia calva"         ASR based on collected fish: 51 males, 24 females (considering only aged fish and fish > 0 years) (CCI 09/10/2018)     
 # [7] "Anguilla anguilla"     Did not consider counts of males and females based on captures during downstream river migration: males 73, females 1145 (Vollestad & Jonsson, 1986); prefered data from captures in lagoons or basins and not during migration: males 737, females 1049 (CCI 10/10/2018)
-# [7´] "Balistes capriscus"
+# [7´] "Balistes capriscus"    ASR data from by-catch captures of 254 males and 444 females, Males were significantly larger than females and could be distinguished from females by size and dark charcoal coloration during the spawning season. (CCI 15/10/2018)
 # [8] "Campostoma anomalum"     No data (CCI 10/10/2018)
-# [10'] "Campostoma oligolepis"   
-# [11'] "Campostoma ornatum"  
+# [10'] "Campostoma oligolepis"   Distinct tubercle pattern on the nape of nuptial males: Sexes shaped differently. No data available for ASR (CCI 15/10/2018)
+# [11'] "Campostoma ornatum"      Distinct tubercle pattern on the nape of nuptial males: Sexes shaped differently. No data available for ASR (CCI 15/10/2018)
 # # [9] "Carcharhinus falciformis" ASR based on bycatch captures of 103 males and 149 females (CCI 11/10/2018)
 # # [10] "Carcharhinus plumbeus"   ASR based on bycatch: 12 males and 168 females (Saiumldi et al. 2005); based on tagged individuals trapped using longlines: 45 males, 27 females (Romine et al., 2006); tagged individuals trapped using longlines or nets: males 620, females 848 (Kohler et al., 2005) (CCI 15/10/2018).
 # # [11] "Carcharias taurus"       ASR based on surveys with photo-id of individuals: 288 males, 271 females (Bansemer & Bennet, 2011) (CCI 15/10/2018)
-# [15'] "Cheilinus undulatus"     
-# [16'] "Chrosomus eos"           
-# [17'] "Chrosomus neogaeus"      
-# [18'] "Chrosomus oreas"   
+# [15'] "Cheilinus undulatus"     Species with protogyny and sex change, ASR estimated from a census from unmarked individuals, 15 males and 100 females (CCI 15/10/2018)
+# [16'] "Chrosomus eos"           No data available for ASR, added info for sex_dim (CCI 15/10/2018)
+# [17'] "Chrosomus neogaeus"      No reliable data for ASR,  The males of these species attain bright red, pink, or yellow colors on their sides and bellies, patches of breeding tubercles at the bases of the pectora and anal fins, and large, modified pectoral fins during the breeding season (CCI 15/10/2018)
+# [18'] "Chrosomus oreas"         ASR based on collected fish: 21 males and 13 females; added info for sex_dim (CCI 15/10/2018)
 # # [12] "Clarias gariepinus"     No useful data available, most studies did not identify mature individuals from immature (CCI 15/10/2018)      
-# [20'] "Clinostomus funduloides" 
+# [20'] "Clinostomus funduloides" ASR based on collected fish: Among 181 mature dace 102 (56%) were females (CCI 15/10/2018)
 # [13] "Cobitis taenia"         ASR based on captured fish: 195 males and 196 females (Marconato & Rasotto, 1989) (CCI 15/10/2018) 
 # [14] "Couesius plumbeus"    ASR based on captured and marked fish: 1,282 males, 839 females. These fish were captured in spawning sites so we assumed they were sexually mature as there was no mention of the age in text (Brown et al., 1970) (CCI 15/10/2018).     
 # [15] "Cyprinus carpio"      ASR based on captured individuals, 180 males and 168 females of age class > II (according to Fernández-Delgado (1990), carps at this age class are sexually mature) (CCI 15/10/2018)   
