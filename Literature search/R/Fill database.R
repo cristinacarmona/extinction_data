@@ -52,7 +52,7 @@ db.fish2 <- db2[db2$Class %in% c("ACTINOPTERYGII","CEPHALASPIDOMORPHI"," MYXINI"
                     (!is.na(db2$male_size_cm.fishbase) & !is.na(db2$female_size_cm.fishbase))),] #updated CCI 21/Sept/2018
 
 str(db.fish2)#594 obs
-str(db.fish1)#79
+str(db.fish1)#154
 head(db.fish)
 
 
@@ -64,17 +64,47 @@ db.fish1[1:20,"binomial"]
 # [4] "Alosa pseudoharengus"    No data available (CCI 09/10/2018)
 # [5] "Alosa sapidissima"   ASR based on three studies from fisheries captures or baited hooks captures: males 1084, females 1248 (Celia, 2007); males 146, females 29 (Layzer, 1979); males 317, females 368 (Craigie, 1926). (CCI 09/10/2018)
 # [6] "Amia calva"         ASR based on collected fish: 51 males, 24 females (considering only aged fish and fish > 0 years) (CCI 09/10/2018)     
-# [7] "Anguilla anguilla"     Did not consider counts of males and females based on captures during downstream river migration: males 73, females 1145 (Vollestad & Jonsson, 1986), prefered data from captures in lagoons or basins and not during migration: males 737, females 1049 (CCI 10/10/2018)
+# [7] "Anguilla anguilla"     Did not consider counts of males and females based on captures during downstream river migration: males 73, females 1145 (Vollestad & Jonsson, 1986); prefered data from captures in lagoons or basins and not during migration: males 737, females 1049 (CCI 10/10/2018)
+# [7´] "Balistes capriscus"
 # [8] "Campostoma anomalum"     No data (CCI 10/10/2018)
-# [9] "Carcharhinus falciformis" ASR based on bycatch captures of 103 males and 149 females (CCI 11/10/2018)
-# [10] "Carcharhinus plumbeus"    
-# [11] "Carcharias taurus"       
-# [12] "Clarias gariepinus"      
-# [13] "Cobitis taenia"          
-# [14] "Couesius plumbeus"       
-# [15] "Cyprinus carpio"         
-# [16] "Dasyatis pastinaca"      
-# [17] "Engraulis mordax"        
-# [18] "Esox lucius"             
-# [19] "Etheostoma juliae"       
-# [20] "Gadus morhua" 
+# [10'] "Campostoma oligolepis"   
+# [11'] "Campostoma ornatum"  
+# # [9] "Carcharhinus falciformis" ASR based on bycatch captures of 103 males and 149 females (CCI 11/10/2018)
+# # [10] "Carcharhinus plumbeus"   ASR based on bycatch: 12 males and 168 females (Saiumldi et al. 2005); based on tagged individuals trapped using longlines: 45 males, 27 females (Romine et al., 2006); tagged individuals trapped using longlines or nets: males 620, females 848 (Kohler et al., 2005) (CCI 15/10/2018).
+# # [11] "Carcharias taurus"       ASR based on surveys with photo-id of individuals: 288 males, 271 females (Bansemer & Bennet, 2011) (CCI 15/10/2018)
+# [15'] "Cheilinus undulatus"     
+# [16'] "Chrosomus eos"           
+# [17'] "Chrosomus neogaeus"      
+# [18'] "Chrosomus oreas"   
+# # [12] "Clarias gariepinus"     No useful data available, most studies did not identify mature individuals from immature (CCI 15/10/2018)      
+# [20'] "Clinostomus funduloides" 
+# [13] "Cobitis taenia"         ASR based on captured fish: 195 males and 196 females (Marconato & Rasotto, 1989) (CCI 15/10/2018) 
+# [14] "Couesius plumbeus"    ASR based on captured and marked fish: 1,282 males, 839 females. These fish were captured in spawning sites so we assumed they were sexually mature as there was no mention of the age in text (Brown et al., 1970) (CCI 15/10/2018).     
+# [15] "Cyprinus carpio"      ASR based on captured individuals, 180 males and 168 females of age class > II (according to Fernández-Delgado (1990), carps at this age class are sexually mature) (CCI 15/10/2018)   
+# [16] "Dasyatis pastinaca"   No reliable data found, one study showed an ASR of 0.71, however individuals were not marked (Morey et al., 2006) (CCI 15/10/2018)   
+# [17] "Engraulis mordax"     No reliable data found (CCI 15/10/2018)        
+# [18] "Esox lucius"          ASR based on captured fish: 66 males and 94 females (CCI 15/10/2018)           
+# [19] "Etheostoma juliae"    ASR based on captured fish: 53 males and 63 females (CCI 15/10/2018)   
+
+
+db.fish1[22:41,"binomial"]
+# [1] "Couesius plumbeus"   ,/  
+# [2] "Cyprinella camura"     
+# [3] "Cyprinella galactura"  
+# [4] "Cyprinella lutrensis"  
+# [5] "Cyprinella spiloptera" 
+# [6] "Cyprinella venusta"    
+# [7] "Cyprinella whipplei"   
+# [8] "Cyprinus carpio"     ,/  
+# [9] "Dasyatis pastinaca"    ,/
+# [10] "Dionda episcopa"       
+# [11] "Engraulis mordax"      
+# [12] "Ericymba buccata"      
+# [13] "Erimystax dissimilis"  
+# [14] "Esox lucius"           ,/
+# [15] "Etheostoma juliae"     ,/
+# [16] "Gadus morhua"          
+# [17] "Gambusia affinis"      
+# [18] "Gasterosteus aculeatus"
+# [19] "Gila atraria"          
+# [20] "Gila coerulea" 
