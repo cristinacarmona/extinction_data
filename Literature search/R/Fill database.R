@@ -89,12 +89,12 @@ db.fish1[1:20,"binomial"]
 
 db.fish1[22:41,"binomial"]
 # [1] "Couesius plumbeus"   ,/  
-# [2] "Cyprinella camura"     
-# [3] "Cyprinella galactura"  
-# [4] "Cyprinella lutrensis"  
-# [5] "Cyprinella spiloptera" 
-# [6] "Cyprinella venusta"    
-# [7] "Cyprinella whipplei"   
+# [2] "Cyprinella camura"    ASR based on collected fish: 342 males and 445 females;  The breeding males of both N. galacturus and N. camurus have greatly enlarged dorsal fins and red pigment in both dorsal and anal fin (CCI 16/10/2018).
+# [3] "Cyprinella galactura"  The breeding males of both N. galacturus and N. camurus have greatly enlarged dorsal fins and red pigment in both dorsal and anal fin (CCI 16/10/2018).
+# [4] "Cyprinella lutrensis"  No data for ASR, added info for sex_dim (CCI 16/10/2018)
+# [5] "Cyprinella spiloptera" Breeding adults of N. spilopterus and N. whipplii exhibit a high degree of sexual dimorphism. The back and sides of breeding males are a brilliant steel blue, and the dark crosshatch markings on the sides are much more prominent than in immature specimens and females (CCI 16/10/2018).
+# [6] "Cyprinella venusta"    No reliable data for ASR (CCI 16/10/2018)
+# [7] "Cyprinella whipplei" No data for ASR, Breeding adults of N. spilopterus and N. whipplii exhibit a high degree of sexual dimorphism. The back and sides of breeding males are a brilliant steel blue, and the dark crosshatch markings on the sides are much more prominent than in immature specimens and females (CCI 16/10/2018)   
 # [8] "Cyprinus carpio"     ,/  
 # [9] "Dasyatis pastinaca"    ,/
 # [10] "Dionda episcopa"       
