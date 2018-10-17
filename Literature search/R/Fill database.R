@@ -97,14 +97,66 @@ db.fish1[22:41,"binomial"]
 # [7] "Cyprinella whipplei" No data for ASR, Breeding adults of N. spilopterus and N. whipplii exhibit a high degree of sexual dimorphism. The back and sides of breeding males are a brilliant steel blue, and the dark crosshatch markings on the sides are much more prominent than in immature specimens and females (CCI 16/10/2018)   
 # [8] "Cyprinus carpio"     ,/  
 # [9] "Dasyatis pastinaca"    ,/
-# [10] "Dionda episcopa"       
-# [11] "Engraulis mordax"      
-# [12] "Ericymba buccata"      
-# [13] "Erimystax dissimilis"  
+# [10] "Dionda episcopa"     No data available (CCI 17/10/2018)  
+# [11] "Engraulis mordax"    ,/  
+# [12] "Ericymba buccata"      External sexual dimorphism was not apparent on any mature silverjaw minnows in this study, no reliable data for ASR found (CCI 17/10/2018)
+# [13] "Erimystax dissimilis" No data available (CCI 17/10/2018) 
 # [14] "Esox lucius"           ,/
 # [15] "Etheostoma juliae"     ,/
-# [16] "Gadus morhua"          
-# [17] "Gambusia affinis"      
-# [18] "Gasterosteus aculeatus"
-# [19] "Gila atraria"          
-# [20] "Gila coerulea" 
+# [16] "Gadus morhua"         No reliable data (CCI 17/10/2018) 
+# [17] "Gambusia affinis"       ASR based on collected fish from two studies: 464 females and 499 males (Milton & Arthington, 1983); 392 males and 746 females (Krumholz, 1948) (CCI 17/10/2018)     
+# [18] "Gasterosteus aculeatus" No reliable data for ASR (CCI 17/10/2018)
+# [19] "Gila atraria"           ASR based on collected fish: 21 males and 16 females (CCI 17/10/2018)     
+# [20] "Gila coerulea"      No data available (CCI 17/10/2018) 
+
+
+db.fish1[42:61,"binomial"]
+# [1] "Haemulon plumierii"      ASR based on collected fish: 117 males (larger than 271 mm, size classes considered from 280-400) and 203 females (larger than 213 mm, size classes considered from 220-400) (Palazón-Fernández, 2007); no sexual dimorphism in body shape or colour was observed (CCI 17/10/2018)
+# [2] "Heterodontus portusjacksoni"
+# [3] "Hippocampus reidi"          
+# [4] "Hippocampus whitei"         
+# [5] "Huso huso"                  
+# [6] "Hybognathus hankinsoni"     
+# [7] "Hybognathus nuchalis"       
+# [8] "Hybognathus placitus"       
+# [9] "Hybognathus regius"         
+# [10] "Hybopsis amblops"           
+# [11] "Hybopsis hypsinotus"        
+# [12] "Hypophthalmichthys molitrix"
+# [13] "Istiophorus platypterus"    
+# [14] "Isurus oxyrinchus"          
+# [15] "Lamna ditropis"             
+# [16] "Lamna nasus"                
+# [17] "Lavinia exilicauda"         
+# [18] "Lepidomeda vittata"         
+# [19] "Lepisosteus osseus"         
+# [20] "Lepisosteus platyrhincus" 
+
+
+db.fish1[62:81,"binomial"]
+# [1] "Lepomis megalotis"      
+# [2] "Lethrinus nebulosus"    
+# [3] "Luxilus albeolus"       
+# [4] "Luxilus cardinalis"     
+# [5] "Luxilus chrysocephalus" 
+# [6] "Luxilus coccogenis"     
+# [7] "Luxilus cornutus"       
+# [8] "Luxilus pilsbryi"       
+# [9] "Luxilus zonistius"      
+# [10] "Lythrurus ardens"       
+# [11] "Lythrurus bellus"       
+# [12] "Lythrurus fasciolaris"  
+# [13] "Lythrurus fumeus"       
+# [14] "Lythrurus matutinus"    
+# [15] "Lythrurus umbratilis"   
+# [16] "Macrhybopsis storeriana"
+# [17] "Margariscus margarita"  
+# [18] "Megalops atlanticus"    
+# [19] "Morone americana"       
+# [20] "Morone chrysops"
+
+
+
+
+
+
