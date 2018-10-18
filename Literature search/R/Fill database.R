@@ -118,23 +118,23 @@ db.fish1[42:61,"binomial"]
 # [5] "Huso huso"                No data available (CCI 17/10/2018)  
 # [6] "Hybognathus hankinsoni" No data available (CCI 17/10/2018)     
 # [7] "Hybognathus nuchalis"   No data available (CCI 17/10/2018)     
-# [8] "Hybognathus placitus"       
-# [9] "Hybognathus regius"         
-# [10] "Hybopsis amblops"           
-# [11] "Hybopsis hypsinotus"        
-# [12] "Hypophthalmichthys molitrix"
-# [13] "Istiophorus platypterus"    
-# [14] "Isurus oxyrinchus"          
-# [15] "Lamna ditropis"             
-# [16] "Lamna nasus"                
-# [17] "Lavinia exilicauda"         
-# [18] "Lepidomeda vittata"         
-# [19] "Lepisosteus osseus"         
-# [20] "Lepisosteus platyrhincus" 
+# [8] "Hybognathus placitus"   ASR based on collected fish: 30 males and 32 females, although it did not state they were adults, as they examined sexual dimorphism I assumed they were adults (CCI 18/10/2018)
+# [9] "Hybognathus regius"     No data available on ASR, sex_dim added (CCI 17/10/2018)    
+# [10] "Hybopsis amblops"       No data available (CCI 18/10/2018)    
+# [11] "Hybopsis hypsinotus"    No data available (CCI 18/10/2018)
+# [12] "Hypophthalmichthys molitrix" No reliable data available (CCI 18/10/2018)
+# [13] "Istiophorus platypterus" ASR based on collected fish from fisheries: 699 males and 436 females (CCI 18/10/2018)
+# [14] "Isurus oxyrinchus"       ASR based on collected sharks from fisheries: 6 mature males and 11 mature females (CCI 18/10/2018)   
+# [15] "Lamna ditropis"         No reliable data available (CCI 18/10/2018)    
+# [16] "Lamna nasus"            No reliable data available (CCI 18/10/2018)   
+# [17] "Lavinia exilicauda"       No data available (CCI 18/10/2018)  
+# [18] "Lepidomeda vittata"     Sexual dimorphism is not marked. The most obvious morphological difference between the sexes involves the pectoral fin, which is noticeably larger in the male; no data for ASR available (CCI 18/10/2018)     
+# [19] "Lepisosteus osseus"     ASR based on two studies: collected fish from lake 13 mature males and 11 mature females (Kelley, 2012); tagged fish durng spawning migration 87 males and 42 females (Johnson & Noltie, 1996) (CCI 18/10/2018)    
+# [20] "Lepisosteus platyrhincus" No data available (CCI 18/10/2018)
 
 
 db.fish1[62:81,"binomial"]
-# [1] "Lepomis megalotis"      
+# [1] "Lepomis megalotis"      No data available on ASR, added sex_dim (CCI 18/10/2018)
 # [2] "Lethrinus nebulosus"    
 # [3] "Luxilus albeolus"       
 # [4] "Luxilus cardinalis"     
@@ -156,7 +156,26 @@ db.fish1[62:81,"binomial"]
 # [20] "Morone chrysops"
 
 
-
-
+db.fish1[82:101,"binomial"]
+# [1] "Morone saxatilis"       
+# [2] "Mugil cephalus"         
+# [3] "Mustelus henlei"        
+# [4] "Mylopharyngodon piceus" 
+# [5] "Neogobius melanostomus" 
+# [6] "Nocomis asper"          
+# [7] "Nocomis biguttatus"     
+# [8] "Nocomis leptocephalus"  
+# [9] "Nocomis micropogon"     
+# [10] "Notemigonus crysoleucas"
+# [11] "Notropis ammophilus"    
+# [12] "Notropis amoenus"       
+# [13] "Notropis atherinoides"  
+# [14] "Notropis bairdi"        
+# [15] "Notropis bifrenatus"    
+# [16] "Notropis blennius"      
+# [17] "Notropis chalybaeus"    
+# [18] "Notropis chiliticus"    
+# [19] "Notropis cummingsae"    
+# [20] "Notropis heterodon" 
 
 
