@@ -112,12 +112,12 @@ db.fish1[22:41,"binomial"]
 
 db.fish1[42:61,"binomial"]
 # [1] "Haemulon plumierii"      ASR based on collected fish: 117 males (larger than 271 mm, size classes considered from 280-400) and 203 females (larger than 213 mm, size classes considered from 220-400) (Palazón-Fernández, 2007); no sexual dimorphism in body shape or colour was observed (CCI 17/10/2018)
-# [2] "Heterodontus portusjacksoni"
-# [3] "Hippocampus reidi"          
-# [4] "Hippocampus whitei"         
-# [5] "Huso huso"                  
-# [6] "Hybognathus hankinsoni"     
-# [7] "Hybognathus nuchalis"       
+# [2] "Heterodontus portusjacksoni" ASR based on by-catch data: 141 females and 206 males, considered individuals that were mature according to their gonad index in Table 3 (Tovar-Ávila, 2007) (CCI 17/10/2018)
+# [3] "Hippocampus reidi"       ASR based on marked-identified individuals: 322 males and 283 females (CCI 17/10/2018)         
+# [4] "Hippocampus whitei"      ASR based on marked individuals: 47 adult males and 51 adult females (CCI 17/10/2018)     
+# [5] "Huso huso"                No data available (CCI 17/10/2018)  
+# [6] "Hybognathus hankinsoni" No data available (CCI 17/10/2018)     
+# [7] "Hybognathus nuchalis"   No data available (CCI 17/10/2018)     
 # [8] "Hybognathus placitus"       
 # [9] "Hybognathus regius"         
 # [10] "Hybopsis amblops"           
