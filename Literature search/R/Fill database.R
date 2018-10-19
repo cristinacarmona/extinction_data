@@ -107,10 +107,10 @@ db.mam2[1:10, "binomial"]
 # [4] "Aotus trivirgatus"     no data available (PG 14/10/2018)     
 # [5] "Arctocebus calabarensis" no data available (PG 14/10/2018)  
 # [6] "Arctocephalus australis" ASR based on captures from 337 males and 3215 females (PG 14/10/2018)
-# [7] "Arctocephalus galapagoensis"  no data available (PG 14/10/2018) ASR whit pups 
-# [8] "Arctocephalus gazella"      
-# [9] "Arctocephalus pusillus"     
-# [10] "Arctocephalus townsendi"
+# [7] "Arctocephalus galapagoensis"  no data available (PG 14/10/2018) ASR only with pups 
+# [8] "Arctocephalus gazella"   ASR based on captures from 464 males and 581 females (PG 18/10/2018)   
+# [9] "Arctocephalus pusillus"  ASR based on captures from 9 males and 48 females (from Arctocephalus pusillus doriferus) (PG 18/10/2018) 
+# [10] "Arctocephalus townsendi" 
 
 db.mam2[11:20, "binomial"]
 # [1] "Arctocephalus tropicalis"
