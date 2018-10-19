@@ -135,14 +135,14 @@ db.fish1[42:61,"binomial"]
 
 db.fish1[62:81,"binomial"]
 # [1] "Lepomis megalotis"      No data available on ASR, added sex_dim (CCI 18/10/2018)
-# [2] "Lethrinus nebulosus"    
-# [3] "Luxilus albeolus"       
-# [4] "Luxilus cardinalis"     
-# [5] "Luxilus chrysocephalus" 
-# [6] "Luxilus coccogenis"     
-# [7] "Luxilus cornutus"       
-# [8] "Luxilus pilsbryi"       
-# [9] "Luxilus zonistius"      
+# [2] "Lethrinus nebulosus"    ASR based on collected fish: males > 37.7 cm = 553, females > 43.4 cm = 405 (CCI 19/10/2018)
+# [3] "Luxilus albeolus"       No data available (CCI 19/10/2018)
+# [4] "Luxilus cardinalis"     No data available (CCI 19/10/2018)
+# [5] "Luxilus chrysocephalus" No data available (CCI 19/10/2018)
+# [6] "Luxilus coccogenis"     No data available (CCI 19/10/2018)
+# [7] "Luxilus cornutus"       Added info for sex_dim (CCI 19/10/2018)
+# [8] "Luxilus pilsbryi"       No data available (CCI 19/10/2018)
+# [9] "Luxilus zonistius"      No data available (CCI 19/10/2018)
 # [10] "Lythrurus ardens"       
 # [11] "Lythrurus bellus"       
 # [12] "Lythrurus fasciolaris"  
