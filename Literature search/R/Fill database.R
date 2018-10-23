@@ -56,7 +56,7 @@ str(db.fish1)#154
 head(db.fish)
 
 
-#Start with 164 fish species with known size and mating system
+#Start with 154 fish species with known size and mating system
 db.fish1[1:20,"binomial"] 
 # [1] "Agosia chrysogaster"  Mating system added (OGM 22/Ago/2018), no ASR found (CCI 08/10/2018)
 # [2] "Albula vulpes"       ASR based on captures of 274 females and 192 males, no data for sex_dim (CCI 08/10/2018)    
@@ -143,24 +143,24 @@ db.fish1[62:81,"binomial"]
 # [7] "Luxilus cornutus"       Added info for sex_dim (CCI 19/10/2018)
 # [8] "Luxilus pilsbryi"       No data available (CCI 19/10/2018)
 # [9] "Luxilus zonistius"      No data available (CCI 19/10/2018)
-# [10] "Lythrurus ardens"       
-# [11] "Lythrurus bellus"       
-# [12] "Lythrurus fasciolaris"  
-# [13] "Lythrurus fumeus"       
-# [14] "Lythrurus matutinus"    
-# [15] "Lythrurus umbratilis"   
-# [16] "Macrhybopsis storeriana"
-# [17] "Margariscus margarita"  
-# [18] "Megalops atlanticus"    
-# [19] "Morone americana"       
-# [20] "Morone chrysops"
+# [10] "Lythrurus ardens"      No data available (CCI 22/10/2018)
+# [11] "Lythrurus bellus"      No data available (CCI 22/10/2018)  
+# [12] "Lythrurus fasciolaris"  ASR based on collected fish: 169 males and 197 females (CCI 22/10/2018)
+# [13] "Lythrurus fumeus"     No data available (CCI 22/10/2018)       
+# [14] "Lythrurus matutinus"   No data available (CCI 22/10/2018) 
+# [15] "Lythrurus umbratilis"   Added info for sex_dim (CCI 22/10/2018)
+# [16] "Macrhybopsis storeriana" No data available (CCI 22/10/2018) 
+# [17] "Margariscus margarita"  ASR based on collected fish > 1 year old estimated from figure 3 page 82 (Felts, 2013): 67 females and 46 males (CCI 22/10/2018)
+# [18] "Megalops atlanticus"    ASR based on collected fish > 102 cm (males) and > 130 cm (females) from table 4 (Crabtree et al., 1995): 90 males and 222 females (CCI 22/10/2018)
+# [19] "Morone americana"       No reliable data available (CCI 22/10/2018)
+# [20] "Morone chrysops"        No reliable data available (CCI 22/10/2018)
 
 
 db.fish1[82:101,"binomial"]
-# [1] "Morone saxatilis"       
-# [2] "Mugil cephalus"         
-# [3] "Mustelus henlei"        
-# [4] "Mylopharyngodon piceus" 
+# [1] "Morone saxatilis"      No reliable data available (CCI 22/10/2018)    
+# [2] "Mugil cephalus"        ASR based on collected fish: 208 males and 303 females (CCI 22/10/2018) 
+# [3] "Mustelus henlei"       ASR based on collected sharks: 168 mature males, 246 mature females (CCI 22/10/2018) 
+# [4] "Mylopharyngodon piceus" No data available (CCI 22/10/2018)
 # [5] "Neogobius melanostomus" 
 # [6] "Nocomis asper"          
 # [7] "Nocomis biguttatus"     
@@ -178,4 +178,63 @@ db.fish1[82:101,"binomial"]
 # [19] "Notropis cummingsae"    
 # [20] "Notropis heterodon" 
 
+db.fish1[102:121,"binomial"]
+# [1] "Notropis heterolepis"     
+# [2] "Notropis lutipinnis"      
+# [3] "Notropis nubilus"         
+# [4] "Notropis rubellus"        
+# [5] "Notropis stilbius"        
+# [6] "Notropis stramineus"      
+# [7] "Notropis texanus"         
+# [8] "Notropis volucellus"      
+# [9] "Opsanus beta"             
+# [10] "Opsopoeodus emiliae"      
+# [11] "Paralichthys californicus"
+# [12] "Perca fluviatilis"        
+# [13] "Phenacobius crassilabrum" 
+# [14] "Phenacobius mirabilis"    
+# [15] "Pimephales notatus"       
+# [16] "Pimephales promelas"      
+# [17] "Pimephales vigilax"       
+# [18] "Polyodon spathula"        
+# [19] "Potamotrygon motoro"      
+# [20] "Prionace glauca" 
+
+
+db.fish1[122:141,"binomial"]
+# [1] "Pteronotropis hubbsi"       
+# [2] "Pteronotropis signipinnis"  
+# [3] "Pteronotropis welaka"       
+# [4] "Ptychocheilus grandis"      
+# [5] "Rhinichthys atratulus"      
+# [6] "Rhinichthys cataractae"     
+# [7] "Rhinichthys cobitis"        
+# [8] "Rhinichthys osculus"        
+# [9] "Richardsonius balteatus"    
+# [10] "Salmo trutta"               
+# [11] "Sander lucioperca"          
+# [12] "Sander vitreus"             
+# [13] "Scaphirhynchus platorynchus"
+# [14] "Semotilus atromaculatus"    
+# [15] "Semotilus corporalis"       
+# [16] "Semotilus lumbee"           
+# [17] "Siganus canaliculatus"      
+# [18] "Silurus glanis"             
+# [19] "Sphyrna lewini"             
+# [20] "Squalus acanthias" 
+
+db.fish1[142:154,"binomial"]
+# [1] "Squalus suckleyi"       
+# [2] "Symphodus cinereus"     
+# [3] "Symphodus roissali"     
+# [4] "Symphodus rostratus"    
+# [5] "Symphodus tinca"        
+# [6] "Takifugu rubripes"      
+# [7] "Tautogolabrus adspersus"
+# [8] "Thunnus alalunga"       
+# [9] "Thunnus thynnus"        
+# [10] "Trachinotus falcatus"   
+# [11] "Triakis semifasciata"   
+# [12] "Tropheus moorii"        
+# [13] "Zebrasoma flavescens" 
 
