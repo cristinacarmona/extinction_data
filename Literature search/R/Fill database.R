@@ -161,20 +161,20 @@ db.fish1[82:101,"binomial"]
 # [2] "Mugil cephalus"        ASR based on collected fish: 208 males and 303 females (CCI 22/10/2018) 
 # [3] "Mustelus henlei"       ASR based on collected sharks: 168 mature males, 246 mature females (CCI 22/10/2018) 
 # [4] "Mylopharyngodon piceus" No data available (CCI 22/10/2018)
-# [5] "Neogobius melanostomus" 
-# [6] "Nocomis asper"          
-# [7] "Nocomis biguttatus"     
-# [8] "Nocomis leptocephalus"  
-# [9] "Nocomis micropogon"     
-# [10] "Notemigonus crysoleucas"
-# [11] "Notropis ammophilus"    
-# [12] "Notropis amoenus"       
-# [13] "Notropis atherinoides"  
-# [14] "Notropis bairdi"        
-# [15] "Notropis bifrenatus"    
-# [16] "Notropis blennius"      
-# [17] "Notropis chalybaeus"    
-# [18] "Notropis chiliticus"    
+# [5] "Neogobius melanostomus" No data from natural range available, could not get copy of (Kovtun, 1979) (CCI 23/10/2018)
+# [6] "Nocomis asper"          No data available (CCI 23/10/2018)
+# [7] "Nocomis biguttatus"     No data available (CCI 23/10/2018) 
+# [8] "Nocomis leptocephalus"  No data available (CCI 23/10/2018)
+# [9] "Nocomis micropogon"     No data available (CCI 23/10/2018)
+# [10] "Notemigonus crysoleucas" ASR based on marked fish, average for 8 years: 1190 males and 1190 females (CCI 23/10/2018)
+# [11] "Notropis ammophilus"   No data available (CCI 23/10/2018)
+# [12] "Notropis amoenus"      Added info for sex_dim (CCI 23/10/2018)
+# [13] "Notropis atherinoides" ASR based on collected fish: 328 males and 121 females (CCI 23/10/2018) 
+# [14] "Notropis bairdi"        No data available (CCI 23/10/2018)
+# [15] "Notropis bifrenatus"    Added info for sex_dim (CCI 23/10/2018)
+# [16] "Notropis blennius"      No data available (CCI 23/10/2018)
+# [17] "Notropis chalybaeus"    No data available (CCI 23/10/2018)
+# [18] "Notropis chiliticus"    Added info for sex_dim (CCI 23/10/2018)
 # [19] "Notropis cummingsae"    
 # [20] "Notropis heterodon" 
 
