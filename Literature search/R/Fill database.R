@@ -110,12 +110,12 @@ db.mam2[1:10, "binomial"]
 # [7] "Arctocephalus galapagoensis"  no data available (PG 14/10/2018) ASR only with pups 
 # [8] "Arctocephalus gazella"   ASR based on captures from 464 males and 581 females (PG 18/10/2018)   
 # [9] "Arctocephalus pusillus"  ASR based on captures from 9 males and 48 females (from Arctocephalus pusillus doriferus) (PG 18/10/2018) 
-# [10] "Arctocephalus townsendi" 
+# [10] "Arctocephalus townsendi" ASR based on captures (from 1983 to 1993 ) from 4,996 males and 6,979 females (from Arctocephalus pusillus doriferus) (PG 24/10/2018) 
 
 db.mam2[11:20, "binomial"]
-# [1] "Arctocephalus tropicalis"
-# [2] "Artibeus jamaicensis"    
-# [3] "Atelerix frontalis"      
+# [1] "Arctocephalus tropicalis" No data available (PG 24/10/2018) only females... 
+# [2] "Artibeus jamaicensis"    ASR based on captures from 1 male and 8 females (PG 24/10/2018)
+# [3] "Atelerix frontalis"      no data available (PG 24/10/2018)
 # [4] "Ateles paniscus"         
 # [5] "Avahi laniger"           
 # [6] "Axis porcinus"           
