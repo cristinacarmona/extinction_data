@@ -175,30 +175,30 @@ db.fish1[82:101,"binomial"]
 # [16] "Notropis blennius"      No data available (CCI 23/10/2018)
 # [17] "Notropis chalybaeus"    No data available (CCI 23/10/2018)
 # [18] "Notropis chiliticus"    Added info for sex_dim (CCI 23/10/2018)
-# [19] "Notropis cummingsae"    
-# [20] "Notropis heterodon" 
+# [19] "Notropis cummingsae"    No data available (CCI 23/10/2018)
+# [20] "Notropis heterodon"     No data available (CCI 23/10/2018)
 
 db.fish1[102:121,"binomial"]
-# [1] "Notropis heterolepis"     
-# [2] "Notropis lutipinnis"      
-# [3] "Notropis nubilus"         
-# [4] "Notropis rubellus"        
-# [5] "Notropis stilbius"        
-# [6] "Notropis stramineus"      
-# [7] "Notropis texanus"         
-# [8] "Notropis volucellus"      
-# [9] "Opsanus beta"             
-# [10] "Opsopoeodus emiliae"      
-# [11] "Paralichthys californicus"
-# [12] "Perca fluviatilis"        
-# [13] "Phenacobius crassilabrum" 
-# [14] "Phenacobius mirabilis"    
-# [15] "Pimephales notatus"       
-# [16] "Pimephales promelas"      
-# [17] "Pimephales vigilax"       
-# [18] "Polyodon spathula"        
-# [19] "Potamotrygon motoro"      
-# [20] "Prionace glauca" 
+# [1] "Notropis heterolepis"    No data available (CCI 23/10/2018)   
+# [2] "Notropis lutipinnis"     No data available (CCI 23/10/2018) 
+# [3] "Notropis nubilus"        No reliable data available (CCI 24/10/2018) 
+# [4] "Notropis rubellus"       ASR based on fish collected for two studies: 322 males and 308 females (Pfeiffer, 1955); 1589 males and 1427 females (Reed, 1957) (CCI 24/10/2018) 
+# [5] "Notropis stilbius"       No data available (CCI 24/10/2018) 
+# [6] "Notropis stramineus"     Added info for sex_dim (CCI 24/10/2018)      
+# [7] "Notropis texanus"        No data available (CCI 24/10/2018) 
+# [8] "Notropis volucellus"     ASR based on collected fish: 549 males and 335 females (CCI 24/10/2018)   
+# [9] "Opsanus beta"            No data available (CCI 24/10/2018)           
+# [10] "Opsopoeodus emiliae"    No data available (CCI 24/10/2018)  
+# [11] "Paralichthys californicus"  No reliable data available (CCI 24/10/2018)
+# [12] "Perca fluviatilis"       ASR based on collected fish: 52 females and 62 males (CCI 24/10/2018) 
+# [13] "Phenacobius crassilabrum" No data available (CCI 24/10/2018)
+# [14] "Phenacobius mirabilis"    No data available (CCI 24/10/2018)
+# [15] "Pimephales notatus"       Added info for sex_dim (CCI 24/10/2018)
+# [16] "Pimephales promelas"      No data available (CCI 24/10/2018)
+# [17] "Pimephales vigilax"       Added info for sex_dim (CCI 24/10/2018)
+# [18] "Polyodon spathula"        ASR based on collected fish: males >= 10 y - 29, females >= 15 y - 15, added info for sex_dim (CCI 24/10/2018)
+# [19] "Potamotrygon motoro"      No data available (CCI 24/10/2018)      
+# [20] "Prionace glauca"          ASR based on collected sharks small adults and large adults based on fig. 3 (Montealegre-Quijano & Vooren, 2010): 698 males and 208 females (CCI 24/10/2018)
 
 
 db.fish1[122:141,"binomial"]
