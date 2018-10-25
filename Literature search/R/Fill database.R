@@ -115,7 +115,7 @@ db.mam2[1:10, "binomial"]
 db.mam2[11:20, "binomial"]
 # [1] "Arctocephalus tropicalis" No data available (PG 24/10/2018) only females... 
 # [2] "Artibeus jamaicensis"    ASR based on captures from 1 male and 8 females (PG 24/10/2018)
-# [3] "Atelerix frontalis"      no data available (PG 24/10/2018)
+# [3] "Atelerix frontalis"      no data available (PG 24/10/2018)..
 # [4] "Ateles paniscus"         
 # [5] "Avahi laniger"           
 # [6] "Axis porcinus"           
