@@ -202,19 +202,19 @@ db.fish1[102:121,"binomial"]
 
 
 db.fish1[122:141,"binomial"]
-# [1] "Pteronotropis hubbsi"       
-# [2] "Pteronotropis signipinnis"  
-# [3] "Pteronotropis welaka"       
-# [4] "Ptychocheilus grandis"      
-# [5] "Rhinichthys atratulus"      
-# [6] "Rhinichthys cataractae"     
-# [7] "Rhinichthys cobitis"        
-# [8] "Rhinichthys osculus"        
-# [9] "Richardsonius balteatus"    
-# [10] "Salmo trutta"               
-# [11] "Sander lucioperca"          
-# [12] "Sander vitreus"             
-# [13] "Scaphirhynchus platorynchus"
+# [1] "Pteronotropis hubbsi"       Added info for sex_dim, ASR data not reliable, could not find original source (CCI 25/10/2018)
+# [2] "Pteronotropis signipinnis"  ASR based on collected fish: males >= 33 mm - 172, females >= 26 mm - 254 (according to table 2 and 4 Albanese, 2000) (CCI 25/10/2018)
+# [3] "Pteronotropis welaka"       Added info for sex_dim, no reliable data for ASR found (CCI 25/10/2018)
+# [4] "Ptychocheilus grandis"      No data available (CCI 25/10/2018)
+# [5] "Rhinichthys atratulus"      ASR based on collected fish (mature >= age group 1): males 576, females 492 (CCI 25/10/2018)
+# [6] "Rhinichthys cataractae"     ASR based on collected fish >= age II: 311 males and 492 females (CCI 25/10/2018)
+# [7] "Rhinichthys cobitis"        Added info for sex_dim (CCI 25/10/2018)
+# [8] "Rhinichthys osculus"        No data available (CCI 25/10/2018)
+# [9] "Richardsonius balteatus"    Added info for sex_dim (CCI 25/10/2018)
+# [10] "Salmo trutta"              ASR based on collected fish > 2y from two studies: 103 females and 65 males( Treasurer, 1976); 74 females and 35 males (Ahmet et al., 2005) (CCI 25/10/2018)
+# [11] "Sander lucioperca"         ASR based on collected mature fish during spawning run: 101 males and 65 females (CCI 25/10/2018) 
+# [12] "Sander vitreus"            No reliable data found (CCI 25/10/2018)
+# [13] "Scaphirhynchus platorynchus" No reliable data found (CCI 25/10/2018)
 # [14] "Semotilus atromaculatus"    
 # [15] "Semotilus corporalis"       
 # [16] "Semotilus lumbee"           
