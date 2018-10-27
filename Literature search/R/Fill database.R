@@ -215,26 +215,26 @@ db.fish1[122:141,"binomial"]
 # [11] "Sander lucioperca"         ASR based on collected mature fish during spawning run: 101 males and 65 females (CCI 25/10/2018) 
 # [12] "Sander vitreus"            No reliable data found (CCI 25/10/2018)
 # [13] "Scaphirhynchus platorynchus" No reliable data found (CCI 25/10/2018)
-# [14] "Semotilus atromaculatus"    
-# [15] "Semotilus corporalis"       
-# [16] "Semotilus lumbee"           
-# [17] "Siganus canaliculatus"      
-# [18] "Silurus glanis"             
-# [19] "Sphyrna lewini"             
-# [20] "Squalus acanthias" 
+# [14] "Semotilus atromaculatus"     ASR based on collected or marked fish: 385 males and 540 females (CCI 26/10/2018)
+# [15] "Semotilus corporalis"       Added info for sex_dim (CCI 26/10/2018)
+# [16] "Semotilus lumbee"           No data available (CCI 26/10/2018)
+# [17] "Siganus canaliculatus"      Added info for sex_dim (CCI 26/10/2018)
+# [18] "Silurus glanis"             No data available (CCI 26/10/2018)
+# [19] "Sphyrna lewini"             ASR based on collected sharks: 36 male adults, 44 female adults (CCI 26/10/2018)
+# [20] "Squalus acanthias"          ASR based on by-catch sharks: 88 mature females, 34 mature males (CCI 26/10/2018)
 
 db.fish1[142:154,"binomial"]
-# [1] "Squalus suckleyi"       
-# [2] "Symphodus cinereus"     
-# [3] "Symphodus roissali"     
-# [4] "Symphodus rostratus"    
-# [5] "Symphodus tinca"        
-# [6] "Takifugu rubripes"      
-# [7] "Tautogolabrus adspersus"
-# [8] "Thunnus alalunga"       
-# [9] "Thunnus thynnus"        
-# [10] "Trachinotus falcatus"   
-# [11] "Triakis semifasciata"   
-# [12] "Tropheus moorii"        
-# [13] "Zebrasoma flavescens" 
+# [1] "Squalus suckleyi"         ASR based on collected sharks: 520 mature males, 675 mature females (CCI 26/10/2018)
+# [2] "Symphodus cinereus"       No data available (CCI 26/10/2018)
+# [3] "Symphodus roissali"       Added info for sex_dim (CCI 26/10/2018)
+# [4] "Symphodus rostratus"      No data available (CCI 26/10/2018) 
+# [5] "Symphodus tinca"          ASR based on collected fish: 327 females > 11 cm, 542 males > 10 cm (CCI 26/10/2018)
+# [6] "Takifugu rubripes"        No data available (CCI 26/10/2018)
+# [7] "Tautogolabrus adspersus"  ASR based on collected fish: 47 males and 28 females (CCI 26/10/2018)
+# [8] "Thunnus alalunga"         ASR based on collected fish: 93 males (stage 3-5, Table III), 76 females (stage 2-8, Table V) (CCI 26/10/2018)
+# [9] "Thunnus thynnus"          No reliable data found (CCI 26/10/2018)
+# [10] "Trachinotus falcatus"    ASR based on collected fish: 104 males (>= 486mm), 98 females (>=547mm) (CCI 26/10/2018)
+# [11] "Triakis semifasciata"    No data available (CCI 26/10/2018)
+# [12] "Tropheus moorii"         Added info for sex_dim (CCI 26/10/2018)
+# [13] "Zebrasoma flavescens"    No data available (CCI 26/10/2018)
 
