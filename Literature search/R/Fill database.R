@@ -116,8 +116,8 @@ db.mam2[11:20, "binomial"]
 # [1] "Arctocephalus tropicalis" No data available (PG 24/10/2018) only females... 
 # [2] "Artibeus jamaicensis"    ASR based on captures from 1 male and 8 females (PG 24/10/2018)
 # [3] "Atelerix frontalis"      no data available (PG 24/10/2018)..
-# [4] "Ateles paniscus"         
-# [5] "Avahi laniger"           
+# [4] "Ateles paniscus"        ASR based on captures from 3 male and 8 females (PG 28/10/2018)     
+# [5] "Avahi laniger"       ASR  FROM : Avahi laniger occidentalis and Avahi laniger laniger. ASR based on captures from 6 male and 10 females (PG 28/10/2018)    
 # [6] "Axis porcinus"           
 # [7] "Bassaricyon gabbii"      
 # [8] "Bison bison"             
