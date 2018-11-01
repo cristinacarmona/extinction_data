@@ -73,21 +73,21 @@ amp[21:40,"binomial"]
 # [3] "Hyla annectans"           ASR based on marked individuals from two populations of Hyla annectans chuanxiensis: 64 male adults and 33 female adults (CCI 31/10/2018) 
 # [4] "Hyla arborea"             ASR known from Pipoly, added info for sex_dim (CCI 31/10/2018)
 # [5] "Hyperolius marmoratus"    ASR based on marked individuals estimated from figure 1 (Telfrod & Dyson, 1988): 2651 males and 276 females (CCI 31/10/2018)
-# [6] "Limnodynastes peronii"    No data available (CCI 30/10/2018)
-# [7] "Lithobates catesbeianus"   
-# [8] "Lithobates clamitans"      
-# [9] "Lithobates pipiens"        
-# [10] "Lithobates sylvaticus"     
-# [11] "Mantella aurantiaca"       
-# [12] "Mixophyes fasciolatus"     
-# [13] "Mixophyes fleayi"          
-# [14] "Nanorana parkeri"          
-# [15] "Odorrana grahami"          
-# [16] "Oophaga histrionica"       
-# [17] "Oophaga lehmanni"          
-# [18] "Oophaga pumilio"           
-# [19] "Osteopilus septentrionalis"
-# [20] "Pelobates fuscus" 
+# [6] "Limnodynastes peronii"    No data available (CCI 31/10/2018)
+# [7] "Lithobates catesbeianus"  No data available (CCI 31/10/2018) 
+# [8] "Lithobates clamitans"     No data available (CCI 31/10/2018) 
+# [9] "Lithobates pipiens"       No data available (CCI 31/10/2018) 
+# [10] "Lithobates sylvaticus"   ASR based on marked individuals from two populations: 129 males and 63 females (CCI 31/10/2018)  
+# [11] "Mantella aurantiaca"     No data available (CCI 30/10/2018)  
+# [12] "Mixophyes fasciolatus"   No data available (CCI 31/10/2018)  
+# [13] "Mixophyes fleayi"        No data available (CCI 31/10/2018)   
+# [14] "Nanorana parkeri"        ASR based on marked individuals: 363 males and 143 females (CCI 31/10/2018)          
+# [15] "Odorrana grahami"        ASR based on collected individuals: 189 males and 173 females (CCI 31/10/2018)  
+# [16] "Oophaga histrionica"     No data available (CCI 31/10/2018)  
+# [17] "Oophaga lehmanni"        No data available (CCI 31/10/2018)  
+# [18] "Oophaga pumilio"         ASR based on 85 surveys from marked individuals: 658 males and 1645 females (CCI 31/10/2018) 
+# [19] "Osteopilus septentrionalis" No data available (CCI 31/10/2018)
+# [20] "Pelobates fuscus"         ASR based on data from two studies of marked frogs: 87 males and 29 females (Eggert & Guyétant, 1999); and from 4 years of pond surveys: 711 males and 429 females (Hels, 2002) (CCI 31/10/2018) 
 
 amp[41:60,"binomial"]
 # [1] "Phyllobates terribilis"  
