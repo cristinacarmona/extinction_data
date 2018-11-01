@@ -90,9 +90,9 @@ amp[21:40,"binomial"]
 # [20] "Pelobates fuscus"         ASR based on data from two studies of marked frogs: 87 males and 29 females (Eggert & Guyétant, 1999); and from 4 years of pond surveys: 711 males and 429 females (Hels, 2002) (CCI 31/10/2018) 
 
 amp[41:60,"binomial"]
-# [1] "Phyllobates terribilis"  
-# [2] "Phyllomedusa burmeisteri"
-# [3] "Pseudacris brachyphona"  
+# [1] "Phyllobates terribilis"   No data available (CCI 01/11/2018)
+# [2] "Phyllomedusa burmeisteri" No data available (CCI 01/11/2018)
+# [3] "Pseudacris brachyphona"   ASR based on newly marked individuals from 5 years: 1018 males and 171 females (CCI 01/11/2018)
 # [4] "Pseudacris crucifer"     
 # [5] "Pseudacris regilla"      
 # [6] "Pseudacris streckeri"    
