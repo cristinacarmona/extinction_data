@@ -68,12 +68,12 @@ amp[1:20,"binomial"]
 # [20] "Edalorhina perezi"        No data available (CCI 30/10/2018)
 
 amp[21:40,"binomial"]
-# [1] "Eleutherodactylus coqui"   
-# [2] "Fejervarya limnocharis"    
-# [3] "Hyla annectans"            
-# [4] "Hyla arborea"              
-# [5] "Hyperolius marmoratus"     
-# [6] "Limnodynastes peronii"     
+# [1] "Eleutherodactylus coqui"  ASR based on marked individuals on two areas and two seasons: 294 females and 310 males (CCI 30/10/2018)  
+# [2] "Fejervarya limnocharis"   No data available (CCI 31/10/2018) 
+# [3] "Hyla annectans"           ASR based on marked individuals from two populations of Hyla annectans chuanxiensis: 64 male adults and 33 female adults (CCI 31/10/2018) 
+# [4] "Hyla arborea"             ASR known from Pipoly, added info for sex_dim (CCI 31/10/2018)
+# [5] "Hyperolius marmoratus"    ASR based on marked individuals estimated from figure 1 (Telfrod & Dyson, 1988): 2651 males and 276 females (CCI 31/10/2018)
+# [6] "Limnodynastes peronii"    No data available (CCI 30/10/2018)
 # [7] "Lithobates catesbeianus"   
 # [8] "Lithobates clamitans"      
 # [9] "Lithobates pipiens"        
