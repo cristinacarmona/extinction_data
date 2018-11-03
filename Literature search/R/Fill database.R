@@ -118,9 +118,9 @@ db.mam2[11:20, "binomial"]
 # [3] "Atelerix frontalis"      no data available (PG 24/10/2018)..
 # [4] "Ateles paniscus"        ASR based on captures from 3 male and 8 females (PG 28/10/2018)     
 # [5] "Avahi laniger"       ASR  FROM : Avahi laniger occidentalis and Avahi laniger laniger. ASR based on captures from 6 male and 10 females (PG 28/10/2018)    
-# [6] "Axis porcinus"           
-# [7] "Bassaricyon gabbii"      
-# [8] "Bison bison"             
+# [6] "Axis porcinus"     ASR based on captures from 2,945 male and 5,423 females (PG 02/11/2018)
+# [7] "Bassaricyon gabbii"   no data available (PG 02/11/2018)    
+# [8] "Bison bison"            no data available (pg 02/11/2018) 
 # [9] "Bradypus torquatus"      
 # [10] "Bradypus variegatus" 
 
