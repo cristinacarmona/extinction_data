@@ -121,8 +121,8 @@ db.mam2[11:20, "binomial"]
 # [6] "Axis porcinus"     ASR based on captures from 2,945 male and 5,423 females (PG 02/11/2018)
 # [7] "Bassaricyon gabbii"   no data available (PG 02/11/2018)    
 # [8] "Bison bison"            no data available (pg 02/11/2018) 
-# [9] "Bradypus torquatus"      
-# [10] "Bradypus variegatus" 
+# [9] "Bradypus torquatus"    ASR based on captures from 15 male and 21 female (PG 05/11/2018)  
+# [10] "Bradypus variegatus" ASR based on captures from 59 male and 33 female (PG 05/11/2018)
 
 
 
