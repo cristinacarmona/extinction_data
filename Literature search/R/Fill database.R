@@ -93,20 +93,20 @@ amp[41:60,"binomial"]
 # [1] "Phyllobates terribilis"   No data available (CCI 01/11/2018)
 # [2] "Phyllomedusa burmeisteri" No data available (CCI 01/11/2018)
 # [3] "Pseudacris brachyphona"   ASR based on newly marked individuals from 5 years: 1018 males and 171 females (CCI 01/11/2018)
-# [4] "Pseudacris crucifer"     
-# [5] "Pseudacris regilla"      
-# [6] "Pseudacris streckeri"    
-# [7] "Pseudacris triseriata"   
-# [8] "Rana boylii"             
-# [9] "Rana chensinensis"       
-# [10] "Rana luteiventris"       
-# [11] "Rana omeimontis"         
-# [12] "Rana temporaria"         
-# [13] "Rhacophorus omeimontis"  
-# [14] "Rhinella marina"         
-# [15] "Scaphiopus couchii"      
-# [16] "Spea bombifrons"         
-# [17] "Spea intermontana"       
-# [18] "Xenopus laevis"
+# [4] "Pseudacris crucifer"      No data available (CCI 02/11/2018)
+# [5] "Pseudacris regilla"       No data available (CCI 05/11/2018)
+# [6] "Pseudacris streckeri"     ASR based on marked individuals: 91 males and 62 females (estimated from figure 11, Tucker & Philipp, 1995) (CCI 05/11/2018)
+# [7] "Pseudacris triseriata"    ASR based on marked individuals from a 3 year study: 1145 males and 1144 females (CCI 05/11/2018)
+# [8] "Rana boylii"              ASR based on captured and marked adults during breeding season and post-reproductive months: 31 males and 21 females (CCI 05/11/2018)
+# [9] "Rana chensinensis"        ASR based on captured adults from 3 different elevations: 73 males, 61 females (CCI 05/11/2018)
+# [10] "Rana luteiventris"       ASR based on marked adults: 93 males and 45 females (CCI 05/11/2018)
+# [11] "Rana omeimontis"         No data available (CCI 05/11/2018)
+# [12] "Rana temporaria"         ASR based on marked adults from 2 studies: 546 males and 195 females newly marked throughout 8 years(Elmberg, 1990); 78 males and 19 females (Guarino et al., 2008)(CCI 05/11/2018)
+# [13] "Rhacophorus omeimontis"  ASR based on marked adults from 2 ponds: 230 males and 82 females (CCI 05/11/2018)
+# [14] "Rhinella marina"         No data available (CCI 05/11/2018)
+# [15] "Scaphiopus couchii"      No data available (CCI 05/11/2018)
+# [16] "Spea bombifrons"         No data available (CCI 05/11/2018)
+# [17] "Spea intermontana"       No data available (CCI 05/11/2018)
+# [18] "Xenopus laevis"          No data available (CCI 05/11/2018)
 
 
