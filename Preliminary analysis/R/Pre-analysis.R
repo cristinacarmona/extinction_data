@@ -4,18 +4,21 @@
 #Gave ordinal number to IUCN status 21/sept/2018
 #Corrected mating.system categories 21/sept/2018
 
+#Re-run code now including fish and amphibians 07/nov/2018
+
 #############################
 ###########################
-#Load datasets
-
+# #Load datasets
+# 
 # setwd("C:/Users/cris.carmona/Documents/MEGAsync/Projects/Post-doc/Riesgo de extinción y selección sexual/extinction_data/Preliminary analysis/input")
 # 
 # xlsxfiles <- list.files(path = ".", pattern='*\\.xlsx$', all.files=TRUE)
-# xlsxfiles
 # 
-# library(openxlsx)
-# import.list <- lapply(xlsxfiles, read.xlsx, sheet=1, colNames = TRUE, na.strings=c("NA", "NA ","na","N","-","---"," ","",".","sin dato","SD","sd","Sin Dato", -999,"-999"))
+# csvfiles <- list.files(path = ".", pattern='*\\.csv$', all.files=TRUE)
 # 
+# #library(openxlsx)
+# #import.list <- lapply(xlsxfiles, read.xlsx, sheet=1, colNames = TRUE, na.strings=c("NA", "NA ","na","N","-","---"," ","",".","sin dato","SD","sd","Sin Dato", -999,"-999"))
+# import.list <- lapply(csvfiles, read.csv, header=T, na.strings=c("NA", "NA ","na","N","-","---"," ","",".","sin dato","SD","sd","Sin Dato", -999,"-999"))
 # 
 # #str(import.list)
 # ls()
@@ -24,35 +27,35 @@
 # names(working.list) <- c("db")
 # 
 # attach(working.list)
-# ###########################################################
-# names(db)
-# 
-# 
-# ##########################################################
-# #Siguiendo la clasificación de Fisher y Owens (2004) transformar
-# #las categorías en un índice ordinal del 1-6:
-# #(1= "sin amenaza", 2 = "casi amenazado", 3 = "vulnerable", 4="en peligro", 5 = "en peligro crítico", 6 = "extinta")
-# 
-# table(db$Red.List.status)
-# # EXTINCT (EX) ...6
-# # EXTINCT IN THE WILD (EW) ...6
-# # CRITICALLY ENDANGERED (CR) ...5
-# # ENDANGERED (EN) ...4
-# # VULNERABLE (VU) ...3
-# # NEAR THREATENED (NT) ...2
-# # LEAST CONCERN (LC) ...1
-# # DATA DEFICIENT (DD)....NA
-# # Lower risk /Conservation dependant (LR/cd)....2 "The category is part of the IUCN 1994 Categories & Criteria (version 2.3), which is no longer used in evaluation of taxa, but persists in the IUCN Red List for taxa evaluated prior to 2001, when version 3.1 was first used. Using the 2001 (v3.1) system these taxa are classed as near threatened, but those that have not been re-evaluated remain with the "Conservation Dependent" category. (wikipedia)"
-# # Lower risk /least concern (LR/lc)...1
-# # Lower risk /near threatened....2
-# 
-# #   CR    DD    EN    EW    EX    LC  LR/cd LR/lc 
-# #1710  6701  2966    18   362 27865     9    52 
-# #LR/nt    NT    VU 
-# #61  2650  3698 
-# 
-# head(db)
-# 
+# # ###########################################################
+#  names(db)
+# #
+# #
+# # ##########################################################
+# # #Siguiendo la clasificación de Fisher y Owens (2004) transformar
+# # #las categorías en un índice ordinal del 1-6:
+# # #(1= "sin amenaza", 2 = "casi amenazado", 3 = "vulnerable", 4="en peligro", 5 = "en peligro crítico", 6 = "extinta")
+# #
+#  table(db$Red.List.status)
+# # # EXTINCT (EX) ...6
+# # # EXTINCT IN THE WILD (EW) ...6
+# # # CRITICALLY ENDANGERED (CR) ...5
+# # # ENDANGERED (EN) ...4
+# # # VULNERABLE (VU) ...3
+# # # NEAR THREATENED (NT) ...2
+# # # LEAST CONCERN (LC) ...1
+# # # DATA DEFICIENT (DD)....NA
+# # # Lower risk /Conservation dependant (LR/cd)....2 "The category is part of the IUCN 1994 Categories & Criteria (version 2.3), which is no longer used in evaluation of taxa, but persists in the IUCN Red List for taxa evaluated prior to 2001, when version 3.1 was first used. Using the 2001 (v3.1) system these taxa are classed as near threatened, but those that have not been re-evaluated remain with the "Conservation Dependent" category. (wikipedia)"
+# # # Lower risk /least concern (LR/lc)...1
+# # # Lower risk /near threatened....2
+# #
+# # #   CR    DD    EN    EW    EX    LC  LR/cd LR/lc
+# # #1710  6701  2966    18   362 27865     9    52
+# # #LR/nt    NT    VU
+# # #61  2650  3698
+# #
+# # head(db)
+# #
 # db$rl.status.ordinal <- NA
 # db$rl.status.ordinal[db$Red.List.status %in% c("LC","LR/lc")] <- 1
 # db$rl.status.ordinal[db$Red.List.status %in% c("NT","LR/nt","LR/cd")] <- 2
@@ -63,32 +66,32 @@
 # db$rl.status.ordinal[db$Red.List.status %in% c("EX")] <- 6
 # 
 # table(db$rl.status.ordinal)
-# # 1     2     3     4     5     6 
-# # 27917  2720  3698  2966  1710   380 
-# 
+# # # 1     2     3     4     5     6
+# # # 27917  2720  3698  2966  1710   380
+# #
 # hist(db$rl.status.ordinal)
-# 
-# #------Check mating.system-------------
+# #
+# # #------Check mating.system-------------
 # db2<-db
-# table(db2$mating_system, useNA = "always")#<NA>  43752
+# table(db2$mating_system, useNA = "always")#<NA>  43660
 # 
 # unique(db2$mating_system)
 # 
-# db2$mating_system[db2$mating_system %in% "Unknown, NA"] <- NA
+# db2$mating_system[db2$mating_system %in% "Unknown"] <- NA #NA: 43674
 # db2$mating_system.corrected[db2$mating_system %in% c("Polygyny", "polygyny",
 #                                                      "Polygynous, promiscuity",
 #                                                      "Polygynous, Cooperative breeder ",
 #                                                      "Polygynous, Cooperative breeder",
 #                                                      "Polygynous, Cooperative breeder, non-monogamy",
 #                                                      "Polygynous, Cooperative breeder, non-monogamy ",
-#                                                      "Polygynous, Polygynandrous (promiscuous), non-monogamy", 
-#                                                      "Polygynous, Polygynandrous (promiscuous), non-monogamy ", 
-#                                                      "Polygynous, Polygynandrous (promiscuous)", 
-#                                                      "Polygynous, polyandry", 
+#                                                      "Polygynous, Polygynandrous (promiscuous), non-monogamy",
+#                                                      "Polygynous, Polygynandrous (promiscuous), non-monogamy ",
+#                                                      "Polygynous, Polygynandrous (promiscuous)",
+#                                                      "Polygynous, polyandry",
 #                                                      "Polygynous, non-monogamy",
 #                                                      "Polygynous, non-monogamy ",
 #                                                      "Polygynous, polygyny",
-#                                                      "Polygynous, NA", 
+#                                                      "Polygynous, NA",
 #                                                      "promiscuity",
 #                                                      "polygynous",
 #                                                      "Polygynous",
@@ -134,7 +137,8 @@
 #                                                      "Monogamous, monogamy",
 #                                                      "Monogamous, monogamy ",
 #                                                      "Monogamous, NA",
-#                                                      "Monogamous, Unknown, NA",
+#                                                      "Monogamous, Unknown",
+#                                                      "Monogamous, Unknown Monogamous, Unknown",
 #                                                      "monogamy",
 #                                                      "monogamy ",
 #                                                      "monogamy, monogamy",
@@ -171,39 +175,44 @@
 #                                                      "Monogamous, Polyandrous",
 #                                                      "Monogamous, Cooperative breeder, non-monogamy ",
 #                                                      "Monogamous, Cooperative breeder, non-monogamy")] <- "Monogamous or Polygamous"
-#   
-#   
+# 
+# 
 # table(db2$mating_system.corrected, useNA = "always") #NA 43755
-# # Monogamous           Monogamous or Polygamous 
-# # 1307                      102 
-# # Polygamous          <NA> 
-# # 928                    43755 
+# # Monogamous           Monogamous or Polygamous
+# # 1336                      102
+# # Polygamous          <NA>
+# # 977                    43677
 # 
-# unique(db2[is.na(db2$mating_system.corrected) & !is.na(db2$mating_system),"mating_system"])
+# unique(db2[is.na(db2$mating_system.corrected) & !is.na(db2$mating_system), c("mating_system", "mating_system.corrected", "binomial")])
+# 
+# # binomial
+# # 19496 Hipposideros fulvus
+# # 41924  Suricata suricatta  Overall, dominant males fathered the majority of pups born in all groups (80%, 65 of 81, of litters; 77%, 203 of 255, of pups) (Griffin et al., 2003)
+# # 43905 Trachypithecus geei
 # 
 # 
-# #------------------------
-# #Check sizes and estimate sexual size dimorphism
-# head(db2) #fish: male_size_cm.fishbase, female_size_cm.fishbase;
-#                 #male_TLinfinity.fishbase, female_TLinfinity.fishbase
-#                 #male_svl_cm, female_svl_cm
-#           #Mammals: male_body_mass_g, female_body_mass_g
-#           #Reptiles: male_svl_cm, female_svl_cm
-#           #Aves: male_body_mass_g, female_body_mass_g
-#           #Amphibia: male_svl_cm, female_svl_cm
-# 
-# names(db2)
+# # #------------------------
+# # #Check sizes and estimate sexual size dimorphism
+# # head(db2) #fish: male_size_cm.fishbase, female_size_cm.fishbase;
+# #                 #male_TLinfinity.fishbase, female_TLinfinity.fishbase
+# #                 #male_svl_cm, female_svl_cm
+# #           #Mammals: male_body_mass_g, female_body_mass_g
+# #           #Reptiles: male_svl_cm, female_svl_cm
+# #           #Aves: male_body_mass_g, female_body_mass_g
+# #           #Amphibia: male_svl_cm, female_svl_cm
+# #
+# # names(db2)
 # table(db2$ref.sex.size.dim)
 # hist(db2$sex.size.dim)
-# 
-# 
+# #
+# #
 # db2$sex.size.dim.2 <- NA
 # db2$sex.size.dim.2[db2$Class %in% "MAMMALIA"] <- log(db2$male_body_mass_g[db2$Class %in% "MAMMALIA"]/db2$female_body_mass_g[db2$Class %in% "MAMMALIA"])
 # db2$sex.size.dim.2[db2$Class %in% c("REPTILIA", "AMPHIBIA")] <- log(db2$male_svl_cm[db2$Class %in% c("REPTILIA", "AMPHIBIA")]/db2$female_svl_cm[db2$Class %in% c("REPTILIA", "AMPHIBIA")])
 # db2$sex.size.dim.2[db2$Class %in% "AVES"] <- log(db2$male_body_mass_g[db2$Class %in% "AVES"]/db2$female_body_mass_g[db2$Class %in% "AVES"])
 # 
 # db2$sex.size.dim.2[db2$Class %in% c("ACTINOPTERYGII","CEPHALASPIDOMORPHI"," MYXINI",
-#                                     "CHONDRICHTHYES","SARCOPTERYGII")] <- 
+#                                     "CHONDRICHTHYES","SARCOPTERYGII")] <-
 #   ifelse(!is.na(db2$male_svl_cm[db2$Class %in% c("ACTINOPTERYGII","CEPHALASPIDOMORPHI"," MYXINI",
 #                                     "CHONDRICHTHYES","SARCOPTERYGII")]) &
 #            !is.na(db2$female_svl_cm[db2$Class %in% c("ACTINOPTERYGII","CEPHALASPIDOMORPHI"," MYXINI",
@@ -211,30 +220,61 @@
 #     log(db2$male_svl_cm[db2$Class %in% c("ACTINOPTERYGII","CEPHALASPIDOMORPHI"," MYXINI", "CHONDRICHTHYES","SARCOPTERYGII")]
 #         /db2$female_svl_cm[db2$Class %in% c("ACTINOPTERYGII","CEPHALASPIDOMORPHI"," MYXINI", "CHONDRICHTHYES","SARCOPTERYGII")]),
 #     ifelse(!is.na(db2$male_size_cm.fishbase[db2$Class %in% c("ACTINOPTERYGII","CEPHALASPIDOMORPHI"," MYXINI",
-#                                                              "CHONDRICHTHYES","SARCOPTERYGII")]) 
-#            & !is.na(db2$female_size_cm.fishbase[db2$Class %in% c("ACTINOPTERYGII","CEPHALASPIDOMORPHI"," MYXINI", 
+#                                                              "CHONDRICHTHYES","SARCOPTERYGII")])
+#            & !is.na(db2$female_size_cm.fishbase[db2$Class %in% c("ACTINOPTERYGII","CEPHALASPIDOMORPHI"," MYXINI",
 #                                                                  "CHONDRICHTHYES","SARCOPTERYGII")]),
 #           log(db2$male_size_cm.fishbase[db2$Class %in% c("ACTINOPTERYGII","CEPHALASPIDOMORPHI"," MYXINI",
 #                                                          "CHONDRICHTHYES","SARCOPTERYGII")]/
 #                 db2$female_size_cm.fishbase[db2$Class %in% c("ACTINOPTERYGII","CEPHALASPIDOMORPHI"," MYXINI",
-#                                                              "CHONDRICHTHYES","SARCOPTERYGII")]), 
+#                                                              "CHONDRICHTHYES","SARCOPTERYGII")]),
 #           ifelse(!is.na(db2$male_TLinfinity.fishbase) & !is.na(db2$female_TLinfinity.fishbase),
 #                  log(db2$male_TLinfinity.fishbase/db2$female_TLinfinity.fishbase), NA)))
 # 
 # 
-# #--------debug------------
+# # #--------debug------------
 # hist(db2$sex.size.dim.2)
 # ind<-which(db2$sex.size.dim.2 < -1)
-# db2[ind,] 
+# db2[ind,]
 # 
 # #Podarcis siculus female_svl_cm is 1664.03....should be: 6.206
 # db2$female_svl_cm[db2$binomial %in% "Podarcis siculus"] <- 6.206
+
+
+
+#Run sex.size.dim.2 formulas again:
+# db2$sex.size.dim.2 <- NA
+# db2$sex.size.dim.2[db2$Class %in% "MAMMALIA"] <- log(db2$male_body_mass_g[db2$Class %in% "MAMMALIA"]/db2$female_body_mass_g[db2$Class %in% "MAMMALIA"])
+# db2$sex.size.dim.2[db2$Class %in% c("REPTILIA", "AMPHIBIA")] <- log(db2$male_svl_cm[db2$Class %in% c("REPTILIA", "AMPHIBIA")]/db2$female_svl_cm[db2$Class %in% c("REPTILIA", "AMPHIBIA")])
+# db2$sex.size.dim.2[db2$Class %in% "AVES"] <- log(db2$male_body_mass_g[db2$Class %in% "AVES"]/db2$female_body_mass_g[db2$Class %in% "AVES"])
+# 
+# db2$sex.size.dim.2[db2$Class %in% c("ACTINOPTERYGII","CEPHALASPIDOMORPHI"," MYXINI",
+#                                     "CHONDRICHTHYES","SARCOPTERYGII")] <-
+#   ifelse(!is.na(db2$male_svl_cm[db2$Class %in% c("ACTINOPTERYGII","CEPHALASPIDOMORPHI"," MYXINI",
+#                                     "CHONDRICHTHYES","SARCOPTERYGII")]) &
+#            !is.na(db2$female_svl_cm[db2$Class %in% c("ACTINOPTERYGII","CEPHALASPIDOMORPHI"," MYXINI",
+#                                       "CHONDRICHTHYES","SARCOPTERYGII")]),
+#     log(db2$male_svl_cm[db2$Class %in% c("ACTINOPTERYGII","CEPHALASPIDOMORPHI"," MYXINI", "CHONDRICHTHYES","SARCOPTERYGII")]
+#         /db2$female_svl_cm[db2$Class %in% c("ACTINOPTERYGII","CEPHALASPIDOMORPHI"," MYXINI", "CHONDRICHTHYES","SARCOPTERYGII")]),
+#     ifelse(!is.na(db2$male_size_cm.fishbase[db2$Class %in% c("ACTINOPTERYGII","CEPHALASPIDOMORPHI"," MYXINI",
+#                                                              "CHONDRICHTHYES","SARCOPTERYGII")])
+#            & !is.na(db2$female_size_cm.fishbase[db2$Class %in% c("ACTINOPTERYGII","CEPHALASPIDOMORPHI"," MYXINI",
+#                                                                  "CHONDRICHTHYES","SARCOPTERYGII")]),
+#           log(db2$male_size_cm.fishbase[db2$Class %in% c("ACTINOPTERYGII","CEPHALASPIDOMORPHI"," MYXINI",
+#                                                          "CHONDRICHTHYES","SARCOPTERYGII")]/
+#                 db2$female_size_cm.fishbase[db2$Class %in% c("ACTINOPTERYGII","CEPHALASPIDOMORPHI"," MYXINI",
+#                                                              "CHONDRICHTHYES","SARCOPTERYGII")]),
+#           ifelse(!is.na(db2$male_TLinfinity.fishbase) & !is.na(db2$female_TLinfinity.fishbase),
+#                  log(db2$male_TLinfinity.fishbase/db2$female_TLinfinity.fishbase), NA)))
 #  
-# #----------------------
-# #Check sex.dim
+
+
+
+
+# # #----------------------
+# # #Check sex.dim
 # head(db2)
 # length(db2$binomial)
-# categories<-as.data.frame(table(db2$sex_dim, useNA="always")) #161 categories
+# categories<-as.data.frame(table(db2$sex_dim, useNA="always")) #167 categories
 # 
 # db2$sex_dim[db2$sex_dim %in% "Male larger than female"] <- "Male larger"
 # db2$sex_dim[db2$sex_dim %in% "Sesex alike"] <- "Sexes alike"
@@ -242,7 +282,7 @@
 # db2$sex_dim[db2$sex_dim %in% "other, Morph-NA, Color-NA"] <- NA
 # db2$sex_dim[db2$sex_dim %in% "Males more colorful"] <- "Male more colorful"
 # 
-# cat_sex_dim<-unique(categories$Var1) #155 categories
+# cat_sex_dim<-unique(categories$Var1) #167 categories
 # 
 # ind<-grep("-males ", cat_sex_dim, perl=T)
 # ind2<-grep("(?<!fe)male", cat_sex_dim, perl=T)
@@ -255,8 +295,8 @@
 # db2$sex_dim_simplified <- gsub("Male larger, ", "", db2$sex_dim_simplified)
 # db2$sex_dim_simplified <- gsub(", Male larger", "", db2$sex_dim_simplified)
 # db2$sex_dim_simplified <- gsub("Male larger", NA, db2$sex_dim_simplified)
-# categories<-as.data.frame(table(db2$sex_dim_simplified, useNA="always")) #161 categories
-# cat_sex_dim<-unique(categories$Var1) #132 categories
+# categories<-as.data.frame(table(db2$sex_dim_simplified, useNA="always")) #138 categories
+# cat_sex_dim<-unique(categories$Var1) #138 categories
 # 
 # 
 # ind<-grep("Female", cat_sex_dim, perl=T)
@@ -267,19 +307,19 @@
 # 
 # db2$sex_dim_simplified <- gsub("Female larger, ", "", db2$sex_dim_simplified)
 # db2$sex_dim_simplified <- gsub("Female larger", NA, db2$sex_dim_simplified)
-# categories<-as.data.frame(table(db2$sex_dim_simplified, useNA="always")) #161 categories
-# cat_sex_dim<-unique(categories$Var1) #109 categories
+# categories<-as.data.frame(table(db2$sex_dim_simplified, useNA="always")) #116 categories
+# cat_sex_dim<-unique(categories$Var1) #116 categories
 # 
-# #Get rid of NA in categories
+# # #Get rid of NA in categories
 # db2$sex_dim_simplified <- gsub("^NA, ", "", db2$sex_dim_simplified)
 # db2$sex_dim_simplified <- gsub("Color-NA", "", db2$sex_dim_simplified)
 # db2$sex_dim_simplified <- gsub("Morph-NA, ", "", db2$sex_dim_simplified)
 # db2$sex_dim_simplified <- gsub("NA, ", "", db2$sex_dim_simplified)
-# categories<-as.data.frame(table(db2$sex_dim_simplified, useNA="always")) #161 categories
-# cat_sex_dim<-unique(categories$Var1) #109 categories
-# 
-# #Get rid of Morph-males alike females turn it into Sexes alike and
-# #Sexes alike, Color-males alike females
+# categories<-as.data.frame(table(db2$sex_dim_simplified, useNA="always")) #116 categories
+# cat_sex_dim<-unique(categories$Var1) #116 categories
+# #
+# # #Get rid of Morph-males alike females turn it into Sexes alike and
+# # #Sexes alike, Color-males alike females
 # db2$sex_dim_simplified <- gsub("Morph-males alike females, ", "Sexes alike, ", db2$sex_dim_simplified)
 # categories<-as.data.frame(table(db2$sex_dim_simplified, useNA="always")) #161 categories
 # cat_sex_dim<-unique(categories$Var1) #108 categories
@@ -294,52 +334,54 @@
 # 
 # db2$sex_dim_simplified[db2$sex_dim_simplified %in% "Sexes alike, Sexes alike, Color-males alike females"] <- "Sexes alike"
 # 
-# 
-# #Get rid of Color-different colors in juveniles and adults and
-# # Morph-different morphology in juveniles and adults
+# #
+# # #Get rid of Color-different colors in juveniles and adults and
+# # # Morph-different morphology in juveniles and adults
 # db2$sex_dim_simplified <- gsub(", Color-different colors in juveniles and adults", "", db2$sex_dim_simplified)
 # db2$sex_dim_simplified <- gsub("Morph-different morphology in juveniles and adults, ", "", db2$sex_dim_simplified)
 # 
 # db2$sex_dim_simplified[db2$sex_dim_simplified %in% "Color-different colors in juveniles and adults"] <- NA
 # db2$sex_dim_simplified[db2$sex_dim_simplified %in% "Morph-different morphology in juveniles and adults"] <- NA
 # categories<-as.data.frame(table(db2$sex_dim_simplified, useNA="always")) #161 categories
-# cat_sex_dim<-unique(categories$Var1) #99 categories
-# 
-# #Get rid of other
+# cat_sex_dim<-unique(categories$Var1) #106 categories
+# #
+# # #Get rid of other
 # ind<-grep("other", cat_sex_dim, perl=T)
 # cat_sex_dim[ind]
 # db2$sex_dim_simplified <- gsub("other, ", "", db2$sex_dim_simplified)
 # categories<-as.data.frame(table(db2$sex_dim_simplified, useNA="always")) #161 categories
-# cat_sex_dim<-unique(categories$Var1) #93 categories
+# cat_sex_dim<-unique(categories$Var1) #100 categories
 # 
-# #Turn Morph-always different morphology between mature adults to Sexes shaped differently
+# # #Turn Morph-always different morphology between mature adults to Sexes shaped differently
 # db2$sex_dim_simplified[db2$sex_dim_simplified %in% "Sexes shaped differently, Morph-always different morphology between mature adults, "] <- "Sexes shaped differently"
 # categories<-as.data.frame(table(db2$sex_dim_simplified, useNA="always")) #161 categories
-# cat_sex_dim<-unique(categories$Var1) #92 categories
+# cat_sex_dim<-unique(categories$Var1) #100 categories
 # 
-# #Get rid of no special organs
+# # #Get rid of no special organs
 # ind<-grep("no special organs", cat_sex_dim, perl=T)
 # cat_sex_dim[ind]
 # db2$sex_dim_simplified <- gsub("no special organs, ", "", db2$sex_dim_simplified)
 # db2$sex_dim_simplified[db2$sex_dim_simplified %in% "no special organs"] <- NA
 # categories<-as.data.frame(table(db2$sex_dim_simplified, useNA="always")) #161 categories
-# cat_sex_dim<-unique(categories$Var1) #74 categories
+# cat_sex_dim<-unique(categories$Var1) #81 categories
 # 
-# #Get rid of Male more colorful, Color-always different colors between mature adults
+# # #Get rid of Male more colorful, Color-always different colors between mature adults
 # db2$sex_dim_simplified[db2$sex_dim_simplified %in% ""] <- NA
 # 
 # db2$sex_dim_simplified[db2$sex_dim_simplified %in% "Male more colorful, Color-always different colors between mature adults"] <- "Male more colorful"
 # categories<-as.data.frame(table(db2$sex_dim_simplified, useNA="always")) #161 categories
-# cat_sex_dim<-unique(categories$Var1) #72 categories
+# cat_sex_dim<-unique(categories$Var1) #79 categories
 # 
 # categories[order(categories$Freq),]
-# 
-# #Convert Morph-always different morphology between mature adults, to
-# #Sexes shaped differently
+# #
+# # #Convert Morph-always different morphology between mature adults, to
+# # #Sexes shaped differently
 # db2$sex_dim_simplified[db2$sex_dim_simplified %in% "Morph-always different morphology between mature adults, "] <- "Sexes shaped differently"
+# db2$sex_dim_simplified[db2$sex_dim_simplified %in% "Morph-always different morphology between mature adults, , Morph-always different morphology between mature adults, "] <- "Sexes shaped differently"
+# 
 # db2$sex_dim_simplified[db2$sex_dim_simplified %in% "Morph-different morphology during breeding season only, Color-males alike females"] <- "Sexes shaped differently"
 # db2$sex_dim_simplified[db2$sex_dim_simplified %in% "Morph-different morphology in juveniles and adults"] <- NA
-#   
+# 
 # db2$sex_dim_simplified[db2$sex_dim_simplified %in% "Color-always different colors between mature adults"] <- "Sexes colored or patterned differently"
 # db2$sex_dim_simplified[db2$sex_dim_simplified %in% "Color-different colors during breeding season only"] <- "Sexes colored or patterned differently"
 # db2$sex_dim_simplified[db2$sex_dim_simplified %in% "Color-different colors in mature adults only"] <- "Sexes colored or patterned differently"
@@ -347,13 +389,13 @@
 # db2$sex_dim_simplified[db2$sex_dim_simplified %in% "Sexes colored or patterned differently, Female more colorful"] <- "Female more colorful"
 # 
 # categories<-as.data.frame(table(db2$sex_dim_simplified, useNA="always")) #161 categories
-# cat_sex_dim<-unique(categories$Var1) #67 categories
+# cat_sex_dim<-unique(categories$Var1) #71 categories
 # 
-# #check color categories
+# # #check color categories
 # ind<-grep("color", cat_sex_dim, perl=T)
 # cat_sex_dim[ind]
 # 
-# #Get rid of sexes alike when there is another observation of different colors
+# # #Get rid of sexes alike when there is another observation of different colors
 # db2$sex_dim_simplified[db2$sex_dim_simplified %in% "Sexes alike, Male more colorful"] <- "Male more colorful"
 # db2$sex_dim_simplified[db2$sex_dim_simplified %in% "Sexes alike, Female more colorful"] <- "Female more colorful"
 # db2$sex_dim_simplified[db2$sex_dim_simplified %in% "Sexes alike, Sexes colored or patterned differently, Male more colorful"] <- "Male more colorful"
@@ -368,14 +410,17 @@
 # db2$sex_dim_simplified[db2$sex_dim_simplified %in% "Sexes colored or patterned differently, Male more colorful, Sexes shaped differently, Ornamentation"] <- "Male more colorful, Sexes shaped differently, Ornamentation"
 # 
 # 
-# db2$sex_dim_simplified[db2$sex_dim_simplified %in% c("Morph-always different morphology between mature adults, Color-always different colors between mature adults",                              
-#                                                      "Morph-always different morphology between mature adults, Color-different colors during breeding season only",                                   
+# db2$sex_dim_simplified[db2$sex_dim_simplified %in% c("Morph-always different morphology between mature adults, Color-always different colors between mature adults",
+#                                                      "Morph-always different morphology between mature adults, Color-different colors during breeding season only",
 #                                                      "Morph-always different morphology between mature adults, Color-different colors in mature adults only" )] <- "Sexes colored or patterned differently, Sexes shaped differently"
 # db2$sex_dim_simplified[db2$sex_dim_simplified %in% "Sexes colored or patterned differently, Sexes shaped differently, Morph-always different morphology between mature adults, "] <- "Sexes colored or patterned differently, Sexes shaped differently"
 # db2$sex_dim_simplified[db2$sex_dim_simplified %in% "Sexes shaped differently, Sexes alike, Color-different colors during breeding season only"] <- "Sexes colored or patterned differently, Sexes shaped differently"
 # db2$sex_dim_simplified[db2$sex_dim_simplified %in% "different shape of head (f,m), Morph-different morphology during breeding season only, Color-different colors during breeding season only"] <- "Sexes colored or patterned differently, Sexes shaped differently"
 # db2$sex_dim_simplified[db2$sex_dim_simplified %in% "genital papilla with tassels (m), Morph-always different morphology between mature adults, Color-always different colors between mature adults"] <- "Sexes colored or patterned differently, Sexes shaped differently"
 # db2$sex_dim_simplified[db2$sex_dim_simplified %in% "genital papilla with tassels (m), Morph-different morphology during breeding season only, Color-different colors during breeding season only"] <- "Sexes colored or patterned differently, Sexes shaped differently"
+# 
+# db2$sex_dim_simplified[db2$sex_dim_simplified %in% "Sexes shaped or patterned differently"] <- "Sexes shaped differently"
+# db2$sex_dim_simplified[db2$sex_dim_simplified %in% "Sexes shaped differently, Sexes colored or patterned differently"] <- "Sexes colored or patterned differently, Sexes shaped differently"
 # 
 # db2$sex_dim_simplified[db2$sex_dim_simplified %in% "Morph-different morphology during breeding season only, Color-different colors during breeding season only"] <- "Sexes colored or patterned differently, Sexes shaped differently"
 # 
@@ -397,15 +442,17 @@
 # db2$sex_dim_simplified[db2$sex_dim_simplified %in% "Sexes alike, Male more colorful, Ornamentation"] <- "Male more colorful, Ornamentation"
 # 
 # db2$sex_dim_simplified[db2$sex_dim_simplified %in% "Male more colorful, Sexes shaped differently, Color-always different colors between mature adults"] <- "Male more colorful, Sexes shaped differently"
+# db2$sex_dim_simplified[db2$sex_dim_simplified %in% "Male more colorful, Sexes colored or patterned differently"] <- "Male more colorful"
+# db2$sex_dim_simplified[db2$sex_dim_simplified %in% "Male more colorful, Sexes shaped or patterned differently"] <- "Male more colorful, Sexes shaped differently"
 # db2$sex_dim_simplified[db2$sex_dim_simplified %in% "Sexes colored or patterned differently, Male more colorful, Ornamentation"] <- "Male more colorful, Ornamentation"
 # 
 # db2$sex_dim_simplified[db2$sex_dim_simplified %in% "Sexes alike, show little or no sexual body-size dimorphism"] <- "Sexes alike"
 # 
 # categories<-as.data.frame(table(db2$sex_dim_simplified, useNA="always")) #161 categories
-# cat_sex_dim<-unique(categories$Var1) #40 categories
+# cat_sex_dim<-unique(categories$Var1) #41 categories
 # 
 # 
-# #Shapes and claspers or genital papilla
+# # #Shapes and claspers or genital papilla
 # db2$sex_dim_simplified[db2$sex_dim_simplified %in% "different shape of head (f,m), Morph-always different morphology between mature adults, Color-males alike females"] <- "Sexes shaped differently"
 # 
 # db2$sex_dim_simplified[db2$sex_dim_simplified %in% "genital papilla with tassels (m), "] <- "Ornamentation"
@@ -418,7 +465,10 @@
 # 
 # db2$sex_dim_simplified[db2$sex_dim_simplified %in% "Sexes alike, Color-different colors during breeding season only"] <- "Sexes colored or patterned differently"
 # 
+# db2$sex_dim_simplified[db2$sex_dim_simplified %in% "pectoral fins larger on males"] <- "Sexes shaped differently"
 # 
+# db2[db2$sex_dim_simplified %in% "Male with weapons",]
+# db2$sex_dim_simplified[db2$sex_dim_simplified %in% "Male with weapons"] <- "Ornamentation"
 # 
 # ind <- grep("claspers", db2$sex_dim_simplified, perl=T)
 # ind <- grep("protruding genital papilla \\(m\\),", db2$sex_dim_simplified, perl=T)
@@ -440,9 +490,9 @@
 # categories<-as.data.frame(table(db2$sex_dim_simplified, useNA="always")) #161 categories
 # cat_sex_dim<-unique(categories$Var1) #16 categories
 # 
-# #-----------------------------------------------
+# # #-----------------------------------------------
 # setwd("C:/Users/cris.carmona/Documents/MEGAsync/Projects/Post-doc/Riesgo de extinción y selección sexual/extinction_data/Preliminary analysis/output")
-# write.csv(db2, "merged_iucn_pre-analysis_categories.csv")
+# write.csv(db2, "merged_iucn_pre-analysis_categories2.csv")
 
 #---------------------------------------------
 ############################################################
@@ -460,7 +510,7 @@ import.list <- lapply(csvfiles, read.csv, header = T , na.strings=c("NA", "NA ",
 #str(import.list)
 ls()
 
-working.list <- import.list
+working.list <- import.list[2]
 names(working.list) <- c("db3")
 
 attach(working.list)
@@ -469,17 +519,17 @@ attach(working.list)
 #----------------------------------------------
 
 #Create scores for sex_dim categories
-db4<-db3
+db4 <- db3
 
 ind <- grep("Ornamentation", db4$sex_dim_simplified, perl=T)
-str(db4[ind, c("binomial","sex_dim_simplified")]) #181 obs
+str(db4[ind, c("binomial","sex_dim_simplified")]) #184 obs
 ####created new categories in protocol: Female with ornaments and Male with ornaments
 
 db4[db4$sex_dim_simplified %in% "Sexes alike, Ornamentation",]
 
 # 
 categories<-as.data.frame(table(db4$sex_dim_simplified, useNA="always")) #161 categories
-cat_sex_dim<-unique(categories$Var1) #16 categories
+cat_sex_dim<-unique(categories$Var1) #15 categories
 
 
 
@@ -495,19 +545,23 @@ db4$sex_dim_simplified[db4$binomial %in% "Podiceps auritus"] <- "Sexes alike, Or
 db4$sex_dim_simplified <- factor(db4$sex_dim_simplified)
 
 categories<-as.data.frame(table(db4$sex_dim_simplified, useNA="always")) #161 categories
-cat_sex_dim<-unique(categories$Var1) #15 categories
+cat_sex_dim<-unique(categories$Var1) #14 categories
 
 db4[db4$sex_dim_simplified %in% "Male with weapons",]
 db4$comments[db4$binomial %in% "Ammodorcas clarkei"] <- "Male with weapons, category was simplified to Ornaments (CCI 27/09/2018)"
-db4$sex_dim_simplified[db4$binomial %in% "Ammodorcas clarkei"] <- "Ornamentation"
+#db4$sex_dim_simplified[db4$binomial %in% "Ammodorcas clarkei"] <- "Ornamentation"
 
 
 db4[db4$sex_dim_simplified %in% "Sexes colored or patterned differently, Sexes shaped differently, Ornamentation",]
 db4$comments[db4$binomial %in% "Callorhinus ursinus"] <- "Male does not have ornaments nor weapons, updated sex_dim_simplified (CCI 27/09/2018)"
 db4$sex_dim_simplified[db4$binomial %in% "Callorhinus ursinus"] <- "Sexes colored or patterned differently, Sexes shaped differently"
 
+#db4[db4$sex_dim_simplified %in% "Male more colorful, Sexes shaped diiferently",]
+#db4$sex_dim_simplified[db4$sex_dim_simplified %in% "Male more colorful, Sexes shaped diiferently "] <- "Male more colorful, Sexes shaped differently"
+
+
 categories<-as.data.frame(table(db4$sex_dim_simplified, useNA="always")) #161 categories
-cat_sex_dim<-unique(categories$Var1) #13 categories
+cat_sex_dim<-unique(categories$Var1) #14 categories
 
 
 
@@ -533,7 +587,7 @@ db4$sex_dim_simplified[db4$binomial %in% "Epomophorus gambianus"] <- "Ornamentat
 
 
 categories<-as.data.frame(table(db4$sex_dim_simplified, useNA="always")) #161 categories
-cat_sex_dim<-unique(categories$Var1) #13 categories
+cat_sex_dim<-unique(categories$Var1) #12 categories
 
 
 #SCORES for sex_dim------------------
@@ -555,15 +609,26 @@ db4$orndimscr[db4$sex_dim_simplified %in% "Sexes colored or patterned differentl
 #-------------------------------------
 #Count species with data for sex_dimorphism
 str(which(!is.na(db4$sex_dim_simplified[db4$Class %in% c("ACTINOPTERYGII","CEPHALASPIDOMORPHI","MYXINI",
-                                                         "CHONDRICHTHYES","SARCOPTERYGII")])))
+                                                         "CHONDRICHTHYES","SARCOPTERYGII")]))) #1439
+
+str(which(!is.na(db4$sex_dim_simplified[db4$Class %in% c("REPTILIA")]))) #113
+str(which(!is.na(db4$sex_dim_simplified[db4$Class %in% c("AVES")]))) #359
+str(which(!is.na(db4$sex_dim_simplified[db4$Class %in% c("AMPHIBIA")]))) #60
+str(which(!is.na(db4$sex_dim_simplified[db4$Class %in% c("MAMMALIA")]))) #501
+
 
 #-----------------------------------------
 #Descriptives
+str(db3$ASR)
+db4$ASR <- as.numeric(as.character(db4$ASR))
+
 hist(db4$ASR)
 hist(db4$colordimscr)
 hist(db4$orndimscr)
 hist(db4$rl.status.ordinal)
 hist(db4$sex.size.dim.2)
+
+db4[which(db4$sex.size.dim.2 < -2),]
 
 require(foreign)
 require(ggplot2)
@@ -573,7 +638,7 @@ require(reshape2)
 
 
 db.nona<-db4[!is.na(db4$ASR)& !is.na(db4$colordimscr) & !is.na(db4$mating_system.corrected),]
-str(db.nona) #51 obs
+str(db.nona) #76 obs
 
 lapply(db4[, c("colordimscr","orndimscr", "rl.status.ordinal", "mating_system.corrected")], table)
 
@@ -587,7 +652,7 @@ ggplot(db.nona, aes(x = rl.status.ordinal, y = sex.size.dim.2)) +
   facet_grid(db.nona$mating_system.corrected ~ db.nona$colordimscr, margins = TRUE) +
   theme(axis.text.x = element_text(angle = 45, hjust = 1, vjust = 1))
 
-boxplot(sex.size.dim.2~rl.status.ordinal, data=db4)
+boxplot(sex.size.dim.2~rl.status.ordinal, data=db.nona)
 
 ggplot(db4, aes(x = rl.status.ordinal, y = sex.size.dim.2)) +
   geom_boxplot(size = .75) +
@@ -622,5 +687,5 @@ sf <- function(y) {
     'Y>=5' = qlogis(mean(y >= 5)))
 }
 
-s <- with(db4, summary(as.numeric(rl.status.ordinal) ~ sex.size.dim.2, fun=sf))
+(s <- with(db4, summary(as.numeric(rl.status.ordinal) ~ sex.size.dim.2, fun=sf)))
 plot(s, which=1:3, pch=1:3, xlab='logit', main=' ', xlim=range(s[,3:4]))
