@@ -517,9 +517,16 @@ attach(working.list)
 
 
 #----------------------------------------------
+db4 <- db3
+names(db4)
+#Check NAs in rl status
+table(db4$rl.status.ordinal, useNA="always")
+
+db4[is.na(db4$rl.status.ordinal), c("rl.status.ordinal", "Red.List.status")]
+
 
 #Create scores for sex_dim categories
-db4 <- db3
+
 
 ind <- grep("Ornamentation", db4$sex_dim_simplified, perl=T)
 str(db4[ind, c("binomial","sex_dim_simplified")]) #184 obs
@@ -637,15 +644,31 @@ require(Hmisc)
 require(reshape2)
 
 
-db.nona<-db4[!is.na(db4$ASR)& !is.na(db4$colordimscr) & !is.na(db4$mating_system.corrected),]
-str(db.nona) #76 obs
+db.nona<-db4[!is.na(db4$colordimscr) & !is.na(db4$mating_system.corrected),]
+str(db.nona) #76 obs with ASR, 574 without ASR
 
 lapply(db4[, c("colordimscr","orndimscr", "rl.status.ordinal", "mating_system.corrected")], table)
 
 ftable(xtabs(~ db.nona$rl.status.ordinal + db.nona$mating_system.corrected + db.nona$colordimscr, addNA=T, data = db.nona))
 
-summary(db4$ASR)
+ftable(xtabs(~ db.nona$rl.status.ordinal + db.nona$mating_system.corrected + db.nona$orndimscr, addNA=T, data = db.nona))
 
+db.nona.asr<-db4[!is.na(db4$ASR) & !is.na(db4$mating_system.corrected),]
+str(db.nona.asr) #76 obs with all vars and ASR, 574 without ASR, 251 with asr but no sex.dim
+
+#Split ASR in categories
+ftable(xtabs(~ db.nona.asr$rl.status.ordinal + db.nona.asr$mating_system.corrected + db.nona.asr$ASR, addNA=T, data = db.nona))
+
+summary(db.nona.asr$ASR)
+db.nona.asr$ASRcat<-cut(db.nona.asr$ASR, c(0,0.45,0.55,1))
+
+ftable(xtabs(~ db.nona.asr$rl.status.ordinal + db.nona.asr$mating_system.corrected + db.nona.asr$ASRcat, addNA=T, data = db.nona))
+
+
+db4[which(db4$ASR <0.10),]
+
+
+###################################
 ggplot(db.nona, aes(x = rl.status.ordinal, y = sex.size.dim.2)) +
   geom_boxplot(size = .75) +
   geom_jitter(alpha = .5) +
