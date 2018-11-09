@@ -124,10 +124,29 @@ db.mam2[11:20, "binomial"]
 # [9] "Bradypus torquatus"    ASR based on captures from 15 male and 21 female (PG 05/11/2018)  
 # [10] "Bradypus variegatus" ASR based on captures from 59 male and 33 female (PG 05/11/2018)
 
+db.mam2[21:30, "binomial"] 
+#[1] "Callicebus cupreus"  no data availavle (PG 08/11/2018)   
+#[2] "Callicebus moloch"      
+#[3] "Callicebus personatus"  
+#[4] "Callicebus torquatus"   
+#[5] "Callithrix geoffroyi"   
+#[6] "Callithrix jacchus"     
+#[7] "Callithrix penicillata" 
+#[8] "Callorhinus ursinus"    
+#[9] "Callosciurus erythraeus"
+#[10] "Callosciurus notatus"
 
-
-
-
+db.mam2[31:40,"binomial"]
+#[1] "Caluromys derbianus" 
+#"Canis adustus"      
+#[3] "Canis aureus"        
+#"Canis latrans"
+#[5] "Canis lupus"         
+#"Canis mesomelas"    
+#[7] "Canis rufus"        
+#"Capra ibex"         
+#[9] "Capra sibirica"      
+#"Capricornis crispus"
 
 
 
