@@ -125,10 +125,10 @@ db.mam2[11:20, "binomial"]
 # [10] "Bradypus variegatus" ASR based on captures from 59 male and 33 female (PG 05/11/2018)
 
 db.mam2[21:30, "binomial"] 
-#[1] "Callicebus cupreus"  no data availavle (PG 08/11/2018)   
-#[2] "Callicebus moloch"      
-#[3] "Callicebus personatus"  
-#[4] "Callicebus torquatus"   
+#[1] "Callicebus cupreus"  no data available (PG 08/11/2018)   
+#[2] "Callicebus moloch"   no data available (PG 14/11/2018)   
+#[3] "Callicebus personatus"  ASR based on captures from 3 male and 3 female (PG 14/11/2018)
+#[4] "Callicebus torquatus"   no data available (PG 14/11/2018)
 #[5] "Callithrix geoffroyi"   
 #[6] "Callithrix jacchus"     
 #[7] "Callithrix penicillata" 
