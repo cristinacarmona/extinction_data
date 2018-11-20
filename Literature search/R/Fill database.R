@@ -129,10 +129,10 @@ db.mam2[21:30, "binomial"]
 #[2] "Callicebus moloch"   no data available (PG 14/11/2018)   
 #[3] "Callicebus personatus"  ASR based on captures from 3 male and 3 female (PG 14/11/2018)
 #[4] "Callicebus torquatus"   no data available (PG 14/11/2018)
-#[5] "Callithrix geoffroyi"   
-#[6] "Callithrix jacchus"     
-#[7] "Callithrix penicillata" 
-#[8] "Callorhinus ursinus"    
+#[5] "Callithrix geoffroyi"   ASR based on captures from 6 male and 8 female (PG 19/11/2018)
+#[6] "Callithrix jacchus"     ASR based on captures from 5 male and 4 female (PG 19/11/2018)
+#[7] "Callithrix penicillata" ASR based on captures from 13 male and 9 female (PG 19/11/2018)
+#[8] "Callorhinus ursinus"    No data available (PG 19/11/2018)
 #[9] "Callosciurus erythraeus"
 #[10] "Callosciurus notatus"
 
