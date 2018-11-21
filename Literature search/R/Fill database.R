@@ -133,11 +133,11 @@ db.mam2[21:30, "binomial"]
 #[6] "Callithrix jacchus"     ASR based on captures from 5 male and 4 female (PG 19/11/2018)
 #[7] "Callithrix penicillata" ASR based on captures from 13 male and 9 female (PG 19/11/2018)
 #[8] "Callorhinus ursinus"    No data available (PG 19/11/2018)
-#[9] "Callosciurus erythraeus"
-#[10] "Callosciurus notatus"
+#[9] "Callosciurus erythraeus" ASR based on captures from 360 male and 198 female (PG 20/11/2018)
+#[10] "Callosciurus notatus" ASR based on captures from  15.98 male and 17.01 female (PG 20/11/2018)
 
 db.mam2[31:40,"binomial"]
-#[1] "Caluromys derbianus" 
+#[1] "Caluromys derbianus" no data available (PG 20/11/2018)
 #"Canis adustus"      
 #[3] "Canis aureus"        
 #"Canis latrans"
