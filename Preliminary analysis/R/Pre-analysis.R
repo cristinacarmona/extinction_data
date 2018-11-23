@@ -519,11 +519,42 @@ attach(working.list)
 #----------------------------------------------
 db4 <- db3
 names(db4)
+
+#Transform asr
+db4$ASR_arcsinSQRT <- 57.295 * asin(sqrt(db4$ASR))
+57.295 * asin(sqrt(0.5))
+asin(sqrt(0.5))
+db4$ASR_arcsinSQRT2 <- asin(sqrt(db4$ASR))
+summary(db4$ASR_arcsinSQRT)
+summary(db4$ASR_arcsinSQRT2)
+
+hist(db4$ASR)
+hist(db4$ASR_arcsinSQRT)
+
 #Check NAs in rl status
 table(db4$rl.status.ordinal, useNA="always")
 
 db4[is.na(db4$rl.status.ordinal), c("rl.status.ordinal", "Red.List.status")]
 
+str(db4[db4$ref.asr %in% "pipoly" & db4$Class %in% "REPTILIA","ASR"]) #51
+str(db4[db4$ref.asr %in% "pipoly" & db4$Class %in% "MAMMALIA","ASR"]) #52
+str(db4[db4$ref.asr %in% "pipoly" & db4$Class %in% "AMPHIBIA","ASR"]) #26
+
+#Create new rl category: 1 in danger, 0 not in danger
+# # # EXTINCT (EX) ...6
+# # # EXTINCT IN THE WILD (EW) ...6
+# # # CRITICALLY ENDANGERED (CR) ...5
+# # # ENDANGERED (EN) ...4
+# # # VULNERABLE (VU) ...3
+# # # NEAR THREATENED (NT) ...2
+# # # LEAST CONCERN (LC) ...1
+# # # DATA DEFICIENT (DD)....NA
+# # # Lower risk /Conservation dependant (LR/cd)....2 "The category is part of the IUCN 1994 Categories & Criteria (version 2.3), which is no longer used in evaluation of taxa, but persists in the IUCN Red List for taxa evaluated prior to 2001, when version 3.1 was first used. Using the 2001 (v3.1) system these taxa are classed as near threatened, but those that have not been re-evaluated remain with the "Conservation Dependent" category. (wikipedia)"
+# # # Lower risk /least concern (LR/lc)...1
+# # # Lower risk /near threatened....2
+
+db4$rl.status.binomial <- ifelse(db4$rl.status.ordinal %in% c(1,2)|is.na(db4$rl.status.ordinal), 0, 1)
+db4[,c("rl.status.binomial","rl.status.ordinal")]
 
 #Create scores for sex_dim categories
 
@@ -630,6 +661,7 @@ str(db3$ASR)
 db4$ASR <- as.numeric(as.character(db4$ASR))
 
 hist(db4$ASR)
+hist(db4$ASR_arcsinSQRT)
 hist(db4$colordimscr)
 hist(db4$orndimscr)
 hist(db4$rl.status.ordinal)
@@ -662,20 +694,42 @@ ftable(xtabs(~ db.nona.asr$rl.status.ordinal + db.nona.asr$mating_system.correct
 summary(db.nona.asr$ASR)
 db.nona.asr$ASRcat<-cut(db.nona.asr$ASR, c(0,0.45,0.55,1))
 
+db.nona.asr<-db4[!is.na(db4$ASR),]
+str(db.nona.asr)#456 observations
+summary(db.nona.asr$ASR)
+db.nona.asr$ASRcat<-cut(db.nona.asr$ASR, c(0,0.45,0.55,1))
 ftable(xtabs(~ db.nona.asr$rl.status.ordinal + db.nona.asr$mating_system.corrected + db.nona.asr$ASRcat, addNA=T, data = db.nona))
-
-
-db4[which(db4$ASR <0.10),]
+xtabs(~db.nona.asr$rl.status.ordinal + db.nona.asr$ASRcat)
 
 
 ###################################
-ggplot(db.nona, aes(x = rl.status.ordinal, y = sex.size.dim.2)) +
+#Explorative plots-------------
+par(mfrow=c(1,1))
+boxplot(rl.status.ordinal~ASRcat, data=db.nona.asr)
+
+boxplot(ASR_arcsinSQRT~rl.status.ordinal, data=db.nona.asr)
+boxplot(ASR~rl.status.ordinal, data=db.nona.asr)
+boxplot(ASR_arcsinSQRT~rl.status.binomial, data=db.nona.asr)
+
+boxplot(colordimscr~rl.status.ordinal, data=db.nona.asr)
+boxplot(colordimscr~rl.status.binomial, data=db.nona.asr)
+
+
+boxplot(orndimscr~rl.status.ordinal, data=db.nona.asr)
+boxplot(orndimscr~rl.status.binomial, data=db.nona.asr)
+
+boxplot(sex.size.dim.2~rl.status.ordinal, data=db.nona.asr)
+boxplot(sex.size.dim.2~rl.status.binomial, data=db.nona.asr)
+
+boxplot(rl.status.ordinal~mating_system.corrected, data=db.nona.asr)
+
+
+ggplot(db.nona.asr, aes(x = ASRcat, y = rl.status.ordinal)) +
   geom_boxplot(size = .75) +
   geom_jitter(alpha = .5) +
-  facet_grid(db.nona$mating_system.corrected ~ db.nona$colordimscr, margins = TRUE) +
+  facet_grid(db.nona.asr$mating_system.corrected ~ db.nona.asr$colordimscr, margins = TRUE) +
   theme(axis.text.x = element_text(angle = 45, hjust = 1, vjust = 1))
 
-boxplot(sex.size.dim.2~rl.status.ordinal, data=db.nona)
 
 ggplot(db4, aes(x = rl.status.ordinal, y = sex.size.dim.2)) +
   geom_boxplot(size = .75) +
@@ -683,13 +737,85 @@ ggplot(db4, aes(x = rl.status.ordinal, y = sex.size.dim.2)) +
   facet_grid(db4$mating_system.corrected ~ db4$colordimscr, margins = TRUE) +
   theme(axis.text.x = element_text(angle = 45, hjust = 1, vjust = 1))
 
+#####################################
+#fit logit model
+xtabs(~rl.status.binomial + mating_system.corrected, data = db.nona.asr)
+
+glm.1 <- glm(rl.status.binomial ~ ASR_arcsinSQRT2 + mating_system.corrected + sex.size.dim.2, data = db.nona.asr, family = binomial)
+plot(glm.1)
+summary(glm.1)
+
+# Check linearity assumption: 
+#Predict the probability (p) of rl.status.binomial, If the scatter plot shows non-linearity, you need other methods to build the model such as including 2 or 3-power terms, fractional polynomials and spline function (Chapter @ref(polynomial-and-spline-regression)).
+library(tidyverse)
+library(tidyr)
+library(dplyr)
+library(magrittr)
+library(broom)
+probabilities <- predict(glm.1, type = "response")
+predicted.classes <- ifelse(probabilities > 0.5, "pos", "neg")
+head(predicted.classes)
+predictors <- colnames(db.nona.asr[, c("ASR_arcsinSQRT2", "rl.status.binomial")])
+logit <- log(probabilities/(1-probabilities))
 
 
+mydata <- db.nona.asr[,c("ASR_arcsinSQRT2", "rl.status.binomial")]
+mydata$probabilities <- predict(glm.1, type = "response")
+mydata$logit <- log(probabilities/(1-probabilities))
+head(mydata)
+
+par(mfrow=c(1,1))
+plot(mydata$logit, mydata$ASR_arcsinSQRT2)
+abline()
+
+plot(glm.1, which = 4, id.n = 3)
+
+#binomial plot
+plot(rl.status.binomial ~ ASR_arcsinSQRT2, data = db.nona.asr)
+xv <- seq(0.3, 1.3, 0.1)
+yv <- predict(glm.1, list(ASR_arcsinSQRT2=xv), type="response")
+lines(xv,yv)
+
+library(popbio)
+logi.hist.plot(db.nona.asr$ASR_arcsinSQRT2, db.nona.asr$rl.status.binomial, boxp=FALSE, type="hist", col="gray")
+
+
+#asses model fit
+plot(rl.status.binomial ~ ASR_arcsinSQRT2, type="n", data = db.nona.asr)
+rug(jitter(db.nona.asr$ASR_arcsinSQRT2[db.nona.asr$rl.status.binomial==0])) 
+rug(jitter(db.nona.asr$ASR_arcsinSQRT2[db.nona.asr$rl.status.binomial==1]),side=3) 
+model<-glm(rl.status.binomial~ASR_arcsinSQRT2,binomial, data=db.nona.asr) 
+xv<-0.4:1.3
+yv<-predict(model,list(ASR_arcsinSQRT2=xv),type="response") 
+lines(xv,yv)
+cutr<-cut(db.nona.asr$ASR_arcsinSQRT2,5) 
+tapply(db.nona.asr$rl.status.binomial,cutr,sum)
+table(cutr) 
+cutr
+probs<-tapply(db.nona.asr$rl.status.binomial,cutr,sum)/table(cutr) 
+probs
+probs<-as.vector(probs) 
+resmeans<-tapply(db.nona.asr$ASR_arcsinSQRT2,cutr,mean) 
+resmeans<-as.vector(resmeans)
+points(resmeans,probs,pch=16,cex=2)
+se<-sqrt(probs*(1-probs)/table(cutr))
+up<-probs+as.vector(se) 
+down<-probs-as.vector(se) 
+for (i in 1:5){ 
+  lines(c(resmeans[i],resmeans[i]),c(up[i],down[i]))}
+
+
+xv <- seq(0.3, 1.3, 0.1)
+yv <- predict(glm.1, list(ASR_arcsinSQRT2=xv), type="response")
+lines(xv,yv)
+
+
+######################################
 ## fit ordered logit model
-str(db4$rl.status.ordinal)
-db4$rl.status.ordinal <- as.factor(db4$rl.status.ordinal)
+str(db.nona.asr$rl.status.ordinal)
+db.nona.asr$rl.status.ordinal <- as.factor(ordered(db.nona.asr$rl.status.ordinal))
 
-m <- polr(rl.status.ordinal ~ sex.size.dim.2 + mating_system.corrected, data = db4, Hess=TRUE)
+m <- polr(rl.status.ordinal ~ ASR + mating_system.corrected, data = db.nona.asr, Hess=TRUE)
 
 ## view a summary of the model
 summary(m)
@@ -710,5 +836,91 @@ sf <- function(y) {
     'Y>=5' = qlogis(mean(y >= 5)))
 }
 
-(s <- with(db4, summary(as.numeric(rl.status.ordinal) ~ sex.size.dim.2, fun=sf)))
+(s <- with(db.nona.asr, summary(as.numeric(rl.status.ordinal) ~ ASRcat, fun=sf)))
 plot(s, which=1:3, pch=1:3, xlab='logit', main=' ', xlim=range(s[,3:4]))
+
+
+(s <- with(db.nona.asr, summary(as.numeric(rl.status.ordinal) ~ mating_system.corrected, fun=sf)))
+plot(s, which=1:3, pch=1:3, xlab='logit', main=' ', xlim=range(s[,3:4]))
+
+#ranges not similar: violates proportionality assumption
+
+#Test assumptions with another test
+table<-xtabs(~ ASRcat + rl.status.ordinal, db.nona.asr)
+oddsratio(table)
+exp(-0.2636837) #0.7682
+exp(-0.1015364) #0.90344
+
+db.nona.asr$rl.status.ordinal <- as.factor(db.nona.asr$rl.status.ordinal)
+
+#Compare odds ratio collapsing factor levels (https://rpubs.com/kaz_yos/polr)
+library(vcd)
+new.levels1<-c(1, 1, 3, 4, 5)
+
+db.nona.asr$rl.st.new1<- factor(new.levels1[db.nona.asr$rl.status.ordinal])
+
+table1 <- xtabs(~ ASRcat + rl.st.new, db.nona.asr)
+oddsratio(table1)
+exp(-0.7033704) #0.4949144
+exp(-0.6067896)#0.545098
+#coefficients collapsing y levels not similar: violates proportionality assumption
+
+new.levels2<-c(1, 2, 2, 4, 5)
+
+db.nona.asr$rl.st.new2<- factor(new.levels2[db.nona.asr$rl.status.ordinal])
+
+table2 <- xtabs(~ ASRcat + rl.st.new2, db.nona.asr)
+oddsratio(table)
+
+
+#####################--------------------------------
+#Use VGAM::vglm
+## Load VGAM
+library(VGAM)
+## Without proportional odds assumptions
+
+db.nona.asr$rl.status.ordinal <- ordered(db.nona.asr$rl.status.ordinal)
+
+mod1 <- vglm(rl.status.ordinal ~ ASR + mating_system.corrected, db.nona.asr, family = cumulative(link = "logit", parallel = T, reverse = TRUE))
+summary(mod1)
+
+#-------------------
+#Explore with package ordinal and clm
+library(ordinal)
+d
+clm.1 <- clm(rl.status.ordinal ~ ASR + mating_system.corrected, data=db.nona.asr)
+summary(clm.1)#con. H: The condition number of the Hessian is a measure of how identifiable the model is; 
+#large values, say larger than 1e4 indicate that the model may be ill defined.
+
+exp(coef(clm.1))
+
+nominal_test(clm.1) #check proportional odds assumption
+scale_test(clm.1) #check proportional odds assumption
+
+pr1 <- profile(clm.1, alpha=1e-4)
+par(mfrow = c(2,2))
+plot(pr1, root=T) #check for linearity
+plot(pr1)
+plot(pr1, approx=T)
+plot(pr1, Log=T, relative=F)
+
+diff(clm.1$alpha) #should be equidistant
+
+
+#Another test to check assumptions:
+clm.nom <- clm(rl.status.ordinal ~ 1, nominal=~sex.size.dim.2, data=db.nona.asr)
+summary(clm.nom)
+anova(clm.1, clm.nom) #There is only little difference in the log-likelihoods of the two models, so the test is insignificant.
+#There is therefore no evidence that the proportional odds assumption is violated for
+#mating_system.
+clm.nom1 <- clm(rl.status.ordinal ~ sex.size.dim.2, nominal=~ASR, data=db.nona.asr)
+summary(clm.nom1)
+anova(clm.1, clm.nom1)
+#No evidence proportional odds assumption is violated for ASR if modeled with mating_system.corrected
+
+#Check model convergence
+slice2.clm1 <- slice(clm.1, lambda = 1e-5)
+par(mfrow = c(2, 3))
+plot(slice2.clm1)
+
+hist(db.nona.asr$ASR)
