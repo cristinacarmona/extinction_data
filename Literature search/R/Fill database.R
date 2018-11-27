@@ -138,15 +138,15 @@ db.mam2[21:30, "binomial"]
 
 db.mam2[31:40,"binomial"]
 #[1] "Caluromys derbianus" no data available (PG 20/11/2018)
-#"Canis adustus"      
-#[3] "Canis aureus"        
-#"Canis latrans"
+#[2] "Canis adustus"    no data available (PG 26/11/2018)
+#[3] "Canis aureus"      no data available (PG 26/11/2018)       
+#[4] "Canis latrans"      ASR based on captures from 17 male and 16 female (PG 26/11/2018)
 #[5] "Canis lupus"         
-#"Canis mesomelas"    
+#[6] "Canis mesomelas"    
 #[7] "Canis rufus"        
-#"Capra ibex"         
+#[8] "Capra ibex"         
 #[9] "Capra sibirica"      
-#"Capricornis crispus"
+#[10] "Capricornis crispus"
 
 
 
