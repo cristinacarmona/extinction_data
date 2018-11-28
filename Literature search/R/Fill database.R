@@ -141,7 +141,7 @@ db.mam2[31:40,"binomial"]
 #[2] "Canis adustus"    no data available (PG 26/11/2018)
 #[3] "Canis aureus"      no data available (PG 26/11/2018)       
 #[4] "Canis latrans"      ASR based on captures from 17 male and 16 female (PG 26/11/2018)
-#[5] "Canis lupus"         
+#[5] "Canis lupus"         ASR based on captures from 11 male and 5 female (PG 27/11/2018)
 #[6] "Canis mesomelas"    
 #[7] "Canis rufus"        
 #[8] "Capra ibex"         
