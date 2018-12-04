@@ -142,10 +142,10 @@ db.mam2[31:40,"binomial"]
 #[3] "Canis aureus"      no data available (PG 26/11/2018)       
 #[4] "Canis latrans"      ASR based on captures from 17 male and 16 female (PG 26/11/2018)
 #[5] "Canis lupus"         ASR based on captures from 11 male and 5 female (PG 27/11/2018)
-#[6] "Canis mesomelas"    
-#[7] "Canis rufus"        
-#[8] "Capra ibex"         
-#[9] "Capra sibirica"      
+#[6] "Canis mesomelas"     ASR based on captures from 123 male and 84 female (PG 03/12/2018)
+#[7] "Canis rufus"         ASR based on captures from 11 male and 4 female (PG 03/12/2018)
+#[8] "Capra ibex"          ASR based on captures from 45 male and 28 female (PG 03/12/2018)
+#[9] "Capra sibirica"      ASR based on captures from 106.72 male and 103.04 female (PG 03/12/2018)
 #[10] "Capricornis crispus"
 
 
