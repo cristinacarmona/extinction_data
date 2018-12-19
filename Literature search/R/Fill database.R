@@ -148,8 +148,53 @@ db.mam2[31:40,"binomial"]
 #[9] "Capra sibirica"      ASR based on captures from 106.72 male and 103.04 female (PG 03/12/2018)
 #[10] "Capricornis crispus" ASR based on captures from 14.11 male and 9.88 female (PG 18/12/2018)
 
+db.mam2 [41:50, "binomial"]
+#[1] "Caracal caracal"       
+#[2] "Cardioderma cor"       
+#[3] "Castor canadensis"     
+#[4] "Castor fiber"          
+#[5] "Cercocebus agilis"     
+#[6] "Cercocebus atys"       
+#[7] "Cercocebus galeritus"  
+#[8] "Cercopithecus ascanius"
+#[9] "Cercopithecus cephus"  
+#[10] "Cercopithecus diana"  
 
+db.mam2 [51:60, "binomial"]
+#[1] "Cercopithecus mitis"    
+#[2] "Cercopithecus mona"     
+#[3] "Cercopithecus neglectus"
+#[4] "Cercopithecus nictitans"
+#[5] "Cercopithecus sclateri" 
+#[6] "Cervus elaphus"         
+#[7] "Cervus nippon"          
+#[8] "Cheirogaleus medius"    
+#[9] "Chiropotes satanas"     
+#[10] "Chlorocebus aethiops"   
 
+db.mam2 [61:70, "binomial"]
+#[1] "Chlorocebus sabaeus"    
+#[2] "Choloepus hoffmanni"    
+#[3] "Chrysocyon brachyurus"  
+#[4] "Chrysospalax trevelyani"
+#[5] "Coendou prehensilis"    
+#[6] "Colobus angolensis"     
+#[7] "Colobus guereza"        
+#[8] "Colobus polykomos"      
+#[9] "Colobus satanas"        
+#[10] "Colobus vellerosus"   
+
+db.mam2[71:80, "binomial"]
+#[1] "Condylura cristata"     
+#[2] "Conepatus chinga"       
+#[3] "Connochaetes taurinus"  
+#[4] "Corynorhinus townsendii"
+#[5] "Cricetomys gambianus"   
+#[6] "Crocuta crocuta"        
+#[7] "Cryptotis parva"        
+#[8] "Ctenomys talarum"       
+#[9] "Cynomys leucurus"       
+#[10] "Cynomys ludovicianus"   
 ###########################################################
 #-----------------------------------------------
 #--------------------Trabajo CCI (10/sept/2018)
