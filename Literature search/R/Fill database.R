@@ -146,7 +146,7 @@ db.mam2[31:40,"binomial"]
 #[7] "Canis rufus"         ASR based on captures from 11 male and 4 female (PG 03/12/2018)
 #[8] "Capra ibex"          ASR based on captures from 45 male and 28 female (PG 03/12/2018)
 #[9] "Capra sibirica"      ASR based on captures from 106.72 male and 103.04 female (PG 03/12/2018)
-#[10] "Capricornis crispus"
+#[10] "Capricornis crispus" ASR based on captures from 14.11 male and 9.88 female (PG 18/12/2018)
 
 
 
