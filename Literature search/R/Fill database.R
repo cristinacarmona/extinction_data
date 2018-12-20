@@ -149,21 +149,21 @@ db.mam2[31:40,"binomial"]
 #[10] "Capricornis crispus" ASR based on captures from 14.11 male and 9.88 female (PG 18/12/2018)
 
 db.mam2 [41:50, "binomial"]
-#[1] "Caracal caracal"       
-#[2] "Cardioderma cor"       
-#[3] "Castor canadensis"     
-#[4] "Castor fiber"          
-#[5] "Cercocebus agilis"     
-#[6] "Cercocebus atys"       
-#[7] "Cercocebus galeritus"  
-#[8] "Cercopithecus ascanius"
-#[9] "Cercopithecus cephus"  
-#[10] "Cercopithecus diana"  
+#[1] "Caracal caracal"       ASR based on captures from 1 male and 6 female (PG 18/12/2018)
+#[2] "Cardioderma cor"       no data available (PG 19/12/2018)
+#[3] "Castor canadensis"     ASR based on captures from 38 male and 38 female. Thirty-eight pairs of adult beavers were studied (PG 19/12/2018)
+#[4] "Castor fiber"          ASR based on captures from 6 male and 6 female. Which were the reproducing pairs (PG 19/12/2018)
+#[5] "Cercocebus agilis"     no data available (PG 19/12/2018)
+#[6] "Cercocebus atys"       no data available (PG 19/12/2018)
+#[7] "Cercocebus galeritus"  ASR based on captures from 13 male and 40 female (PG 19/12/2018)
+#[8] "Cercopithecus ascanius" no data available (PG 19/12/2018)
+#[9] "Cercopithecus cephus"  no data available (PG 19/12/2018)
+#[10] "Cercopithecus diana"  no data available (PG 19/12/2018)
 
 db.mam2 [51:60, "binomial"]
-#[1] "Cercopithecus mitis"    
-#[2] "Cercopithecus mona"     
-#[3] "Cercopithecus neglectus"
+#[1] "Cercopithecus mitis"    no data available (PG 19/12/2018)
+#[2] "Cercopithecus mona"     no data available (PG 19/12/2018)
+#[3] "Cercopithecus neglectus" no data available (PG 19/12/2018)
 #[4] "Cercopithecus nictitans"
 #[5] "Cercopithecus sclateri" 
 #[6] "Cervus elaphus"         
