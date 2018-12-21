@@ -164,17 +164,17 @@ db.mam2 [51:60, "binomial"]
 #[1] "Cercopithecus mitis"    no data available (PG 19/12/2018)
 #[2] "Cercopithecus mona"     no data available (PG 19/12/2018)
 #[3] "Cercopithecus neglectus" no data available (PG 19/12/2018)
-#[4] "Cercopithecus nictitans"
-#[5] "Cercopithecus sclateri" 
-#[6] "Cervus elaphus"         
-#[7] "Cervus nippon"          
-#[8] "Cheirogaleus medius"    
-#[9] "Chiropotes satanas"     
-#[10] "Chlorocebus aethiops"   
+#[4] "Cercopithecus nictitans" no data available (PG 20/12/2018)
+#[5] "Cercopithecus sclateri"  no data available (PG 20/12/2018)
+#[6] "Cervus elaphus"          data available by pipoly (PG 20/12/2018) ASR encontrado .368
+#[7] "Cervus nippon"           data available by pipoly (PG 20/12/2018)
+#[8] "Cheirogaleus medius"     ASR based on captures from 22 male and 14 female (PG 20/12/2018)
+#[9] "Chiropotes satanas"      ASR based on captures from 12 male and 9 female (PG 20/12/2018)
+#[10] "Chlorocebus aethiops"   no data available (PG 20/12/2018)
 
 db.mam2 [61:70, "binomial"]
-#[1] "Chlorocebus sabaeus"    
-#[2] "Choloepus hoffmanni"    
+#[1] "Chlorocebus sabaeus"    no data available (PG 20/12/2018)
+#[2] "Choloepus hoffmanni"    no data available (PG 20/12/2018)
 #[3] "Chrysocyon brachyurus"  
 #[4] "Chrysospalax trevelyani"
 #[5] "Coendou prehensilis"    
