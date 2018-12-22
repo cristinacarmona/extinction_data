@@ -175,14 +175,14 @@ db.mam2 [51:60, "binomial"]
 db.mam2 [61:70, "binomial"]
 #[1] "Chlorocebus sabaeus"    no data available (PG 20/12/2018)
 #[2] "Choloepus hoffmanni"    no data available (PG 20/12/2018)
-#[3] "Chrysocyon brachyurus"  
-#[4] "Chrysospalax trevelyani"
-#[5] "Coendou prehensilis"    
-#[6] "Colobus angolensis"     
-#[7] "Colobus guereza"        
-#[8] "Colobus polykomos"      
-#[9] "Colobus satanas"        
-#[10] "Colobus vellerosus"   
+#[3] "Chrysocyon brachyurus"  no data available (PG 21/12/2018)
+#[4] "Chrysospalax trevelyani" no data available (PG 21/12/2018)
+#[5] "Coendou prehensilis"    no data available (PG 21/12/2018)
+#[6] "Colobus angolensis"     ASR based on captures from 12 male and 16 female (PG 21/12/2018)
+#[7] "Colobus guereza"        ASR based on captures from 7 male and 9 female (PG 21/12/2018)
+#[8] "Colobus polykomos"      no data available (PG 21/12/2018)
+#[9] "Colobus satanas"        no data available (PG 21/12/2018) inf en un artículo de 1999 pero no es clara, N no definida
+#[10] "Colobus vellerosus"    ASR based on captures from 2 male and 12 female (PG 21/12/2018)
 
 db.mam2[71:80, "binomial"]
 #[1] "Condylura cristata"     
