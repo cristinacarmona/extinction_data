@@ -185,16 +185,16 @@ db.mam2 [61:70, "binomial"]
 #[10] "Colobus vellerosus"    ASR based on captures from 2 male and 12 female (PG 21/12/2018)
 
 db.mam2[71:80, "binomial"]
-#[1] "Condylura cristata"     
-#[2] "Conepatus chinga"       
-#[3] "Connochaetes taurinus"  
-#[4] "Corynorhinus townsendii"
-#[5] "Cricetomys gambianus"   
-#[6] "Crocuta crocuta"        
-#[7] "Cryptotis parva"        
-#[8] "Ctenomys talarum"       
-#[9] "Cynomys leucurus"       
-#[10] "Cynomys ludovicianus"   
+#[1] "Condylura cristata"     no data available (PG 25/12/2018)  
+#[2] "Conepatus chinga"       ASR based on captures from 6 male and 10 female (PG 25/12/2018)   
+#[3] "Connochaetes taurinus"  ASR based on captures from 14 male and 138 female (PG 25/12/2018)
+#[4] "Corynorhinus townsendii"no data available (PG 25/12/2018)
+#[5] "Cricetomys gambianus"   ASR based on captures from 23 male and 13 female. (Cricetomys gambianus Waterhouse) (PG 25/12/2018) 
+#[6] "Crocuta crocuta"        ASR by pipoly ASR found (.774 Frank 1986)
+#[7] "Cryptotis parva"        no data available (PG 25/12/2018)
+#[8] "Ctenomys talarum"       ASR by pipoly
+#[9] "Cynomys leucurus"       ASR based on captures from 9 male and 6 female (PG 25/12/2018)
+#[10] "Cynomys ludovicianus"  no data available (PG 25/12/2018)
 ###########################################################
 #-----------------------------------------------
 #--------------------Trabajo CCI (10/sept/2018)
