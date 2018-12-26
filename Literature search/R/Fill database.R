@@ -202,11 +202,11 @@ db.mam2 [81:90, "binomial"]
 #[3] "Dama dama"              ASR from pipoly     
 #[4] "Dasypus novemcinctus"   ASR based on captures from 58 male and 41 female (PG 25/12/2018)     
 #[5] "Dasyurus hallucatus"    ASR based on captures from 26 male and 11 female (PG 25/12/2018)     
-#[6] "Dasyurus maculatus"          
-#[7] "Daubentonia madagascariensis"
-#[8] "Dendrolagus lumholtzi"       
-#[9] "Desmodus rotundus"           
-#[10] "Diaemus youngi"     
+#[6] "Dasyurus maculatus"     ASR based on captures from 19 male and 12 female (PG 26/12/2018)    
+#[7] "Daubentonia madagascariensis" no data available (PG 26/12/2018)
+#[8] "Dendrolagus lumholtzi"  no data available (PG 26/12/2018)     
+#[9] "Desmodus rotundus"      ASR based on captures from 132 male and 113 female (PG 26/12/2018)      
+#[10] "Diaemus youngi"        no data available (PG 26/12/2018)
 
 db.mam2[91:100, "binomial"]
 #[1] "Diceros bicornis"     
