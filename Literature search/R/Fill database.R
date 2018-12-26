@@ -195,6 +195,90 @@ db.mam2[71:80, "binomial"]
 #[8] "Ctenomys talarum"       ASR by pipoly
 #[9] "Cynomys leucurus"       ASR based on captures from 9 male and 6 female (PG 25/12/2018)
 #[10] "Cynomys ludovicianus"  no data available (PG 25/12/2018)
+
+db.mam2 [81:90, "binomial"]
+#[1] "Cynopterus brachyotis"  ASR based on captures from 11 male and 23 female (PG 25/12/2018)   
+#[2] "Cystophora cristata"    ASR based on captures from 64 male and 57 female (PG 25/12/2018)      
+#[3] "Dama dama"              ASR from pipoly     
+#[4] "Dasypus novemcinctus"   ASR based on captures from 58 male and 41 female (PG 25/12/2018)     
+#[5] "Dasyurus hallucatus"    ASR based on captures from 26 male and 11 female (PG 25/12/2018)     
+#[6] "Dasyurus maculatus"          
+#[7] "Daubentonia madagascariensis"
+#[8] "Dendrolagus lumholtzi"       
+#[9] "Desmodus rotundus"           
+#[10] "Diaemus youngi"     
+
+db.mam2[91:100, "binomial"]
+#[1] "Diceros bicornis"     
+#[2] "Diclidurus albus"     
+#[3] "Didelphis aurita"     
+#[4] "Didelphis marsupialis"
+#[5] "Didelphis virginiana" 
+#[6] "Dipodomys merriami"   
+#[7] "Dipodomys microps"    
+#[8] "Dipodomys stephensi"  
+#[9] "Dolichotis patagonum" 
+#[10] "Elephantulus intufi"
+
+db.mam2 [101:110, "binomial"]
+#[1] "Elephantulus myurus"   
+#[2] "Elephantulus rufescens"
+#[3] "Enhydra lutris"        
+#[4] "Epomophorus gambianus" 
+#[5] "Equus hemionus"        
+#[6] "Equus kiang"           
+#[7] "Equus zebra"           
+#[8] "Eremitalpa granti"     
+#[9] "Erignathus barbatus"   
+#[10] "Erinaceus europaeus"
+
+db.mam2 [111:120, "binomial"]
+#[1] "Erophylla sezekorni" 
+#[2] "Erythrocebus patas"  
+#[3] "Eumetopias jubatus"  
+#[4] "Eumops glaucinus"    
+#[5] "Felis chaus"         
+#[6] "Felis nigripes"      
+#[7] "Felis silvestris"    
+#[8] "Funambulus pennantii"
+#[9] "Galago senegalensis" 
+#[10] "Gazella subgutturosa"
+
+db.mam2 [121:130,"binomial"]
+#[1] "Geomys arenarius"       
+#[2] "Giraffa camelopardalis" 
+#[3] "Glaucomys volans"       
+#[4] "Glis glis"              
+#[5] "Gorilla gorilla"        
+#[6] "Gulo gulo"              
+#[7] "Halichoerus grypus"     
+#[8] "Hapalemur griseus"      
+#[9] "Hemibelideus lemuroides"
+#[10] "Hemitragus jemlahicus"
+
+db.mam2 [131:140, "binomial"]
+#[1] "Hippopotamus amphibius" 
+#[2] "Hipposideros commersoni"
+#[3] "Hippotragus niger"      
+#[4] "Homo sapiens"           
+#[5] "Hydrurga leptonyx"      
+#[6] "Hylobates agilis"       
+#[7] "Hylobates klossii"      
+#[8] "Hylobates moloch"       
+#[9] "Hyperoodon ampullatus"  
+#[10] "Hypogeomys antimena"
+
+  db.mam2 [141:150, "binomial"]
+#[1] "Hypsignathus monstrosus"   
+#[2] "Ichneumia albicauda"       
+#[3] "Jaculus jaculus"           
+#[4] "Jaculus orientalis"        
+#[5] "Kobus vardonii"            
+#[6] "Lagorchestes hirsutus"     
+#[7] "Lavia frons"               
+#[8] "Lemur catta"               
+#[9] "Leontopithecus chrysomelas"
+#[10] "Leontopithecus rosalia"
 ###########################################################
 #-----------------------------------------------
 #--------------------Trabajo CCI (10/sept/2018)
