@@ -235,14 +235,14 @@ db.mam2 [101:110, "binomial"]
 db.mam2 [111:120, "binomial"]
 #[1] "Erophylla sezekorni"    no data available (PG 27/12/2018) un artículo pero no es claro
 #[2] "Erythrocebus patas"     ASR bades on captures from 11 male and 23 female (PG 27/12/2018)
-#[3] "Eumetopias jubatus"  
-#[4] "Eumops glaucinus"    
-#[5] "Felis chaus"         
-#[6] "Felis nigripes"      
-#[7] "Felis silvestris"    
-#[8] "Funambulus pennantii"
-#[9] "Galago senegalensis" 
-#[10] "Gazella subgutturosa"
+#[3] "Eumetopias jubatus"     no data available (PG 27/12/2018) info no clara
+#[4] "Eumops glaucinus"       ASR based on captures from 1 male and 7 female (PG 27/12/2018) based on Eumops glaucinus Floridanus colony
+#[5] "Felis chaus"            no data available (PG 27/12/2018)
+#[6] "Felis nigripes"         no data available (PG 27/12/2018)
+#[7] "Felis silvestris"       ASR based on captures from 30 male and 22 female (PG 27/12/2018) 
+#[8] "Funambulus pennantii"   ASR based on captures from 23 male and 17 female (PG 27/12/2018) 
+#[9] "Galago senegalensis"    no data available (PG 27/12/2018)
+#[10] "Gazella subgutturosa"  ASR based on captures from 4, 705.16 male and 4, 992.06 female (PG 27/12/2018) 
 
 db.mam2 [121:130,"binomial"]
 #[1] "Geomys arenarius"       
