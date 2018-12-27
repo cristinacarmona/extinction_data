@@ -209,16 +209,16 @@ db.mam2 [81:90, "binomial"]
 #[10] "Diaemus youngi"        no data available (PG 26/12/2018)
 
 db.mam2[91:100, "binomial"]
-#[1] "Diceros bicornis"     
-#[2] "Diclidurus albus"     
-#[3] "Didelphis aurita"     
-#[4] "Didelphis marsupialis"
-#[5] "Didelphis virginiana" 
-#[6] "Dipodomys merriami"   
-#[7] "Dipodomys microps"    
-#[8] "Dipodomys stephensi"  
-#[9] "Dolichotis patagonum" 
-#[10] "Elephantulus intufi"
+#[1] "Diceros bicornis"       ASR based on captures from 20 male and 24 female (PG 26/12/2018)    
+#[2] "Diclidurus albus"       no data available (PG 26/12/2018)
+#[3] "Didelphis aurita"       no data available (PG 26/12/2018)
+#[4] "Didelphis marsupialis"  no data available (PG 26/12/2018
+#[5] "Didelphis virginiana"   ASR based on captures from 8 male and 9 female (PG 26/12/2018)
+#[6] "Dipodomys merriami"     ASR based on captures from 943 male and 631 female (PG 25/12/2018)
+#[7] "Dipodomys microps"      no data available (PG 26/12/2018)
+#[8] "Dipodomys stephensi"    ASR based on captures from 616 male and 491 female (PG 25/12/2018)
+#[9] "Dolichotis patagonum"   no data available (PG 26/12/2018)
+#[10] "Elephantulus intufi"   no data available (PG 26/12/2018)
 
 db.mam2 [101:110, "binomial"]
 #[1] "Elephantulus myurus"   
