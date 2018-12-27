@@ -233,8 +233,8 @@ db.mam2 [101:110, "binomial"]
 #[10] "Erinaceus europaeus"   ASR by pipoly
 
 db.mam2 [111:120, "binomial"]
-#[1] "Erophylla sezekorni" 
-#[2] "Erythrocebus patas"  
+#[1] "Erophylla sezekorni"    no data available (PG 27/12/2018) un artículo pero no es claro
+#[2] "Erythrocebus patas"     ASR bades on captures from 11 male and 23 female (PG 27/12/2018)
 #[3] "Eumetopias jubatus"  
 #[4] "Eumops glaucinus"    
 #[5] "Felis chaus"         
