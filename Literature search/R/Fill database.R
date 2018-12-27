@@ -221,16 +221,16 @@ db.mam2[91:100, "binomial"]
 #[10] "Elephantulus intufi"   no data available (PG 26/12/2018)
 
 db.mam2 [101:110, "binomial"]
-#[1] "Elephantulus myurus"   
-#[2] "Elephantulus rufescens"
-#[3] "Enhydra lutris"        
-#[4] "Epomophorus gambianus" 
-#[5] "Equus hemionus"        
-#[6] "Equus kiang"           
-#[7] "Equus zebra"           
-#[8] "Eremitalpa granti"     
-#[9] "Erignathus barbatus"   
-#[10] "Erinaceus europaeus"
+#[1] "Elephantulus myurus"    no data available (PG 26/12/2018) 
+#[2] "Elephantulus rufescens" no data available (PG 26/12/2018) 
+#[3] "Enhydra lutris"         ASR by pipoly
+#[4] "Epomophorus gambianus"  ASR based on captures from 14 male and 17 female (PG 26/12/2018)
+#[5] "Equus hemionus"         ASR based on captures from 8 male and 6 female (PG 26/12/2018) 
+#[6] "Equus kiang"            no data available (PG 26/12/2018)
+#[7] "Equus zebra"            ASR based on captures from 9 male and 22 female (PG 26/12/2018)
+#[8] "Eremitalpa granti"      ASR based on captures from 6 male and 9 female (PG 26/12/2018)
+#[9] "Erignathus barbatus"    no data available (PG 27/12/2018)
+#[10] "Erinaceus europaeus"   ASR by pipoly
 
 db.mam2 [111:120, "binomial"]
 #[1] "Erophylla sezekorni" 
