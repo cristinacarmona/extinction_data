@@ -245,16 +245,16 @@ db.mam2 [111:120, "binomial"]
 #[10] "Gazella subgutturosa"  ASR based on captures from 4, 705.16 male and 4, 992.06 female (PG 27/12/2018) 
 
 db.mam2 [121:130,"binomial"]
-#[1] "Geomys arenarius"       
-#[2] "Giraffa camelopardalis" 
-#[3] "Glaucomys volans"       
-#[4] "Glis glis"              
-#[5] "Gorilla gorilla"        
-#[6] "Gulo gulo"              
-#[7] "Halichoerus grypus"     
-#[8] "Hapalemur griseus"      
-#[9] "Hemibelideus lemuroides"
-#[10] "Hemitragus jemlahicus"
+#[1] "Geomys arenarius"       no data available (PG 27/12/2018) 
+#[2] "Giraffa camelopardalis" ASR based on captures from 27 male and 46 female (PG 27/12/2018) from Giraffa camelopardalis tippelskirchi
+#[3] "Glaucomys volans"       ASR based on captures from 13 male and 8 female (PG 27/12/2018) 
+#[4] "Glis glis"              ASR based on captures from 109 male and 82 female (PG 27/12/2018) 
+#[5] "Gorilla gorilla"        ASR by pipoly
+#[6] "Gulo gulo"              no data available (PG 27/12/2018) 
+#[7] "Halichoerus grypus"     no data available (PG 27/12/2018)
+#[8] "Hapalemur griseus"      no data available (PG 27/12/2018) 
+#[9] "Hemibelideus lemuroides"no data available (PG 27/12/2018)
+#[10] "Hemitragus jemlahicus" ASR based on captures from 20 male and 163 female (PG 27/12/2018)
 
 db.mam2 [131:140, "binomial"]
 #[1] "Hippopotamus amphibius" 
