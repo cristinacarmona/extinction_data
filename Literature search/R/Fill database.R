@@ -269,16 +269,16 @@ db.mam2 [131:140, "binomial"]
 #[10] "Hypogeomys antimena"    ASR based on captures from 7 male and 3 female (PG 27/12/2018)
 
   db.mam2 [141:150, "binomial"]
-#[1] "Hypsignathus monstrosus"   
-#[2] "Ichneumia albicauda"       
-#[3] "Jaculus jaculus"           
-#[4] "Jaculus orientalis"        
-#[5] "Kobus vardonii"            
-#[6] "Lagorchestes hirsutus"     
-#[7] "Lavia frons"               
-#[8] "Lemur catta"               
-#[9] "Leontopithecus chrysomelas"
-#[10] "Leontopithecus rosalia"
+#[1] "Hypsignathus monstrosus"  no data available (PG 28/12/2018)  
+#[2] "Ichneumia albicauda"      no data available (PG 28/12/2018)  
+#[3] "Jaculus jaculus"          no data available (PG 28/12/2018) 
+#[4] "Jaculus orientalis"       no data available (PG 28/12/2018) 
+#[5] "Kobus vardonii"           no data available (PG 28/12/2018)  
+#[6] "Lagorchestes hirsutus"    no data available (PG 28/12/2018)  
+#[7] "Lavia frons"              no data available (PG 28/12/2018) 
+#[8] "Lemur catta"              ASR based on captures from 43 male and 38 female (PG 28/12/2018) 
+#[9] "Leontopithecus chrysomelas" no data available (PG 28/12/2018) 
+#[10] "Leontopithecus rosalia"  no data available (PG 28/12/2018)  1 doc, mix cap and wil no espe.
 ###########################################################
 #-----------------------------------------------
 #--------------------Trabajo CCI (10/sept/2018)
