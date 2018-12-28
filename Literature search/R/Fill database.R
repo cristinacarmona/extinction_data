@@ -257,16 +257,16 @@ db.mam2 [121:130,"binomial"]
 #[10] "Hemitragus jemlahicus" ASR based on captures from 20 male and 163 female (PG 27/12/2018)
 
 db.mam2 [131:140, "binomial"]
-#[1] "Hippopotamus amphibius" 
-#[2] "Hipposideros commersoni"
-#[3] "Hippotragus niger"      
-#[4] "Homo sapiens"           
-#[5] "Hydrurga leptonyx"      
-#[6] "Hylobates agilis"       
-#[7] "Hylobates klossii"      
-#[8] "Hylobates moloch"       
-#[9] "Hyperoodon ampullatus"  
-#[10] "Hypogeomys antimena"
+#[1] "Hippopotamus amphibius"  ASR based on captures from 19 male and 26 female (PG 27/12/2018)
+#[2] "Hipposideros commersoni" ASR based on captures from 2 male and 20 female (PG 27/12/2018)
+#[3] "Hippotragus niger"       no data available (PG 27/12/2018) 
+#[4] "Homo sapiens"            no data available (PG 27/12/2018) 
+#[5] "Hydrurga leptonyx"       no data available (PG 27/12/2018)
+#[6] "Hylobates agilis"        no data available (PG 27/12/2018)
+#[7] "Hylobates klossii"       no data available (PG 27/12/2018)
+#[8] "Hylobates moloch"        no data available (PG 27/12/2018)
+#[9] "Hyperoodon ampullatus"   no data available (PG 27/12/2018) 
+#[10] "Hypogeomys antimena"    ASR based on captures from 7 male and 3 female (PG 27/12/2018)
 
   db.mam2 [141:150, "binomial"]
 #[1] "Hypsignathus monstrosus"   
